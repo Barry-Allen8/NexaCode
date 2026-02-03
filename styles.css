@@ -1185,11 +1185,17 @@ section {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 3fr 1fr;
     gap: var(--spacing-2xl);
     margin-bottom: var(--spacing-2xl);
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
 }
 
 .footer-brand .logo {
@@ -1329,6 +1335,10 @@ section {
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1370,13 +1380,18 @@ section {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
     .footer-brand {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .footer-column ul {
         align-items: center;
     }
