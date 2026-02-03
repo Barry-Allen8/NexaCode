@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPortfolioFilters();
     initPricingCalculator();
     initChatbot();
-    initThemeToggle();
     initFaqAccordion();
     initLeadPopup();
 });
@@ -173,6 +172,8 @@ function initMobileMenu() {
 
 // ===== Smooth Scroll =====
 function initSmoothScroll() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -186,7 +187,7 @@ function initSmoothScroll() {
                 
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
             }
         });
@@ -231,6 +232,13 @@ function initHeaderScroll() {
 
 // ===== Scroll Animations =====
 function initScrollAnimations() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+    if (!('IntersectionObserver' in window)) {
+        return;
+    }
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -248,6 +256,8 @@ function initScrollAnimations() {
                     child.style.transitionDelay = `${index * 0.1}s`;
                     child.classList.add('animate-in');
                 });
+
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -495,7 +505,7 @@ document.head.appendChild(animationStyles);
 // ===== Portfolio Filters =====
 function initPortfolioFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const portfolioCards = document.querySelectorAll('.portfolio-card, .case-study');
 
     if (!filterBtns.length || !portfolioCards.length) return;
 
@@ -509,7 +519,7 @@ function initPortfolioFilters() {
 
             // Filter cards
             portfolioCards.forEach(card => {
-                const categories = card.dataset.category.split(' ');
+                const categories = (card.dataset.category || '').split(' ').filter(Boolean);
                 if (filter === 'all' || categories.includes(filter)) {
                     card.style.display = 'block';
                     card.style.animation = 'fadeInUp 0.5s ease forwards';
@@ -932,50 +942,50 @@ function initChatbot() {
     }
 }
 
-// ===== Theme Toggle =====
-function initThemeToggle() {
-    const themeToggle = document.getElementById('themeToggle');
-    if (!themeToggle) return;
-
-    // Get saved theme or default to dark
-    const savedTheme = localStorage.getItem('nexacode_theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('nexacode_theme', newTheme);
-    });
-}
-
 // ===== FAQ Accordion =====
 function initFaqAccordion() {
-    const faqItems = document.querySelectorAll('.faq-accordion-item');
+    const faqItems = Array.from(document.querySelectorAll('.faq-item')).filter(item => {
+        return Boolean(item.querySelector('button.faq-question') && item.querySelector('.faq-answer'));
+    });
     if (faqItems.length === 0) return;
 
-    faqItems.forEach(item => {
-        const header = item.querySelector('.faq-accordion-header');
-        if (header) {
-            header.addEventListener('click', () => {
-                // Close other items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item && otherItem.classList.contains('active')) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-
-                // Toggle current item
-                item.classList.toggle('active');
-            });
-        }
-    });
-
-    // Open first item by default
-    if (faqItems[0]) {
-        faqItems[0].classList.add('active');
+    function closeItem(item) {
+        const button = item.querySelector('button.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        item.classList.remove('active');
+        if (button) button.setAttribute('aria-expanded', 'false');
+        if (answer) answer.hidden = true;
     }
+
+    function openItem(item) {
+        const button = item.querySelector('button.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        item.classList.add('active');
+        if (button) button.setAttribute('aria-expanded', 'true');
+        if (answer) answer.hidden = false;
+    }
+
+    faqItems.forEach(item => closeItem(item));
+    openItem(faqItems[0]);
+
+    faqItems.forEach(item => {
+        const button = item.querySelector('button.faq-question');
+        if (!button) return;
+
+        button.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) closeItem(otherItem);
+            });
+
+            if (isOpen) {
+                closeItem(item);
+            } else {
+                openItem(item);
+            }
+        });
+    });
 }
 
 // ===== Lead Capture Popup =====
@@ -1035,15 +1045,12 @@ function initLeadPopup() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const emailInput = document.getElementById('leadEmail');
-            const gdprCheckbox = document.getElementById('popupGdpr');
-
-            if (!emailInput || !emailInput.value) return;
-
-            if (gdprCheckbox && !gdprCheckbox.checked) {
-                alert('Please accept the privacy policy to continue.');
+            if (typeof form.reportValidity === 'function' && !form.reportValidity()) {
                 return;
             }
+
+            const emailInput = document.getElementById('leadEmail');
+            if (!emailInput || !emailInput.value) return;
 
             const email = emailInput.value;
 
@@ -1057,22 +1064,40 @@ function initLeadPopup() {
             // Show success message
             const content = popup.querySelector('.lead-popup-content');
             if (content) {
-                content.innerHTML = `
-                    <div class="lead-popup-success">
-                        <div class="lead-popup-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="lead-popup-title" style="margin-top: 1rem;">Thank you!</h3>
-                        <p class="lead-popup-description">We'll send your free audit results to ${email} within 24 hours.</p>
-                        <button class="btn btn-primary" onclick="document.getElementById('leadPopup').classList.remove('active')">
-                            Close
-                        </button>
-                    </div>
+                content.innerHTML = '';
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'lead-popup-success';
+
+                const icon = document.createElement('div');
+                icon.className = 'lead-popup-icon';
+                icon.innerHTML = `
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
                 `;
+
+                const title = document.createElement('h3');
+                title.className = 'lead-popup-title';
+                title.style.marginTop = '1rem';
+                title.textContent = 'Thank you!';
+
+                const description = document.createElement('p');
+                description.className = 'lead-popup-description';
+                description.textContent = `We'll send your free audit results to ${email} within 24 hours.`;
+
+                const closeButton = document.createElement('button');
+                closeButton.type = 'button';
+                closeButton.className = 'btn btn-primary';
+                closeButton.textContent = 'Close';
+                closeButton.addEventListener('click', closePopup);
+
+                wrapper.appendChild(icon);
+                wrapper.appendChild(title);
+                wrapper.appendChild(description);
+                wrapper.appendChild(closeButton);
+                content.appendChild(wrapper);
             }
         });
     }
 }
-
