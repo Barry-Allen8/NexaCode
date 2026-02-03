@@ -277,9 +277,10 @@ button {
 
 /* ===== Section Spacing Fix ===== */
 section {
-    padding: 4rem 0;
+    padding: 60px 0;
     margin: 0;
     min-height: auto;
+    height: auto;
 }
 
 /* ===== Hero Section ===== */
@@ -4445,7 +4446,31 @@ section {
 /* ===== Tech Stack Section (Index) ===== */
 .tech-stack {
     background: var(--color-bg-primary);
-    padding: var(--spacing-4xl) 0;
+    padding: 60px 0;
+}
+
+.tech-categories {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (max-width: 1200px) {
+    .tech-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-categories {
+        grid-template-columns: 1fr;
+    }
 }
 
 .tech-stack-grid {
@@ -4532,7 +4557,7 @@ section {
 /* ===== FAQ Section (Index) ===== */
 .faq-section {
     background: var(--color-bg-secondary);
-    padding: var(--spacing-4xl) 0;
+    padding: 60px 0;
 }
 
 .faq-accordion {
