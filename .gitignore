@@ -1,0 +1,32 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Local agent/tools folders (keep out of repo)
+.agent/
+.agents/
+.claude/
+.codex/
+.gemini/
+
+# Env / secrets
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node (if added later)
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+.cache/

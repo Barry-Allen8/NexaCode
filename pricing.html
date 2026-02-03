@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceny | NexaCode</title>
+    <meta name="description" content="Przejrzyste ceny na strony internetowe, chatboty i rozwiązania AI. Wybierz pakiet dopasowany do Twojego biznesu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon-svg" width="36" height="40" viewBox="0 0 36 40" fill="none">
+                    <defs>
+                        <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00F5D4"/>
+                            <stop offset="100%" style="stop-color:#7B61FF"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradient)"/>
+                    <text x="18" y="26" text-anchor="middle" fill="#0D0D0D" font-family="Onest, sans-serif" font-size="18" font-weight="700">N</text>
+                </svg>
+                <span class="logo-text">NexaCode</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="home">Strona główna</a></li>
+                    <li><a href="services.html" data-i18n="services">Usługi</a></li>
+                    <li><a href="about.html" data-i18n="about">O nas</a></li>
+                    <li><a href="pricing.html" class="active" data-i18n="pricing">Ceny</a></li>
+                    <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary header-cta" data-i18n="order-button">Zamów</a>
+                <div class="lang-switcher">
+                    <button class="lang-switcher-toggle">
+                        <span class="lang-current">PL</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option lang-btn" data-lang="pl">🇵🇱 Polski</button>
+                        <button class="lang-option lang-btn" data-lang="uk">🇺🇦 Українська</button>
+                        <button class="lang-option lang-btn" data-lang="en">🇬🇧 English</button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="grid-pattern"></div>
+            <div class="blob-container">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-label" data-i18n="tariffs">Cennik</span>
+                <h1 class="page-title" data-i18n="pricing-page-title">Przejrzyste ceny bez ukrytych opłat</h1>
+                <p class="page-description" data-i18n="pricing-page-description">Wybierz pakiet dopasowany do Twojego biznesu lub uzyskaj indywidualną ofertę</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Websites Pricing -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-category-header">
+                <div class="category-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <path d="M8 21h8M12 17v4"/>
+                    </svg>
+                </div>
+                <h2 class="category-title" data-i18n="websites-pricing-title">Strony internetowe</h2>
+                <p class="category-description" data-i18n="from-landing-to-store">Od prostego landing page'a do pełnego sklepu internetowego</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="landing-page-title">Landing Page</h3>
+                        <p class="pricing-description" data-i18n="ideal-for-start">Idealny na start</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="landing-page-price">od 500$</span>
+                        <span class="price-period" data-i18n="one-time">jednorazowo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="landing-page-feature-1">Jednostronicowa strona</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="landing-page-feature-2">Responsywny design</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="landing-page-feature-3">Formularz kontaktowy</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="landing-page-feature-4">Podstawowa optymalizacja SEO</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="landing-page-feature-5">Termin: 3-5 dni</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=landing" class="btn btn-secondary btn-block" data-i18n="order-landing-page">Zamów</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge" data-i18n="popular">Popularny</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="corporate-site-title">Strona Korporacyjna</h3>
+                        <p class="pricing-description" data-i18n="for-serious-business">Dla poważnego biznesu</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="corporate-site-price">od 1000$</span>
+                        <span class="price-period" data-i18n="one-time">jednorazowo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="corporate-site-feature-1">Do 10 stron</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="corporate-site-feature-2">Unikalny design</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="corporate-site-feature-3">Panel administracyjny (CMS)</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="corporate-site-feature-4">Pełna optymalizacja SEO</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="corporate-site-feature-5">Google Analytics</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="corporate-site-feature-6">Termin: 7-14 dni</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=corporate" class="btn btn-primary btn-block" data-i18n="order-corporate-site">Zamów</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="e-commerce-title">Sklep Internetowy</h3>
+                        <p class="pricing-description" data-i18n="e-commerce-solution">Rozwiązanie E-commerce</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="e-commerce-price">od 2000$</span>
+                        <span class="price-period" data-i18n="one-time">jednorazowo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-feature-1">Katalog produktów</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-feature-2">Koszyk i zamówienie</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-feature-3">Integracja płatności</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-feature-4">Panel administracyjny</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-feature-5">Termin: 14-30 dni</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=ecommerce" class="btn btn-secondary btn-block" data-i18n="order-e-commerce">Zamów</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbots Pricing -->
+    <section class="pricing-section alt-bg">
+        <div class="container">
+            <div class="pricing-category-header">
+                <div class="category-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        <path d="M8 10h.01M12 10h.01M16 10h.01"/>
+                    </svg>
+                </div>
+                <h2 class="category-title" data-i18n="chatbots-pricing-title">Chatboty</h2>
+                <p class="category-description" data-i18n="automate-communication">Automatyzuj komunikację z klientami</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="basic-chatbot-title">Podstawowy bot</h3>
+                        <p class="pricing-description" data-i18n="simple-answers">Proste odpowiedzi</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="basic-chatbot-price">od 300$</span>
+                        <span class="price-period" data-i18n="one-time">jednorazowo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="basic-chatbot-feature-1">Telegram / Viber</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="basic-chatbot-feature-2">Menu i przyciski</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="basic-chatbot-feature-3">Do 20 odpowiedzi</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="basic-chatbot-feature-4">Termin: 3-5 dni</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=bot-basic" class="btn btn-secondary btn-block" data-i18n="order-basic-chatbot">Zamów</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge" data-i18n="popular">Popularny</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="ai-chatbot-title">Bot AI</h3>
+                        <p class="pricing-description" data-i18n="with-chatgpt">Z ChatGPT</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="ai-chatbot-price">od 500$</span>
+                        <span class="price-period" data-i18n="plus-api-costs">+ koszty API</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="ai-chatbot-feature-1">Dowolny komunikator</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="ai-chatbot-feature-2">Integracja z ChatGPT</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="ai-chatbot-feature-3">Uczenie na Twoich danych</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="ai-chatbot-feature-4">Integracja z CRM</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="ai-chatbot-feature-5">Termin: 5-10 dni</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=bot-ai" class="btn btn-primary btn-block" data-i18n="order-ai-chatbot">Zamów</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="e-commerce-chatbot-title">Bot sprzedażowy</h3>
+                        <p class="pricing-description">E-commerce</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="e-commerce-chatbot-price">od 800$</span>
+                        <span class="price-period" data-i18n="one-time">jednorazowo</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-chatbot-feature-1">Katalog w bocie</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-chatbot-feature-2">Przyjmowanie zamówień</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-chatbot-feature-3">Integracja płatności</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-chatbot-feature-4">Powiadomienia dla administratora</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="e-commerce-chatbot-feature-5">Termin: 7-14 dni</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=bot-sales" class="btn btn-secondary btn-block" data-i18n="order-e-commerce-chatbot">Zamów</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Pricing -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-category-header">
+                <div class="category-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    </svg>
+                </div>
+                <h2 class="category-title" data-i18n="complex-solutions-title">Kompleksowe rozwiązania</h2>
+                <p class="category-description" data-i18n="all-together-with-discount">Wszystko razem ze zniżką</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="starter-package-title">Start</h3>
+                        <p class="pricing-description" data-i18n="for-new-business">Dla nowego biznesu</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="starter-package-price">od 700$</span>
+                        <span class="price-period" data-i18n="instead-of-800">zamiast 800$</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="starter-package-feature-1">Landing Page</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="starter-package-feature-2">Podstawowy chatbot</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="starter-package-feature-3">Zniżka 12%</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=package-start" class="btn btn-secondary btn-block" data-i18n="order-starter-package">Zamów</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge" data-i18n="best-price">Najlepsza cena</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="business-package-title">Biznes</h3>
+                        <p class="pricing-description" data-i18n="optimal-choice">Optymalny wybór</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="business-package-price">od 1500$</span>
+                        <span class="price-period" data-i18n="instead-of-1800">zamiast 1800$</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="business-package-feature-1">Strona Korporacyjna</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="business-package-feature-2">AI chatbot</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="business-package-feature-3">Integracja z CRM</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="business-package-feature-4">1 miesiąc wsparcia</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="business-package-feature-5">Zniżka 17%</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=package-business" class="btn btn-primary btn-block" data-i18n="order-business-package">Zamów</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name" data-i18n="enterprise-package-title">Premium</h3>
+                        <p class="pricing-description" data-i18n="all-inclusive">Wszystko w cenie</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount" data-i18n="enterprise-package-price">od 3000$</span>
+                        <span class="price-period" data-i18n="instead-of-3800">zamiast 3800$</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="enterprise-package-feature-1">Sklep Internetowy</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="enterprise-package-feature-2">AI bot do sprzedaży</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="enterprise-package-feature-3">Pełna automatyzacja</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="enterprise-package-feature-4">3 miesiące wsparcia</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="enterprise-package-feature-5">Zniżka 21%</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html?service=package-premium" class="btn btn-secondary btn-block" data-i18n="order-enterprise-package">Zamów</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Pricing -->
+    <section class="pricing-section alt-bg">
+        <div class="container">
+            <div class="pricing-category-header">
+                <div class="category-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                        <line x1="9" y1="9" x2="9.01" y2="9"/>
+                        <line x1="15" y1="9" x2="15.01" y2="9"/>
+                    </svg>
+                </div>
+                <h2 class="category-title" data-i18n="additional-services-title">Dodatkowe usługi</h2>
+                <p class="category-description" data-i18n="additional-services-desc">Kompleksowe wsparcie dla Twojego biznesu</p>
+            </div>
+            <div class="additional-services-list">
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <path d="M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="mobile-apps-title">Aplikacje mobilne</h4>
+                        <p data-i18n="mobile-apps-short-desc">PWA i aplikacje cross-platform dla iOS i Android</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-800">od 800$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 20V10M12 20V4M6 20v-6"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="analytics-title">Analityka i dashboardy</h4>
+                        <p data-i18n="analytics-short-desc">BI dashboardy, Google Analytics, systemy CRM</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-200">od 200$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="security-title">Cyberbezpieczeństwo</h4>
+                        <p data-i18n="security-short-desc">Audyty bezpieczeństwa, SSL, ochrona DDoS</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-50">od 50$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="marketing-title">Digital Marketing</h4>
+                        <p data-i18n="marketing-short-desc">SEO, reklama PPC, email marketing</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-200">od 200$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="design-title">UX/UI Design</h4>
+                        <p data-i18n="design-short-desc">Prototypy, design systemy, audyty UX</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-300">od 300$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                            <line x1="8" y1="23" x2="16" y2="23"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="voice-title">Asystenci głosowi</h4>
+                        <p data-i18n="voice-short-desc">Boty głosowe, IVR, integracje z Alexa</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-500">od 500$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="video-title">Wideo i animacje</h4>
+                        <p data-i18n="video-short-desc">Wideo promocyjne, animacje webowe, 3D</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-200">od 200$</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5z"/>
+                            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5z"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="support-title">Wsparcie techniczne</h4>
+                        <p data-i18n="support-short-desc">Obsługa stron, hosting, backup, monitoring</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-30">od 30$/mies.</div>
+                </div>
+                <div class="additional-service-item">
+                    <div class="service-item-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                        </svg>
+                    </div>
+                    <div class="service-item-content">
+                        <h4 data-i18n="consulting-title">Szkolenia i konsulting</h4>
+                        <p data-i18n="consulting-short-desc">Szkolenia AI, konsulting IT, audyty</p>
+                    </div>
+                    <div class="service-item-price" data-i18n="from-100">od 100$/godz.</div>
+                </div>
+            </div>
+            <div class="section-cta" style="margin-top: var(--spacing-2xl); text-align: center;">
+                <a href="services.html" class="btn btn-secondary" data-i18n="view-all-services">Zobacz wszystkie usługi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title" data-i18n="frequently-asked-questions">Często zadawane pytania</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question" data-i18n="faq-q1">Jak wygląda płatność?</h3>
+                    <p class="faq-answer" data-i18n="faq-a1">50% zaliczki na start, 50% po zakończeniu. Dla stałych klientów — indywidualne warunki.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question" data-i18n="faq-q2">Czy można zmienić cenę?</h3>
+                    <p class="faq-answer" data-i18n="faq-a2">Podane ceny są minimalne. Ostateczny koszt zależy od złożoności projektu i Twoich wymagań.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question" data-i18n="faq-q3">Co obejmuje wsparcie?</h3>
+                    <p class="faq-answer" data-i18n="faq-a3">Naprawę błędów, konsultacje, drobne zmiany. Większe modyfikacje są płatne osobno.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question" data-i18n="faq-q4">Czy hosting i domena są w cenie?</h3>
+                    <p class="faq-answer" data-i18n="faq-a4">Nie, domena i hosting są płatne osobno. Pomożemy z wyborem i konfiguracją.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question" data-i18n="faq-q5">Czy jest gwarancja?</h3>
+                    <p class="faq-answer" data-i18n="faq-a5">Tak, 30 dni gwarancji na naprawę błędów bezpłatnie po oddaniu projektu.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question" data-i18n="faq-q6">Ile czasu zajmuje projekt?</h3>
+                    <p class="faq-answer" data-i18n="faq-a6">Landing — 3-5 dni, strona — 1-2 tygodnie, sklep — 2-4 tygodnie. Zależy od złożoności.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="individual-offer-title">Potrzebujesz indywidualnej oferty?</h2>
+                <p class="cta-description" data-i18n="individual-offer-description">Opowiedz nam o swoim projekcie — przygotujemy szczegółowy kosztorys</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <span data-i18n="get-quote">Uzyskaj wycenę</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon-svg" width="32" height="35" viewBox="0 0 36 40" fill="none">
+                            <defs>
+                                <linearGradient id="hexGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00F5D4"/>
+                                    <stop offset="100%" style="stop-color:#7B61FF"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradientFooter)"/>
+                            <text x="18" y="26" text-anchor="middle" fill="#0D0D0D" font-family="Onest, sans-serif" font-size="18" font-weight="700">N</text>
+                        </svg>
+                        <span class="logo-text">NexaCode</span>
+                    </a>
+                    <p class="footer-description" data-i18n="footer-tagline">Tworzymy cyfrowe rozwiązania dla biznesu</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer-services-heading">Usługi</h4>
+                        <ul>
+                            <li><a href="services.html#websites" data-i18n="websites-title">Strony internetowe</a></li>
+                            <li><a href="services.html#chatbots" data-i18n="chatbots-title">Chatboty</a></li>
+                            <li><a href="services.html#ai" data-i18n="ai-solutions-title">Rozwiązania AI</a></li>
+                            <li><a href="services.html#automation" data-i18n="automation-title">Automatyzacja</a></li>
+                            <li><a href="services.html#mobile-apps" data-i18n="mobile-apps-title">Aplikacje mobilne</a></li>
+                            <li><a href="services.html#ecommerce" data-i18n="ecommerce-title">E-commerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer-more-services">Więcej usług</h4>
+                        <ul>
+                            <li><a href="services.html#analytics" data-i18n="analytics-title">Analityka</a></li>
+                            <li><a href="services.html#security" data-i18n="security-title">Cyberbezpieczeństwo</a></li>
+                            <li><a href="services.html#marketing" data-i18n="marketing-title">Digital Marketing</a></li>
+                            <li><a href="services.html#design" data-i18n="design-title">UX/UI Design</a></li>
+                            <li><a href="services.html#support" data-i18n="support-title">Wsparcie techniczne</a></li>
+                            <li><a href="services.html#consulting" data-i18n="consulting-title">Szkolenia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer-company-heading">Firma</h4>
+                        <ul>
+                            <li><a href="about.html" data-i18n="about">O nas</a></li>
+                            <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
+                            <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer-follow-us-heading">Śledź nas</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer-copyright">© 2025 NexaCode. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html" data-i18n="home">Strona główna</a></li>
+                <li><a href="services.html" data-i18n="services">Usługi</a></li>
+                <li><a href="about.html" data-i18n="about">O nas</a></li>
+                <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
+                <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-block" data-i18n="order-button">Zamów</a>
+            <div class="mobile-lang-switcher">
+                <button class="lang-btn" data-lang="pl">🇵🇱 PL</button>
+                <button class="lang-btn" data-lang="uk">🇺🇦 UA</button>
+                <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

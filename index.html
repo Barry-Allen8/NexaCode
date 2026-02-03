@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaCode | Tworzymy strony internetowe i chatboty dla Twojego biznesu</title>
+    <meta name="description" content="Profesjonalne tworzenie stron internetowych, chatbotów i rozwiązań AI dla automatyzacji Twojego biznesu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon-svg" width="36" height="40" viewBox="0 0 36 40" fill="none">
+                    <defs>
+                        <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00F5D4"/>
+                            <stop offset="100%" style="stop-color:#7B61FF"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradient)"/>
+                    <text x="18" y="26" text-anchor="middle" fill="#0D0D0D" font-family="Onest, sans-serif" font-size="18" font-weight="700">N</text>
+                </svg>
+                <span class="logo-text">NexaCode</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active" data-i18n="home">Strona główna</a></li>
+                    <li><a href="services.html" data-i18n="services">Usługi</a></li>
+                    <li><a href="about.html" data-i18n="about">O nas</a></li>
+                    <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
+                    <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary header-cta" data-i18n="order-button">Zamów</a>
+                <div class="lang-switcher">
+                    <button class="lang-switcher-toggle">
+                        <span class="lang-current">PL</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option lang-btn" data-lang="pl">🇵🇱 Polski</button>
+                        <button class="lang-option lang-btn" data-lang="uk">🇺🇦 Українська</button>
+                        <button class="lang-option lang-btn" data-lang="en">🇬🇧 English</button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="grid-pattern"></div>
+            <div class="blob-container">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span data-i18n="working-with-ai">Pracujemy z technologiami AI</span>
+                </div>
+                <h1 class="hero-title" data-i18n="hero-title">
+                    Tworzymy <span class="gradient-text">strony internetowe</span> i <span class="gradient-text">chatboty</span> dla Twojego biznesu
+                </h1>
+                <p class="hero-description" data-i18n="hero-description">
+                    Pomagamy firmom automatyzować procesy, pozyskiwać klientów i zwiększać sprzedaż za pomocą nowoczesnych technologii internetowych i sztucznej inteligencji
+                </p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span data-i18n="free-consultation">Bezpłatna konsultacja</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="services.html" class="btn btn-secondary btn-lg" data-i18n="our-services">
+                        Nasze usługi
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-i18n="projects-completed">Projektów</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label" data-i18n="satisfied-clients">Klientów</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label" data-i18n="years-experience">Lat doświadczenia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span data-i18n="scroll-down">Przewiń w dół</span>
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="our-services-label">Nasze usługi</span>
+                <h2 class="section-title" data-i18n="what-we-can-do">Co możemy dla Ciebie zrobić</h2>
+                <p class="section-description" data-i18n="comprehensive-solutions">Kompleksowe rozwiązania dla cyfrowej transformacji Twojego biznesu</p>
+            </div>
+            <div class="services-grid">
+                <a href="services.html#websites" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="websites-title">Strony internetowe</h3>
+                    <p class="service-description" data-i18n="websites-description">Nowoczesne, szybkie i responsywne strony dla Twojej firmy</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#chatbots" class="service-card featured">
+                    <div class="service-badge" data-i18n="popular">Popularne</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            <path d="M8 10h.01M12 10h.01M16 10h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="chatbots-title">Chatboty</h3>
+                    <p class="service-description" data-i18n="chatbots-description">Inteligentne boty dla Telegram, Viber, Instagram z AI</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#ai" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="ai-solutions-title">Rozwiązania AI</h3>
+                    <p class="service-description" data-i18n="ai-solutions-description">Sztuczna inteligencja do automatyzacji procesów biznesowych</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#automation" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="automation-title">Automatyzacja</h3>
+                    <p class="service-description" data-i18n="automation-description">Integracje między usługami i automatyzacja procesów</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#mobile-apps" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <path d="M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="mobile-apps-title">Aplikacje mobilne</h3>
+                    <p class="service-description" data-i18n="mobile-apps-short-desc">PWA i aplikacje cross-platform dla iOS i Android</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#ecommerce" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="ecommerce-title">E-commerce</h3>
+                    <p class="service-description" data-i18n="ecommerce-short-desc">Sklepy internetowe z płatnościami i systemami lojalnościowymi</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#analytics" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 20V10M12 20V4M6 20v-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="analytics-title">Analityka i dashboardy</h3>
+                    <p class="service-description" data-i18n="analytics-short-desc">BI dashboardy, Google Analytics, systemy CRM</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#security" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="security-title">Cyberbezpieczeństwo</h3>
+                    <p class="service-description" data-i18n="security-short-desc">Audyty bezpieczeństwa, SSL, ochrona DDoS</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#marketing" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="marketing-title">Digital Marketing</h3>
+                    <p class="service-description" data-i18n="marketing-short-desc">SEO, reklama PPC, email marketing</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#design" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="design-title">UX/UI Design</h3>
+                    <p class="service-description" data-i18n="design-short-desc">Prototypy, design systemy, audyty UX</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#voice" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                            <line x1="8" y1="23" x2="16" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="voice-title">Asystenci głosowi</h3>
+                    <p class="service-description" data-i18n="voice-short-desc">Boty głosowe, IVR, integracje z Alexa</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#video" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="video-title">Wideo i animacje</h3>
+                    <p class="service-description" data-i18n="video-short-desc">Wideo promocyjne, animacje webowe, 3D</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#support" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5z"/>
+                            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="support-title">Wsparcie techniczne</h3>
+                    <p class="service-description" data-i18n="support-short-desc">Obsługa stron, hosting, backup, monitoring</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+                <a href="services.html#consulting" class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="consulting-title">Szkolenia i konsulting</h3>
+                    <p class="service-description" data-i18n="consulting-short-desc">Szkolenia AI, konsulting IT, audyty</p>
+                    <span class="service-link" data-i18n="learn-more">Dowiedz się więcej →</span>
+                </a>
+            </div>
+            <div class="section-cta">
+                <a href="services.html" class="btn btn-secondary btn-lg" data-i18n="view-all-services">Zobacz wszystkie usługi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <span class="section-label" data-i18n="why-us-label">Dlaczego my</span>
+                    <h2 class="section-title" data-i18n="how-we-work-title">Pracujemy na wynik, a nie na ilość godzin</h2>
+                    <p class="why-us-description" data-i18n="how-we-work-description">
+                        Nie tylko tworzymy piękne strony – budujemy narzędzia, które przynoszą realne korzyści Twojej firmie. Każdy projekt zaczynamy od analizy Twoich celów.
+                    </p>
+                    <ul class="why-us-list">
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="fixed-price">Stała cena bez ukrytych opłat</span>
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="fast-launch">Szybkie uruchomienie projektów od 3 dni</span>
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="post-launch-support">Wsparcie i konsultacje po uruchomieniu</span>
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span data-i18n="modern-tech">Nowoczesne technologie i najlepsze praktyki</span>
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary" data-i18n="learn-more-about-us">Dowiedz się więcej o nas</a>
+                </div>
+                <div class="why-us-image">
+                    <div class="image-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-stat">
+                                <span class="card-stat-number">98%</span>
+                                <span class="card-stat-label" data-i18n="satisfied-clients-stat">Zadowolonych klientów</span>
+                            </div>
+                            <div class="card-divider"></div>
+                            <div class="card-stat">
+                                <span class="card-stat-number">24/7</span>
+                                <span class="card-stat-label" data-i18n="tech-support">Wsparcie techniczne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="work-process">Proces pracy</span>
+                <h2 class="section-title" data-i18n="how-we-work-process">Jak pracujemy</h2>
+                <p class="section-description" data-i18n="transparent-process">Przejrzysty i efektywny proces od pomysłu do uruchomienia</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="step-consultation">Konsultacja</h3>
+                        <p class="step-description" data-i18n="step-consultation-desc">Bezpłatnie omawiamy Twoje cele i oczekiwania</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="step-proposal">Propozycja</h3>
+                        <p class="step-description" data-i18n="step-proposal-desc">Przygotowujemy szczegółową propozycję z terminami i kosztami</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="step-development">Rozwój</h3>
+                        <p class="step-description" data-i18n="step-development-desc">Tworzymy design i implementujemy funkcjonalność</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 class="step-title" data-i18n="step-launch">Uruchomienie</h3>
+                        <p class="step-description" data-i18n="step-launch-desc">Testujemy, uruchamiamy i szkolimy Cię</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="reviews">Opinie</span>
+                <h2 class="section-title" data-i18n="what-clients-say">Co mówią nasi klienci</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p data-i18n="testimonial-1">"Bardzo zadowoleni ze współpracy! Zespół szybko zrozumiał nasze potrzeby i stworzył dokładnie to, czego potrzebowaliśmy. Chatbot znacznie zmniejszył obciążenie wsparcia."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JK</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonial-1-name">Jan Kowalski</span>
+                            <span class="author-role" data-i18n="testimonial-1-role">CEO, TechStore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p data-i18n="testimonial-2">"Profesjonalne podejście i dbałość o szczegóły. Stronę otrzymaliśmy nawet przed terminem. Polecam wszystkim, którzy szukają niezawodnego partnera do tworzenia stron."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AN</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonial-2-name">Anna Nowak</span>
+                            <span class="author-role" data-i18n="testimonial-2-role">Founder, Beauty Lab</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p data-i18n="testimonial-3">"Rozwiązanie AI, które nam wdrożyli, zautomatyzowało 70% rutynowej pracy. Teraz możemy skupić się na rozwoju biznesu zamiast na zadaniach operacyjnych."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PW</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonial-3-name">Piotr Wiśniewski</span>
+                            <span class="author-role" data-i18n="testimonial-3-role">COO, LogiTrans</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta-title">Gotowi do rozpoczęcia?</h2>
+                <p class="cta-description" data-i18n="cta-description">Uzyskaj bezpłatną konsultację i dowiedz się, jak możemy pomóc Twojej firmie</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span data-i18n="contact-us-cta">Skontaktuj się z nami</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="pricing.html" class="btn btn-secondary btn-lg" data-i18n="view-prices-cta">Zobacz ceny</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon-svg" width="32" height="35" viewBox="0 0 36 40" fill="none">
+                            <defs>
+                                <linearGradient id="hexGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00F5D4"/>
+                                    <stop offset="100%" style="stop-color:#7B61FF"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradientFooter)"/>
+                            <text x="18" y="26" text-anchor="middle" fill="#0D0D0D" font-family="Onest, sans-serif" font-size="18" font-weight="700">N</text>
+                        </svg>
+                        <span class="logo-text">NexaCode</span>
+                    </a>
+                    <p class="footer-description" data-i18n="footer-tagline">Tworzymy cyfrowe rozwiązania dla biznesu</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer-services-heading">Usługi</h4>
+                        <ul>
+                            <li><a href="services.html#websites" data-i18n="websites-title">Strony internetowe</a></li>
+                            <li><a href="services.html#chatbots" data-i18n="chatbots-title">Chatboty</a></li>
+                            <li><a href="services.html#ai" data-i18n="ai-solutions-title">Rozwiązania AI</a></li>
+                            <li><a href="services.html#automation" data-i18n="automation-title">Automatyzacja</a></li>
+                            <li><a href="services.html#mobile-apps" data-i18n="mobile-apps-title">Aplikacje mobilne</a></li>
+                            <li><a href="services.html#ecommerce" data-i18n="ecommerce-title">E-commerce</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer-more-services">Więcej usług</h4>
+                        <ul>
+                            <li><a href="services.html#analytics" data-i18n="analytics-title">Analityka</a></li>
+                            <li><a href="services.html#security" data-i18n="security-title">Cyberbezpieczeństwo</a></li>
+                            <li><a href="services.html#marketing" data-i18n="marketing-title">Digital Marketing</a></li>
+                            <li><a href="services.html#design" data-i18n="design-title">UX/UI Design</a></li>
+                            <li><a href="services.html#support" data-i18n="support-title">Wsparcie techniczne</a></li>
+                            <li><a href="services.html#consulting" data-i18n="consulting-title">Szkolenia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-i18n="footer-company-heading">Firma</h4>
+                        <ul>
+                            <li><a href="about.html" data-i18n="about">O nas</a></li>
+                            <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
+                            <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer-follow-us-heading">Śledź nas</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer-copyright">© 2025 NexaCode. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html" data-i18n="home">Strona główna</a></li>
+                <li><a href="services.html" data-i18n="services">Usługi</a></li>
+                <li><a href="about.html" data-i18n="about">O nas</a></li>
+                <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
+                <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-block" data-i18n="order-button">Zamów</a>
+            <!-- Mobile Language Switcher -->
+            <div class="mobile-lang-switcher">
+                <button class="lang-btn" data-lang="pl">🇵🇱 PL</button>
+                <button class="lang-btn" data-lang="uk">🇺🇦 UA</button>
+                <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
