@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initChatbot();
     initFaqAccordion();
     initLeadPopup();
+    initCookieConsent();
 });
 
 // ===== Language System =====
@@ -1107,5 +1108,99 @@ function initLeadPopup() {
                 content.appendChild(wrapper);
             }
         });
+    }
+}
+
+// ===== Cookie Consent =====
+function initCookieConsent() {
+    const cookieConsent = localStorage.getItem('cookie_consent');
+    const banner = document.createElement('div');
+    
+    // Check if consent already given
+    if (cookieConsent === 'accepted' || cookieConsent === 'declined') {
+        return;
+    }
+
+    banner.className = 'cookie-banner';
+    banner.innerHTML = `
+        <div class="container cookie-content">
+            <div class="cookie-text">
+                <p data-i18n="cookie-text">Ми використовуємо файли cookie для покращення роботи сайту.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="cookieSettings" class="btn btn-secondary btn-sm" data-i18n="cookie-settings">Налаштування</button>
+                <button id="cookieDecline" class="btn btn-secondary btn-sm" data-i18n="cookie-decline">Відхилити</button>
+                <button id="cookieAccept" class="btn btn-primary btn-sm" data-i18n="cookie-accept">Прийняти всі</button>
+            </div>
+        </div>
+        <div class="container cookie-settings-wrapper">
+            <div class="cookie-option">
+                <div class="cookie-label">
+                    <span class="cookie-name" data-i18n="cookie-necessary">Необхідні</span>
+                    <span class="cookie-desc">Важливі для роботи сайту</span>
+                </div>
+                <div class="toggle-switch">
+                    <input type="checkbox" checked disabled>
+                    <span class="slider"></span>
+                </div>
+            </div>
+            <div class="cookie-option">
+                <div class="cookie-label">
+                    <span class="cookie-name" data-i18n="cookie-analytics">Аналітика</span>
+                    <span class="cookie-desc">Google Analytics</span>
+                </div>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="analyticsCookies" checked>
+                    <span class="slider"></span>
+                </div>
+            </div>
+            <div class="cookie-actions" style="margin-top: 1rem; justify-content: flex-end;">
+                 <button id="cookieSaveSettings" class="btn btn-primary btn-sm">Зберегти</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(banner);
+
+    // Force reflow for animation
+    setTimeout(() => {
+        banner.classList.add('active');
+    }, 100);
+
+    // Event Listeners
+    const settingsBtn = banner.querySelector('#cookieSettings');
+    const settingsWrapper = banner.querySelector('.cookie-settings-wrapper');
+    const acceptBtn = banner.querySelector('#cookieAccept');
+    const declineBtn = banner.querySelector('#cookieDecline');
+    const saveSettingsBtn = banner.querySelector('#cookieSaveSettings');
+
+    settingsBtn.addEventListener('click', () => {
+        settingsWrapper.classList.toggle('active');
+    });
+
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie_consent', 'accepted');
+        localStorage.setItem('cookie_analytics', 'true');
+        closeBanner();
+    });
+
+    declineBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie_consent', 'declined');
+        localStorage.setItem('cookie_analytics', 'false');
+        closeBanner();
+    });
+
+    saveSettingsBtn.addEventListener('click', () => {
+        const analytics = document.getElementById('analyticsCookies').checked;
+        localStorage.setItem('cookie_consent', 'accepted');
+        localStorage.setItem('cookie_analytics', analytics);
+        closeBanner();
+    });
+
+    function closeBanner() {
+        banner.classList.remove('active');
+        setTimeout(() => {
+            banner.remove();
+        }, 500);
     }
 }
