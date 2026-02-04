@@ -670,9 +670,9 @@ function initChatbot() {
     const responses = {
         'pricing': {
             text: {
-                'pl': 'Nasze ceny:\n\n- Landing page: od 1500 PLN\n- Strona korporacyjna: od 3000 PLN\n- Chatbot AI: od 2000 PLN\n- E-commerce: od 5000 PLN\n- Integracja AI: od 4000 PLN\n\nCena zalezy od zlozonosci projektu.',
-                'uk': 'Nashi tsiny:\n\n- Landing page: vid 1500 PLN\n- Korporatyvnyy sayt: vid 3000 PLN\n- Chatbot AI: vid 2000 PLN\n- E-commerce: vid 5000 PLN\n- AI intehratsiya: vid 4000 PLN',
-                'en': 'Our pricing:\n\n- Landing page: from 1500 PLN\n- Corporate website: from 3000 PLN\n- AI Chatbot: from 2000 PLN\n- E-commerce: from 5000 PLN\n- AI Integration: from 4000 PLN\n\nFinal price depends on project complexity.'
+                'pl': 'Nasze ceny:\n\n- Landing page: od $500\n- Strona korporacyjna: od $900\n- Chatbot AI: od $650\n- E-commerce: od $1,500\n- Integracja AI: od $1,100\n- Automatyzacja: od $750\n\nCena zalezy od zlozonosci projektu.',
+                'uk': 'Nashi tsiny:\n\n- Landing page: vid $500\n- Korporatyvnyy sayt: vid $900\n- Chatbot AI: vid $650\n- E-commerce: vid $1,500\n- AI intehratsiya: vid $1,100\n- Avtomatyzatsiya: vid $750',
+                'en': 'Our pricing:\n\n- Landing page: from $500\n- Corporate website: from $900\n- AI Chatbot: from $650\n- E-commerce: from $1,500\n- AI Integration: from $1,100\n- Automation: from $750\n\nFinal price depends on project complexity.'
             },
             followUp: ['calculator', 'contact']
         },
