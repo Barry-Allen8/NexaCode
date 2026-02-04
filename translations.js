@@ -753,17 +753,20 @@ const translations = {
         'faq-contact-us': 'Skontaktuj się z nami',
 
         // Lead Popup
-        'popup-title': 'Bezplatny audyt strony!',
-        'popup-desc': 'Otrzymaj szczegolowy raport z:',
-        'popup-feature-1': 'Analiza wydajnosci i szybkosci',
-        'popup-feature-2': 'Raport SEO i widocznosci',
+        'popup-title': 'Bezpłatny audyt strony!',
+        'popup-desc': 'Otrzymaj szczegółowy raport z:',
+        'popup-feature-1': 'Analiza wydajności i szybkości',
+        'popup-feature-2': 'Raport SEO i widoczności',
         'popup-feature-3': 'Rekomendacje UX/UI',
         'popup-feature-4': 'Plan optymalizacji konwersji',
         'popup-btn': 'Otrzymaj audyt',
         'popup-submit': 'Otrzymaj bezpłatny audyt',
         'popup-note': 'Bez karty kredytowej. Wyniki w 24h.',
         'popup-gdpr': 'Akceptuję politykę prywatności',
-        'popup-email-placeholder': 'Twój email',
+        'popup-email-placeholder': 'Twój e-mail',
+        'popup-success-title': 'Dziękujemy!',
+        'popup-success-desc': 'Wyślemy bezpłatny audyt na {email} w ciągu 24 godzin.',
+        'popup-success-close': 'Zamknij',
 
         // Privacy Policy
         'privacy-page-label': 'Informacje prawne',
@@ -1618,6 +1621,9 @@ const translations = {
         'popup-note': 'Без кредитної картки. Результати за 24 год.',
         'popup-gdpr': 'Приймаю політику конфіденційності',
         'popup-email-placeholder': 'Ваш email',
+        'popup-success-title': 'Дякуємо!',
+        'popup-success-desc': 'Ми надішлемо безкоштовний аудит на {email} протягом 24 годин.',
+        'popup-success-close': 'Закрити',
 
         // Privacy Policy
         'privacy-page-label': 'Юридична інформація',
@@ -2481,6 +2487,9 @@ const translations = {
         'popup-note': 'No credit card required. Results in 24h.',
         'popup-gdpr': 'I accept the privacy policy',
         'popup-email-placeholder': 'Your email',
+        'popup-success-title': 'Thank you!',
+        'popup-success-desc': 'We’ll send your free audit results to {email} within 24 hours.',
+        'popup-success-close': 'Close',
 
         // Privacy Policy
         'privacy-page-label': 'Legal Information',

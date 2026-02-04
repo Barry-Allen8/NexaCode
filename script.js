@@ -1012,10 +1012,25 @@ function initLeadPopup() {
 
     if (alreadySubscribed || shownThisSession) return;
 
-    // Show popup after 45 seconds of browsing
-    const showTimeout = setTimeout(() => {
+    function getPopupTranslation(key, fallback) {
+        if (typeof translations === 'object') {
+            const pack = translations[currentLang] || translations['pl'];
+            if (pack && pack[key]) return pack[key];
+            if (translations['pl'] && translations['pl'][key]) return translations['pl'][key];
+        }
+        return fallback;
+    }
+
+    function showPopup() {
+        // Ensure popup content matches the current language
+        applyTranslations(currentLang);
         popup.classList.add('active');
         sessionStorage.setItem('popup_shown', 'true');
+    }
+
+    // Show popup after 45 seconds of browsing
+    const showTimeout = setTimeout(() => {
+        showPopup();
     }, 45000);
 
     // Also show on exit intent (mouse leaves viewport)
@@ -1023,8 +1038,7 @@ function initLeadPopup() {
     document.addEventListener('mouseleave', (e) => {
         if (e.clientY < 0 && !exitIntentShown && !shownThisSession && !alreadySubscribed) {
             clearTimeout(showTimeout);
-            popup.classList.add('active');
-            sessionStorage.setItem('popup_shown', 'true');
+            showPopup();
             exitIntentShown = true;
         }
     });
@@ -1089,16 +1103,20 @@ function initLeadPopup() {
                 const title = document.createElement('h3');
                 title.className = 'lead-popup-title';
                 title.style.marginTop = '1rem';
-                title.textContent = 'Thank you!';
+                title.textContent = getPopupTranslation('popup-success-title', 'Thank you!');
 
                 const description = document.createElement('p');
                 description.className = 'lead-popup-description';
-                description.textContent = `We'll send your free audit results to ${email} within 24 hours.`;
+                const descTemplate = getPopupTranslation(
+                    'popup-success-desc',
+                    `We'll send your free audit results to {email} within 24 hours.`
+                );
+                description.textContent = descTemplate.replace('{email}', email);
 
                 const closeButton = document.createElement('button');
                 closeButton.type = 'button';
                 closeButton.className = 'btn btn-primary';
-                closeButton.textContent = 'Close';
+                closeButton.textContent = getPopupTranslation('popup-success-close', 'Close');
                 closeButton.addEventListener('click', closePopup);
 
                 wrapper.appendChild(icon);
