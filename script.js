@@ -1113,94 +1113,63 @@ function initLeadPopup() {
 
 // ===== Cookie Consent =====
 function initCookieConsent() {
-    const cookieConsent = localStorage.getItem('cookie_consent');
-    const banner = document.createElement('div');
-    
-    // Check if consent already given
-    if (cookieConsent === 'accepted' || cookieConsent === 'declined') {
-        return;
+    const CONSENT_KEY = 'cookieConsent';
+
+    // Migrate legacy consent (cookie_consent) if present
+    if (localStorage.getItem(CONSENT_KEY) === null) {
+        const legacy = localStorage.getItem('cookie_consent');
+        if (legacy === 'accepted') {
+            localStorage.setItem(CONSENT_KEY, 'true');
+        } else if (legacy === 'declined') {
+            localStorage.setItem(CONSENT_KEY, 'false');
+        }
     }
 
+    // Show banner only if consent not set
+    if (localStorage.getItem(CONSENT_KEY) !== null) return;
+
+    const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     banner.innerHTML = `
-        <div class="container cookie-content">
-            <div class="cookie-text">
-                <p data-i18n="cookie-text">Ми використовуємо файли cookie для покращення роботи сайту.</p>
+        <div class="container cookie-banner-inner" role="dialog" aria-live="polite">
+            <div class="cookie-banner-copy">
+                <p class="cookie-banner-text" data-i18n="cookie-text">We use cookies to ensure the website works properly and to improve your experience.</p>
+                <a class="cookie-banner-settings" href="cookies-policy.html" data-i18n="cookie-settings">Settings</a>
             </div>
-            <div class="cookie-actions">
-                <button id="cookieSettings" class="btn btn-secondary btn-sm" data-i18n="cookie-settings">Налаштування</button>
-                <button id="cookieDecline" class="btn btn-secondary btn-sm" data-i18n="cookie-decline">Відхилити</button>
-                <button id="cookieAccept" class="btn btn-primary btn-sm" data-i18n="cookie-accept">Прийняти всі</button>
-            </div>
-        </div>
-        <div class="container cookie-settings-wrapper">
-            <div class="cookie-option">
-                <div class="cookie-label">
-                    <span class="cookie-name" data-i18n="cookie-necessary">Необхідні</span>
-                    <span class="cookie-desc">Важливі для роботи сайту</span>
-                </div>
-                <div class="toggle-switch">
-                    <input type="checkbox" checked disabled>
-                    <span class="slider"></span>
-                </div>
-            </div>
-            <div class="cookie-option">
-                <div class="cookie-label">
-                    <span class="cookie-name" data-i18n="cookie-analytics">Аналітика</span>
-                    <span class="cookie-desc">Google Analytics</span>
-                </div>
-                <div class="toggle-switch">
-                    <input type="checkbox" id="analyticsCookies" checked>
-                    <span class="slider"></span>
-                </div>
-            </div>
-            <div class="cookie-actions" style="margin-top: 1rem; justify-content: flex-end;">
-                 <button id="cookieSaveSettings" class="btn btn-primary btn-sm">Зберегти</button>
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-banner-accept" data-i18n="cookie-accept">Accept All</button>
             </div>
         </div>
     `;
 
     document.body.appendChild(banner);
 
-    // Force reflow for animation
-    setTimeout(() => {
-        banner.classList.add('active');
-    }, 100);
+    // Ensure the banner is translated to current language (banner is created after initLanguage())
+    applyTranslations(currentLang);
 
-    // Event Listeners
-    const settingsBtn = banner.querySelector('#cookieSettings');
-    const settingsWrapper = banner.querySelector('.cookie-settings-wrapper');
-    const acceptBtn = banner.querySelector('#cookieAccept');
-    const declineBtn = banner.querySelector('#cookieDecline');
-    const saveSettingsBtn = banner.querySelector('#cookieSaveSettings');
-
-    settingsBtn.addEventListener('click', () => {
-        settingsWrapper.classList.toggle('active');
+    // Animate in
+    requestAnimationFrame(() => {
+        banner.classList.add('is-visible');
     });
 
+    const acceptBtn = banner.querySelector('.cookie-banner-accept');
     acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookie_consent', 'accepted');
-        localStorage.setItem('cookie_analytics', 'true');
-        closeBanner();
-    });
-
-    declineBtn.addEventListener('click', () => {
-        localStorage.setItem('cookie_consent', 'declined');
-        localStorage.setItem('cookie_analytics', 'false');
-        closeBanner();
-    });
-
-    saveSettingsBtn.addEventListener('click', () => {
-        const analytics = document.getElementById('analyticsCookies').checked;
-        localStorage.setItem('cookie_consent', 'accepted');
-        localStorage.setItem('cookie_analytics', analytics);
+        localStorage.setItem(CONSENT_KEY, 'true');
         closeBanner();
     });
 
     function closeBanner() {
-        banner.classList.remove('active');
-        setTimeout(() => {
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
             banner.remove();
-        }, 500);
+            return;
+        }
+
+        banner.classList.add('is-hiding');
+        banner.classList.remove('is-visible');
+
+        const remove = () => banner.remove();
+        banner.addEventListener('transitionend', remove, { once: true });
+        setTimeout(remove, 400);
     }
 }

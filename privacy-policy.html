@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | NexaCode</title>
-    <meta name="description" content="Polityka Prywatności i Cookies NexaCode">
+    <meta name="description" content="Polityka Prywatności NexaCode">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap"
@@ -26,14 +26,40 @@
             padding: 40px;
         }
 
-        .legal-text-wrapper h2 {
+        .legal-text-wrapper h2,
+        .legal-text-wrapper h3 {
+            position: relative;
             color: var(--color-text-primary);
+            padding-left: 1rem;
+        }
+
+        .legal-text-wrapper h2::before,
+        .legal-text-wrapper h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.25em;
+            width: 4px;
+            height: 1.1em;
+            border-radius: 9999px;
+            background: var(--color-accent-secondary);
+            box-shadow: 0 0 0 1px rgba(123, 97, 255, 0.2), 0 0 24px rgba(123, 97, 255, 0.25);
+        }
+
+        .legal-text-wrapper h2 {
             font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             margin-top: 2.5rem;
         }
 
-        .legal-text-wrapper h2:first-child {
+        .legal-text-wrapper h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .legal-text-wrapper h2:first-of-type {
             margin-top: 0;
         }
 
@@ -45,10 +71,27 @@
         .legal-text-wrapper ul {
             margin-bottom: 1.5rem;
             padding-left: 1.5rem;
+            list-style: disc;
+        }
+
+        .legal-text-wrapper li::marker {
+            color: var(--color-accent-secondary);
         }
 
         .legal-text-wrapper li {
             margin-bottom: 0.5rem;
+        }
+
+        .legal-text-wrapper a {
+            color: var(--color-accent-primary);
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            transition: color var(--transition-fast), opacity var(--transition-fast);
+        }
+
+        .legal-text-wrapper a:hover {
+            color: var(--color-accent-secondary);
         }
     </style>
 </head>
@@ -117,8 +160,8 @@
         </div>
         <div class="container">
             <div class="page-hero-content">
-                <span class="section-label" data-i18n="privacy-page-label">Prawne</span>
-                <h1 class="page-title" data-i18n="privacy-page-title">Polityka Prywatności i Cookies</h1>
+                <span class="section-label" data-i18n="privacy-page-label">Informacje prawne</span>
+                <h1 class="page-title" data-i18n="privacy-page-title">Polityka Prywatności</h1>
             </div>
         </div>
     </section>
@@ -127,50 +170,69 @@
     <section class="privacy-content">
         <div class="container">
             <div class="legal-text-wrapper" data-i18n-html="privacy-policy-text">
-                <!-- Fallback Content in Ukrainian -->
-                <h2>1. Вступ</h2>
-                <p>Ця Політика конфіденційності описує, як NexaCode (далі — «Ми», «Нас») збирає, використовує та захищає
-                    вашу персональну інформацію при використанні нашого веб-сайту.</p>
+                <!-- Fallback Content (Polish) -->
+                <p><strong>Ostatnia aktualizacja:</strong> 4 lutego 2026</p>
+                <p>NexaCode ("my") szanuje Twoją prywatność. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób
+                    zbieramy, wykorzystujemy i chronimy dane osobowe w związku z korzystaniem z naszej strony
+                    internetowej oraz kontaktem z nami. Przetwarzamy dane zgodnie z RODO (GDPR) oraz innymi właściwymi
+                    przepisami.</p>
 
-                <h2>2. Дані, які ми збираємо</h2>
-                <p>Ми можемо збирати наступні типи даних:</p>
+                <h2>1. Jakie dane zbieramy</h2>
+                <p>Możemy zbierać:</p>
                 <ul>
-                    <li><strong>Дані форм:</strong> Ім'я, Email, Номер телефону та інші дані, які ви надаєте при
-                        заповненні контактних форм.</li>
-                    <li><strong>Технічні дані:</strong> IP-адреса, тип браузера, тип пристрою, дані про відвідування
-                        сторінок (через Google Analytics).</li>
+                    <li><strong>Dane z formularzy:</strong> imię i nazwisko (lub nazwa), adres e‑mail, numer telefonu,
+                        treść wiadomości oraz inne informacje, które dobrowolnie podasz.</li>
+                    <li><strong>Dane techniczne:</strong> adres IP, informacje o przeglądarce i urządzeniu, logi
+                        serwera, przybliżona lokalizacja (na podstawie IP) oraz identyfikatory online.</li>
+                    <li><strong>Dane z plików cookies:</strong> informacje niezbędne do działania strony oraz – za
+                        zgodą – dane analityczne lub marketingowe.</li>
                 </ul>
 
-                <h2>3. Мета збору даних</h2>
-                <p>Ми використовуємо зібрані дані для наступних цілей:</p>
+                <h2>2. Cele i podstawy prawne przetwarzania</h2>
+                <p>Przetwarzamy dane w następujących celach:</p>
                 <ul>
-                    <li>Надання послуг та відповідь на ваші запити;</li>
-                    <li>Покращення роботи нашого веб-сайту та користувацького досвіду;</li>
-                    <li>Маркетингові комунікації (за вашою згодою);</li>
-                    <li>Аналіз відвідуваності сайту.</li>
+                    <li>obsługa zapytań i <strong>konsultacje</strong> (w tym działania przed zawarciem umowy);</li>
+                    <li>świadczenie usług IT, w tym tworzenie stron internetowych, chatbotów i <strong>rozwiązań
+                            AI</strong>;</li>
+                    <li>zapewnienie bezpieczeństwa oraz prawidłowego działania strony;</li>
+                    <li>analityka i rozwój serwisu (np. statystyki odwiedzin);</li>
+                    <li>marketing i kontakt handlowy – wyłącznie, gdy wyrazisz na to zgodę.</li>
+                </ul>
+                <p>Podstawą prawną może być: Twoja zgoda (art. 6 ust. 1 lit. a RODO), niezbędność do zawarcia lub
+                    wykonania umowy (art. 6 ust. 1 lit. b), nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f) albo
+                    obowiązek prawny (art. 6 ust. 1 lit. c).</p>
+
+                <h2>3. Odbiorcy danych</h2>
+                <p>Możemy korzystać z zaufanych dostawców usług (np. hosting, narzędzia komunikacji, analityka,
+                    podwykonawcy). Podmioty te przetwarzają dane w naszym imieniu na podstawie umów powierzenia i zgodnie
+                    z naszymi instrukcjami. Nie sprzedajemy danych osobowych.</p>
+
+                <h2>4. Przechowywanie danych</h2>
+                <p>Przechowujemy dane tylko tak długo, jak jest to niezbędne do realizacji wskazanych celów, a następnie
+                    usuwamy je lub anonimizujemy, o ile przepisy nie wymagają dłuższego przechowywania.</p>
+
+                <h2>5. Bezpieczeństwo</h2>
+                <p>Stosujemy odpowiednie środki techniczne i organizacyjne (m.in. kontrola dostępu, szyfrowanie
+                    transmisji, kopie zapasowe) w celu ochrony danych przed utratą, nieuprawnionym dostępem lub
+                    ujawnieniem.</p>
+
+                <h2>6. Twoje prawa (RODO)</h2>
+                <p>Masz prawo do:</p>
+                <ul>
+                    <li>dostępu do danych i uzyskania ich kopii;</li>
+                    <li>sprostowania danych;</li>
+                    <li>usunięcia danych ("prawo do bycia zapomnianym");</li>
+                    <li>ograniczenia przetwarzania;</li>
+                    <li>przenoszenia danych;</li>
+                    <li>wniesienia sprzeciwu wobec przetwarzania;</li>
+                    <li>wycofania zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania sprzed
+                        wycofania);</li>
+                    <li>wniesienia skargi do właściwego organu nadzorczego.</li>
                 </ul>
 
-                <h2>4. Термін зберігання даних</h2>
-                <p>Ми зберігаємо ваші персональні дані лише протягом часу, необхідного для досягнення цілей, зазначених
-                    у цій Політиці, якщо інше не передбачено законом.</p>
-
-                <h2>5. Ваші права</h2>
-                <p>Відповідно до GDPR, ви маєте право на:</p>
-                <ul>
-                    <li>Доступ до своїх даних;</li>
-                    <li>Виправлення неточних даних;</li>
-                    <li>Видалення даних («право на забуття»);</li>
-                    <li>Обмеження обробки даних;</li>
-                    <li>Відкликання згоди на обробку даних.</li>
-                </ul>
-
-                <h2>6. Безпека даних</h2>
-                <p>Ми вживаємо всіх необхідних технічних та організаційних заходів для захисту ваших даних від
-                    несанкціонованого доступу, втрати або зміни.</p>
-
-                <h2>7. Контактна інформація</h2>
-                <p>Якщо у вас є питання щодо цієї Політики, зв'яжіться з нами: <a
-                        href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
+                <h2>7. Kontakt</h2>
+                <p>Aby skorzystać ze swoich praw lub zadać pytanie, skontaktuj się z nami przez formularz kontaktowy na
+                    stronie lub napisz na <a href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
             </div>
         </div>
     </section>

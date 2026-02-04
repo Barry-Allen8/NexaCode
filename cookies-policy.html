@@ -26,14 +26,40 @@
             padding: 40px;
         }
 
-        .legal-text-wrapper h2 {
+        .legal-text-wrapper h2,
+        .legal-text-wrapper h3 {
+            position: relative;
             color: var(--color-text-primary);
+            padding-left: 1rem;
+        }
+
+        .legal-text-wrapper h2::before,
+        .legal-text-wrapper h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.25em;
+            width: 4px;
+            height: 1.1em;
+            border-radius: 9999px;
+            background: var(--color-accent-secondary);
+            box-shadow: 0 0 0 1px rgba(123, 97, 255, 0.2), 0 0 24px rgba(123, 97, 255, 0.25);
+        }
+
+        .legal-text-wrapper h2 {
             font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             margin-top: 2.5rem;
         }
 
-        .legal-text-wrapper h2:first-child {
+        .legal-text-wrapper h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .legal-text-wrapper h2:first-of-type {
             margin-top: 0;
         }
 
@@ -45,10 +71,27 @@
         .legal-text-wrapper ul {
             margin-bottom: 1.5rem;
             padding-left: 1.5rem;
+            list-style: disc;
+        }
+
+        .legal-text-wrapper li::marker {
+            color: var(--color-accent-secondary);
         }
 
         .legal-text-wrapper li {
             margin-bottom: 0.5rem;
+        }
+
+        .legal-text-wrapper a {
+            color: var(--color-accent-primary);
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            transition: color var(--transition-fast), opacity var(--transition-fast);
+        }
+
+        .legal-text-wrapper a:hover {
+            color: var(--color-accent-secondary);
         }
     </style>
 </head>
@@ -117,7 +160,7 @@
         </div>
         <div class="container">
             <div class="page-hero-content">
-                <span class="section-label" data-i18n="cookies-page-label">Prawne</span>
+                <span class="section-label" data-i18n="cookies-page-label">Informacje prawne</span>
                 <h1 class="page-title" data-i18n="cookies-page-title">Polityka Cookies</h1>
             </div>
         </div>
@@ -127,33 +170,47 @@
     <section class="privacy-content">
         <div class="container">
             <div class="legal-text-wrapper" data-i18n-html="cookies-policy-text">
-                <!-- Fallback Content in Ukrainian -->
-                <h2>1. Що таке файли Cookie?</h2>
-                <p>Файли Cookie — це невеликі текстові файли, які зберігаються на вашому пристрої при відвідуванні
-                    веб-сайту. Вони допомагають сайту запам'ятовувати ваші налаштування та покращувати роботу.</p>
+                <!-- Fallback Content (Polish) -->
+                <p><strong>Ostatnia aktualizacja:</strong> 4 lutego 2026</p>
+                <p>Niniejsza Polityka Cookies wyjaśnia, czym są pliki cookies oraz jak i w jakim celu korzysta z nich
+                    NexaCode.</p>
 
-                <h2>2. Типи файлів Cookie, які ми використовуємо</h2>
+                <h2>1. Czym są pliki cookies?</h2>
+                <p>Cookies to małe pliki tekstowe zapisywane na Twoim urządzeniu podczas korzystania ze stron
+                    internetowych. Mogą być również stosowane podobne technologie, które pomagają zapamiętać Twoje
+                    preferencje.</p>
+
+                <h2>2. Jakie rodzaje cookies wykorzystujemy</h2>
+                <p>Na naszej stronie mogą być używane następujące kategorie cookies:</p>
                 <ul>
-                    <li><strong>Необхідні:</strong> Важливі для правильної роботи сайту (наприклад, збереження
-                        налаштувань мови або згоди на використання cookies). Ці файли не можна вимкнути.</li>
-                    <li><strong>Аналітичні (Google Analytics):</strong> Допомагають нам зрозуміти, як відвідувачі
-                        взаємодіють із сайтом, збираючи анонімну статистику.</li>
-                    <li><strong>Маркетингові:</strong> Використовуються для відображення релевантної реклами (якщо
-                        застосовується).</li>
+                    <li><strong>Niezbędne:</strong> konieczne do prawidłowego działania strony i podstawowych funkcji
+                        (np. bezpieczeństwo, zapamiętanie wyboru języka).</li>
+                    <li><strong>Analityczne:</strong> pomagają nam zrozumieć, jak użytkownicy korzystają ze strony, aby ją
+                        ulepszać (np. Google Analytics).</li>
+                    <li><strong>Marketingowe:</strong> służą do pomiaru skuteczności kampanii i wyświetlania dopasowanych
+                        treści reklamowych – tylko jeśli wyrazisz zgodę.</li>
                 </ul>
 
-                <h2>3. Управління файлами Cookie</h2>
-                <p>Ви можете керувати налаштуваннями cookies через наш банер або налаштування вашого браузера. Ви можете
-                    в будь-який момент змінити свій вибір або видалити збережені cookies.</p>
+                <h2>3. Jak zarządzać cookies</h2>
+                <p>Możesz zaakceptować pliki cookies w banerze zgody lub zarządzać nimi w ustawieniach swojej
+                    przeglądarki (blokowanie, usuwanie, ograniczanie).</p>
 
-                <h3>Як вимкнути cookies у браузері:</h3>
+                <h3>Jak wyłączyć cookies w przeglądarce</h3>
                 <ul>
-                    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
-                    <li><a href="https://support.apple.com/uk-ua/guide/safari/sfri11471/mac" target="_blank">Safari</a>
-                    </li>
-                    <li><a href="https://support.mozilla.org/uk/kb/cookies-information-websites-store-on-your-computer"
-                            target="_blank">Firefox</a></li>
+                    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank"
+                            rel="noopener noreferrer">Google Chrome</a></li>
+                    <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
+                            target="_blank" rel="noopener noreferrer">Safari</a></li>
+                    <li><a href="https://support.mozilla.org/kb/cookies-information-websites-store-on-your-computer"
+                            target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                    <li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                            target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
                 </ul>
+
+                <h2>4. Skutki wyłączenia cookies</h2>
+                <p>Zablokowanie niezbędnych cookies może spowodować nieprawidłowe działanie niektórych funkcji strony. W
+                    przypadku cookies analitycznych i marketingowych ich wyłączenie nie wpływa na podstawowe korzystanie
+                    z serwisu.</p>
             </div>
         </div>
     </section>

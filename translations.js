@@ -762,127 +762,97 @@ const translations = {
         'popup-btn': 'Otrzymaj audyt',
         'popup-submit': 'Otrzymaj bezpłatny audyt',
         'popup-note': 'Bez karty kredytowej. Wyniki w 24h.',
-        'popup-gdpr': 'Я погоджуюсь з політикою конфіденційності',
-        'popup-email-placeholder': 'Ваш email',
-
-        // Privacy Policy
-        'privacy-page-label': 'Юридична інформація',
-        'privacy-page-title': 'Політика конфіденційності та Cookie',
-        'privacy-policy': 'Політика конфіденційності',
-        'privacy-policy-text': `
-            <h2>1. Вступ</h2>
-            <p>Ця Політика конфіденційності описує, як NexaCode (далі — «Ми», «Нас») збирає, використовує та захищає вашу персональну інформацію при використанні нашого веб-сайту.</p>
-            
-            <h2>2. Дані, які ми збираємо</h2>
-            <p>Ми можемо збирати наступні типи даних:</p>
-            <ul>
-                <li><strong>Дані форм:</strong> Ім'я, Email, Номер телефону та інші дані, які ви надаєте при заповненні контактних форм.</li>
-                <li><strong>Технічні дані:</strong> IP-адреса, тип браузера, тип пристрою, дані про відвідування сторінок (через Google Analytics).</li>
-            </ul>
-
-            <h2>3. Мета збору даних</h2>
-            <p>Ми використовуємо зібрані дані для наступних цілей:</p>
-            <ul>
-                <li>Надання послуг та відповідь на ваші запити;</li>
-                <li>Покращення роботи нашого веб-сайту та користувацького досвіду;</li>
-                <li>Маркетингові комунікації (за вашою згодою);</li>
-                <li>Аналіз відвідуваності сайту.</li>
-            </ul>
-
-            <h2>4. Термін зберігання даних</h2>
-            <p>Ми зберігаємо ваші персональні дані лише протягом часу, необхідного для досягнення цілей, зазначених у цій Політиці, якщо інше не передбачено законом.</p>
-
-            <h2>5. Ваші права</h2>
-            <p>Відповідно до GDPR, ви маєте право на:</p>
-            <ul>
-                <li>Доступ до своїх даних;</li>
-                <li>Виправлення неточних даних;</li>
-                <li>Видалення даних («право на забуття»);</li>
-                <li>Обмеження обробки даних;</li>
-                <li>Відкликання згоди на обробку даних.</li>
-            </ul>
-
-            <h2>6. Безпека даних</h2>
-            <p>Ми вживаємо всіх необхідних технічних та організаційних заходів для захисту ваших даних від несанкціонованого доступу, втрати або зміни.</p>
-
-            <h2>7. Контактна інформація</h2>
-            <p>Якщо у вас є питання щодо цієї Політики, зв'яжіться з нами: <a href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
-        `,
-        'cookies-page-label': 'Юридична інформація',
-        'cookies-page-title': 'Політика використання Cookie',
-        'cookies-policy-text': `
-            <h2>1. Що таке файли Cookie?</h2>
-            <p>Файли Cookie — це невеликі текстові файли, які зберігаються на вашому пристрої при відвідуванні веб-сайту. Вони допомагають сайту запам'ятовувати ваші налаштування та покращувати роботу.</p>
-
-            <h2>2. Типи файлів Cookie, які ми використовуємо</h2>
-            <ul>
-                <li><strong>Необхідні:</strong> Важливі для правильної роботи сайту (наприклад, збереження налаштувань мови або згоди на використання cookies). Ці файли не можна вимкнути.</li>
-                <li><strong>Аналітичні (Google Analytics):</strong> Допомагають нам зрозуміти, як відвідувачі взаємодіють із сайтом, збираючи анонімну статистику.</li>
-                <li><strong>Маркетингові:</strong> Використовуються для відображення релевантної реклами (якщо застосовується).</li>
-            </ul>
-
-            <h2>3. Управління файлами Cookie</h2>
-            <p>Ви можете керувати налаштуваннями cookies через наш банер або налаштування вашого браузера. Ви можете в будь-який момент змінити свій вибір або видалити збережені cookies.</p>
-            
-            <h3>Як вимкнути cookies у браузері:</h3>
-            <ul>
-                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
-                <li><a href="https://support.apple.com/uk-ua/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
-                <li><a href="https://support.mozilla.org/uk/kb/cookies-information-websites-store-on-your-computer" target="_blank">Firefox</a></li>
-            </ul>
-        `,
-
-        'cookie-text': 'Ми використовуємо файли cookie для покращення роботи сайту.',
-        'cookie-accept': 'Прийняти всі',
-        'cookie-decline': 'Відхилити',
-        'cookie-settings': 'Налаштування',
-        'cookie-necessary': 'Необхідні',
-        'cookie-analytics': 'Аналітика',
+        'popup-gdpr': 'Akceptuję politykę prywatności',
+        'popup-email-placeholder': 'Twój email',
 
         // Privacy Policy
         'privacy-page-label': 'Informacje prawne',
-        'privacy-page-title': 'Polityka Prywatności i Cookies',
+        'privacy-page-title': 'Polityka Prywatności',
         'privacy-policy': 'Polityka prywatności',
         'privacy-policy-text': `
-            <h2>1. Postanowienia ogólne</h2>
-            <p>Niniejsza Polityka Prywatności określa zasady gromadzenia, przetwarzania i wykorzystywania danych osobowych użytkowników serwisu NexaCode.</p>
-            <p>Korzystając z naszej strony, wyrażasz zgodę na postanowienia zawarte w niniejszej Polityce.</p>
-            
-            <h2>2. Gromadzenie danych</h2>
-            <p>Możemy gromadzić dane osobowe, które dobrowolnie nam przekazujesz, takie jak:</p>
+            <p><strong>Ostatnia aktualizacja:</strong> 4 lutego 2026</p>
+            <p>NexaCode ("my") szanuje Twoją prywatność. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy i chronimy dane osobowe w związku z korzystaniem z naszej strony internetowej oraz kontaktem z nami. Przetwarzamy dane zgodnie z RODO (GDPR) oraz innymi właściwymi przepisami.</p>
+
+            <h2>1. Jakie dane zbieramy</h2>
+            <p>Możemy zbierać:</p>
             <ul>
-                <li>Imię i nazwisko;</li>
-                <li>Adres e-mail;</li>
-                <li>Numer telefonu.</li>
+                <li><strong>Dane z formularzy:</strong> imię i nazwisko (lub nazwa), adres e‑mail, numer telefonu, treść wiadomości oraz inne informacje, które dobrowolnie podasz.</li>
+                <li><strong>Dane techniczne:</strong> adres IP, informacje o przeglądarce i urządzeniu, logi serwera, przybliżona lokalizacja (na podstawie IP) oraz identyfikatory online.</li>
+                <li><strong>Dane z plików cookies:</strong> informacje niezbędne do działania strony oraz – za zgodą – dane analityczne lub marketingowe.</li>
             </ul>
 
-            <h2>3. Pliki Cookies</h2>
-            <p>Stosujemy pliki cookies w celu zapewnienia poprawnego działania strony, zapamiętywania preferencji użytkownika oraz w celach analitycznych (Google Analytics).</p>
-            <p>Możesz zarządzać ustawieniami cookies w swojej przeglądarce internetowej.</p>
+            <h2>2. Cele i podstawy prawne przetwarzania</h2>
+            <p>Przetwarzamy dane w następujących celach:</p>
+            <ul>
+                <li>obsługa zapytań i <strong>konsultacje</strong> (w tym działania przed zawarciem umowy);</li>
+                <li>świadczenie usług IT, w tym tworzenie stron internetowych, chatbotów i <strong>rozwiązań AI</strong>;</li>
+                <li>zapewnienie bezpieczeństwa oraz prawidłowego działania strony;</li>
+                <li>analityka i rozwój serwisu (np. statystyki odwiedzin);</li>
+                <li>marketing i kontakt handlowy – wyłącznie, gdy wyrazisz na to zgodę.</li>
+            </ul>
+            <p>Podstawą prawną może być: Twoja zgoda (art. 6 ust. 1 lit. a RODO), niezbędność do zawarcia lub wykonania umowy (art. 6 ust. 1 lit. b), nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f) albo obowiązek prawny (art. 6 ust. 1 lit. c).</p>
 
-            <h2>4. Bezpieczeństwo danych</h2>
-            <p>Wdrażamy odpowiednie środki techniczne i organizacyjne, aby chronić Twoje dane przed nieuprawnionym dostępem.</p>
+            <h2>3. Odbiorcy danych</h2>
+            <p>Możemy korzystać z zaufanych dostawców usług (np. hosting, narzędzia komunikacji, analityka, podwykonawcy). Podmioty te przetwarzają dane w naszym imieniu na podstawie umów powierzenia i zgodnie z naszymi instrukcjami. Nie sprzedajemy danych osobowych.</p>
 
-            <h2>5. Kontakt</h2>
-            <p>W przypadku pytań dotyczących polityki prywatności, prosimy o kontakt poprzez formularz na stronie.</p>
+            <h2>4. Przechowywanie danych</h2>
+            <p>Przechowujemy dane tylko tak długo, jak jest to niezbędne do realizacji wskazanych celów, a następnie usuwamy je lub anonimizujemy, o ile przepisy nie wymagają dłuższego przechowywania.</p>
+
+            <h2>5. Bezpieczeństwo</h2>
+            <p>Stosujemy odpowiednie środki techniczne i organizacyjne (m.in. kontrola dostępu, szyfrowanie transmisji, kopie zapasowe) w celu ochrony danych przed utratą, nieuprawnionym dostępem lub ujawnieniem.</p>
+
+            <h2>6. Twoje prawa (RODO)</h2>
+            <p>Masz prawo do:</p>
+            <ul>
+                <li>dostępu do danych i uzyskania ich kopii;</li>
+                <li>sprostowania danych;</li>
+                <li>usunięcia danych ("prawo do bycia zapomnianym");</li>
+                <li>ograniczenia przetwarzania;</li>
+                <li>przenoszenia danych;</li>
+                <li>wniesienia sprzeciwu wobec przetwarzania;</li>
+                <li>wycofania zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania sprzed wycofania);</li>
+                <li>wniesienia skargi do właściwego organu nadzorczego.</li>
+            </ul>
+
+            <h2>7. Kontakt</h2>
+            <p>Aby skorzystać ze swoich praw lub zadać pytanie, skontaktuj się z nami przez formularz kontaktowy na stronie lub napisz na <a href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
         `,
-        'cookies-page-label': 'Prawne',
+        'cookies-page-label': 'Informacje prawne',
         'cookies-page-title': 'Polityka Cookies',
         'cookies-policy-text': `
+            <p><strong>Ostatnia aktualizacja:</strong> 4 lutego 2026</p>
+            <p>Niniejsza Polityka Cookies wyjaśnia, czym są pliki cookies oraz jak i w jakim celu korzysta z nich NexaCode.</p>
+
             <h2>1. Czym są pliki cookies?</h2>
-            <p>Pliki cookies (tzw. "ciasteczka") to małe pliki tekstowe, które są zapisywane na Twoim urządzeniu (komputerze, smartfonie, tablecie) podczas przeglądania stron internetowych.</p>
-            
-            <h2>2. Jakie pliki cookies wykorzystujemy?</h2>
-            <p>Wykorzystujemy następujące rodzaje plików cookies:</p>
+            <p>Cookies to małe pliki tekstowe zapisywane na Twoim urządzeniu podczas korzystania ze stron internetowych. Mogą być również stosowane podobne technologie, które pomagają zapamiętać Twoje preferencje.</p>
+
+            <h2>2. Jakie rodzaje cookies wykorzystujemy</h2>
+            <p>Na naszej stronie mogą być używane następujące kategorie cookies:</p>
             <ul>
-                <li><strong>Niezbędne:</strong> Konieczne do prawidłowego funkcjonowania strony.</li>
-                <li><strong>Analityczne:</strong> Pozwalają nam badać ruch na stronie i zachowania użytkowników (np. Google Analytics), co pomaga nam ulepszać nasze usługi.</li>
-                <li><strong>Funkcjonalne:</strong> Umożliwiają zapamiętanie Twoich preferencji, np. wyboru języka.</li>
+                <li><strong>Niezbędne:</strong> konieczne do prawidłowego działania strony i podstawowych funkcji (np. bezpieczeństwo, zapamiętanie wyboru języka).</li>
+                <li><strong>Analityczne:</strong> pomagają nam zrozumieć, jak użytkownicy korzystają ze strony, aby ją ulepszać (np. Google Analytics).</li>
+                <li><strong>Marketingowe:</strong> służą do pomiaru skuteczności kampanii i wyświetlania dopasowanych treści reklamowych – tylko jeśli wyrazisz zgodę.</li>
             </ul>
 
-            <h2>3. Zarządzanie plikami cookies</h2>
-            <p>Większość przeglądarek internetowych domyślnie akceptuje pliki cookies. Możesz w każdej chwili zmienić ustawienia swojej przeglądarki, aby blokować cookies lub być informowanym o ich każdorazowym przesłaniu. Szczegółowe informacje o możliwości i sposobach obsługi plików cookies dostępne są w ustawieniach oprogramowania (przeglądarki internetowej).</p>
+            <h2>3. Jak zarządzać cookies</h2>
+            <p>Możesz zaakceptować pliki cookies w banerze zgody lub zarządzać nimi w ustawieniach swojej przeglądarki (blokowanie, usuwanie, ograniczanie).</p>
+
+            <h3>Jak wyłączyć cookies w przeglądarce</h3>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+                <li><a href="https://support.mozilla.org/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+            </ul>
+
+            <h2>4. Skutki wyłączenia cookies</h2>
+            <p>Zablokowanie niezbędnych cookies może spowodować nieprawidłowe działanie niektórych funkcji strony. W przypadku cookies analitycznych i marketingowych ich wyłączenie nie wpływa na podstawowe korzystanie z serwisu.</p>
         `,
+
+        // Cookie Consent Banner
+        'cookie-text': 'Używamy plików cookie, aby zapewnić prawidłowe działanie strony i ulepszać nasze usługi.',
+        'cookie-accept': 'Zaakceptuj',
+        'cookie-settings': 'Ustawienia',
     },
 
     'uk': { // Ukrainian
@@ -1651,65 +1621,94 @@ const translations = {
 
         // Privacy Policy
         'privacy-page-label': 'Юридична інформація',
-        'privacy-page-title': 'Політика конфіденційності та Cookie',
+        'privacy-page-title': 'Політика конфіденційності',
         'privacy-policy': 'Політика конфіденційності',
         'privacy-policy-text': `
-            <h2>1. Загальні положення</h2>
-            <p>Ця Політика конфіденційності визначає принципи збору, обробки та використання персональних даних користувачів сервісу NexaCode.</p>
-            <p>Використовуючи наш веб-сайт, ви погоджуєтеся з положеннями цієї Політики.</p>
-            
-            <h2>2. Збір персональних даних</h2>
-            <p>Ми можемо збирати наступні дані:</p>
+            <p><strong>Останнє оновлення:</strong> 4 лютого 2026</p>
+            <p>NexaCode («ми») поважає вашу конфіденційність. У цій Політиці конфіденційності пояснюється, які дані ми збираємо, для чого їх використовуємо та як ви можете реалізувати свої права. Ми обробляємо персональні дані відповідно до GDPR та інших застосовних норм.</p>
+
+            <h2>1. Збір даних</h2>
+            <p>Ми можемо збирати:</p>
             <ul>
-                <li>Ім'я та прізвище;</li>
-                <li>Контактний номер телефону;</li>
-                <li>Адреса електронної пошти;</li>
-                <li>Інші дані, які ви добровільно надаєте через форми на Сайті.</li>
+                <li><strong>Дані з форм:</strong> ім’я, електронна пошта, номер телефону, текст повідомлення та інша інформація, яку ви добровільно надаєте через форми на сайті.</li>
+                <li><strong>Технічні дані:</strong> IP‑адреса, тип/версія браузера, тип пристрою, налаштування мови, журнали доступу та відомості про відвідані сторінки.</li>
+                <li><strong>Cookies:</strong> ідентифікатори та налаштування, що зберігаються на вашому пристрої (детальніше — у «Політиці файлів cookie»).</li>
             </ul>
 
-            <h2>3. Використання файлів Cookies</h2>
-            <p>Ми використовуємо файли cookie для покращення роботи Сайту. Cookie – це невеликі текстові файли, які зберігаються на вашому пристрої.</p>
-            <p>Ми використовуємо:</p>
+            <h2>2. Мета обробки</h2>
+            <p>Ми використовуємо дані зокрема для:</p>
             <ul>
-                <li><strong>Необхідні cookie:</strong> для коректної роботи основних функцій сайту.</li>
-                <li><strong>Аналітичні cookie:</strong> для збору статистики відвідувань (Google Analytics).</li>
-            </ul>
-            <p>Ви можете вимкнути файли cookie у налаштуваннях вашого браузера.</p>
-
-            <h2>4. Мета обробки даних</h2>
-            <p>Ваші дані використовуються для:</p>
-            <ul>
-                <li>Надання послуг та консультацій;</li>
-                <li>Зв'язку з вами щодо вашого запиту;</li>
-                <li>Покращення роботи Сайту.</li>
+                <li><strong>консультацій</strong> та відповіді на ваші запити;</li>
+                <li>надання IT‑послуг, розробки сайтів, чат‑ботів та <strong>AI‑рішень</strong>;</li>
+                <li>покращення UX, стабільності та функціональності сайту;</li>
+                <li>забезпечення безпеки та запобігання зловживанням;</li>
+                <li>маркетингових повідомлень — лише за вашою згодою.</li>
             </ul>
 
-            <h2>5. Передача даних третім особам</h2>
-            <p>Ми не передаємо ваші персональні дані третім особам, за винятком випадків, передбачених законодавством, або якщо це необхідно для надання послуг (наприклад, хостинг-провайдери, сервіси аналітики).</p>
+            <h2>3. Правові підстави (GDPR)</h2>
+            <p>Ми обробляємо дані на підставі вашої згоди, необхідності виконання договору або вжиття заходів перед його укладенням, нашого законного інтересу (наприклад, безпека та розвиток сайту) та/або виконання юридичного обов’язку.</p>
 
-            <h2>6. Безпека даних</h2>
-            <p>Ми вживаємо всіх необхідних заходів для захисту ваших даних від несанкціонованого доступу, зміни або знищення.</p>
+            <h2>4. Передача даних та отримувачі</h2>
+            <p>Ми можемо залучати постачальників послуг (наприклад, хостинг, аналітика, інструменти комунікації, підрядники), які обробляють дані за нашими інструкціями та з належними гарантіями конфіденційності. Ми не продаємо ваші персональні дані.</p>
 
-            <h2>7. Ваші права</h2>
-            <p>Ви маєте право на доступ до своїх даних, їх виправлення, видалення або обмеження обробки. Для цього зв'яжіться з нами через сторінку Контакти.</p>
+            <h2>5. Зберігання даних</h2>
+            <p>Ми зберігаємо персональні дані лише стільки, скільки це потрібно для досягнення цілей, описаних у цій Політиці, після чого видаляємо або знеособлюємо їх, якщо інше не вимагається законом.</p>
+
+            <h2>6. Безпека</h2>
+            <p>Ми застосовуємо технічні та організаційні заходи захисту (зокрема контроль доступу, шифрування передачі даних, резервне копіювання та моніторинг), щоб запобігти несанкціонованому доступу, втраті або зміні даних.</p>
+
+            <h2>7. Ваші права (GDPR)</h2>
+            <p>Ви маєте право:</p>
+            <ul>
+                <li>отримати доступ до даних та копію;</li>
+                <li>виправити неточні дані;</li>
+                <li>вимагати видалення даних («право на забуття»);</li>
+                <li>обмежити обробку;</li>
+                <li>заперечити проти обробки;</li>
+                <li>отримати дані у переносимому форматі (право на перенесення);</li>
+                <li>відкликати згоду у будь-який момент (без впливу на законність обробки до відкликання);</li>
+                <li>подати скаргу до компетентного наглядового органу.</li>
+            </ul>
+
+            <h2>8. Контакти</h2>
+            <p>Для запитів щодо конфіденційності та реалізації прав скористайтеся контактною формою на сайті або напишіть на <a href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
         `,
         'cookies-page-label': 'Юридична інформація',
-        'cookies-page-title': 'Політика Cookie',
+        'cookies-page-title': 'Політика файлів cookie',
         'cookies-policy-text': `
-            <h2>1. Що таке файли cookie?</h2>
-            <p>Файли cookie - це невеликі текстові файли, які зберігаються на вашому пристрої (комп'ютері, смартфоні, планшеті) під час перегляду веб-сайтів.</p>
-            
-            <h2>2. Які файли cookie ми використовуємо?</h2>
-            <p>Ми використовуємо наступні типи файлів cookie:</p>
+            <p><strong>Останнє оновлення:</strong> 4 лютого 2026</p>
+            <p>Ця Політика файлів cookie пояснює, як NexaCode використовує cookies та подібні технології на веб‑сайті.</p>
+
+            <h2>1. Що таке cookie?</h2>
+            <p>Cookie — це невеликі текстові файли, які зберігаються на вашому пристрої (комп’ютері, смартфоні, планшеті) під час перегляду веб‑сайтів. Вони допомагають сайту працювати коректно та запам’ятовувати ваші налаштування.</p>
+
+            <h2>2. Типи cookie, які ми використовуємо</h2>
+            <p>Ми можемо використовувати такі категорії cookie:</p>
             <ul>
-                <li><strong>Необхідні:</strong> Потрібні для правильної роботи веб-сайту.</li>
-                <li><strong>Аналітичні:</strong> Дозволяють нам аналізувати трафік на веб-сайті та поведінку користувачів (наприклад, Google Analytics), що допомагає нам покращувати наші послуги.</li>
-                <li><strong>Функціональні:</strong> Дозволяють запам'ятовувати ваші налаштування, наприклад, вибір мови.</li>
+                <li><strong>Необхідні:</strong> потрібні для базової роботи сайту (наприклад, безпека, збереження вибору мови).</li>
+                <li><strong>Аналітичні:</strong> допомагають нам розуміти, як користувачі взаємодіють із сайтом (наприклад, Google Analytics), щоб покращувати його.</li>
+                <li><strong>Маркетингові:</strong> використовуються для вимірювання ефективності кампаній та показу релевантної реклами — лише за вашою згодою.</li>
             </ul>
 
-            <h2>3. Управління файлами cookie</h2>
-            <p>Більшість веб-браузерів за замовчуванням приймають файли cookie. Ви можете в будь-який момент змінити налаштування свого браузера, щоб блокувати cookie або отримувати сповіщення про кожне їх надсилання. Детальна інформація про можливості та способи обробки файлів cookie доступна в налаштуваннях програмного забезпечення (веб-браузера).</p>
+            <h2>3. Як керувати cookie</h2>
+            <p>Ви можете керувати cookies через банер згоди або налаштування вашого браузера (блокування, видалення, обмеження). Зверніть увагу: блокування необхідних cookie може вплинути на роботу сайту.</p>
+
+            <h3>Як вимкнути cookies у браузері</h3>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+                <li><a href="https://support.mozilla.org/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+            </ul>
+
+            <h2>4. Наслідки вимкнення cookie</h2>
+            <p>Якщо ви вимкнете cookies, деякі функції сайту можуть працювати некоректно. Вимкнення аналітичних та маркетингових cookie не впливає на базове користування сайтом.</p>
         `,
+
+        // Cookie Consent Banner
+        'cookie-text': 'Ми використовуємо файли cookie, щоб забезпечити роботу сайту та покращити ваш досвід.',
+        'cookie-accept': 'Прийняти все',
+        'cookie-settings': 'Налаштування',
     },
 
     'en': { // English
@@ -2485,47 +2484,83 @@ const translations = {
 
         // Privacy Policy
         'privacy-page-label': 'Legal Information',
-        'privacy-page-title': 'Privacy & Cookie Policy',
+        'privacy-page-title': 'Privacy Policy',
         'privacy-policy': 'Privacy Policy',
         'privacy-policy-text': `
-            <h2>1. General Provisions</h2>
-            <p>This Privacy Policy outlines how NexaCode collects, processes, and uses personal data of website users.</p>
-            <p>By using our website, you agree to the terms of this Policy.</p>
-            
-            <h2>2. Data Collection</h2>
-            <p>We may collect personal data that you voluntarily provide to us, such as:</p>
+            <p><strong>Last updated:</strong> February 4, 2026</p>
+            <p>This Privacy Policy explains how NexaCode ("we", "us") collects and processes personal data when you use our website and contact us. We handle personal data in accordance with the GDPR and other applicable laws.</p>
+
+            <h2>1. Data We Collect</h2>
+            <p>We may collect:</p>
             <ul>
-                <li>Name and surname;</li>
-                <li>Email address;</li>
-                <li>Phone number.</li>
+                <li><strong>Form data:</strong> name, email address, phone number, message content, and any other information you choose to provide.</li>
+                <li><strong>Technical data:</strong> IP address, browser and device information, language settings, server logs, and pages you visit.</li>
+                <li><strong>Cookies:</strong> identifiers and preferences stored on your device (see our Cookies Policy for details).</li>
             </ul>
 
-            <h2>3. Cookies</h2>
-            <p>We use cookies to improve our services, remember user preferences, and analyze website traffic (Google Analytics).</p>
-            <p>You can manage cookie settings in your browser.</p>
+            <h2>2. Purposes of Processing</h2>
+            <p>We use personal data to:</p>
+            <ul>
+                <li>respond to inquiries and provide <strong>consultations</strong>;</li>
+                <li>deliver IT services, including website development, chatbots, and <strong>AI services</strong>;</li>
+                <li>improve UX, content, and website performance;</li>
+                <li>ensure security and prevent abuse;</li>
+                <li>send marketing communications — only with your consent.</li>
+            </ul>
 
-            <h2>4. Data Security</h2>
-            <p>We implement appropriate technical and organizational measures to protect your data against unauthorized access.</p>
+            <h2>3. Legal Bases (GDPR)</h2>
+            <p>We process personal data based on one or more legal bases: your consent, performance of a contract or steps prior to entering into a contract, our legitimate interests (e.g., security and improvement of the website), and/or compliance with legal obligations.</p>
 
-            <h2>5. Contact</h2>
-            <p>If you have any questions about our privacy policy, please contact us via the contact form on the website.</p>
+            <h2>4. Data Sharing</h2>
+            <p>We may share data with trusted service providers acting as processors (e.g., hosting, analytics, communication tools, subcontractors) when necessary to provide our services. We do not sell your personal data.</p>
+
+            <h2>5. Storage and Retention</h2>
+            <p>We store personal data only for as long as necessary to fulfill the purposes described in this Policy, after which we delete or anonymize it, unless a longer retention period is required by law.</p>
+
+            <h2>6. Security</h2>
+            <p>We apply appropriate technical and organizational measures to protect personal data (including access controls, encrypted transmission, backups, and monitoring). However, no method of transmission or storage is 100% secure.</p>
+
+            <h2>7. Your Rights</h2>
+            <p>Under the GDPR, you may have the right to access, rectify, erase, restrict processing, object to processing, data portability, and withdraw consent at any time (without affecting the lawfulness of processing before withdrawal). You also have the right to lodge a complaint with a supervisory authority.</p>
+
+            <h2>8. Contact</h2>
+            <p>To exercise your rights or ask questions, use the contact form on our website or email us at <a href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
         `,
-        'cookies-page-label': 'Legal',
+        'cookies-page-label': 'Legal Information',
         'cookies-page-title': 'Cookies Policy',
         'cookies-policy-text': `
-            <h2>1. What are cookies?</h2>
-            <p>Cookies are small text files that are stored on your device (computer, smartphone, tablet) when you browse websites.</p>
-            
-            <h2>2. What cookies do we use?</h2>
-            <p>We use the following types of cookies:</p>
+            <p><strong>Last updated:</strong> February 4, 2026</p>
+            <p>This Cookies Policy explains what cookies are and how NexaCode uses them on the website.</p>
+
+            <h2>1. What Are Cookies?</h2>
+            <p>Cookies are small text files stored on your device (computer, smartphone, tablet) when you browse websites. They help the website work properly and can provide information about how the site is used.</p>
+
+            <h2>2. Types of Cookies We Use</h2>
+            <p>We may use the following categories of cookies:</p>
             <ul>
-                <li><strong>Necessary:</strong> Required for the website to function properly.</li>
-                <li><strong>Analytical:</strong> Allow us to analyze website traffic and user behavior (e.g., Google Analytics), which helps us improve our services.</li>
-                <li><strong>Functional:</strong> Allow us to remember your preferences, such as language selection.</li>
+                <li><strong>Necessary:</strong> required for basic website functionality (e.g., security, language preference).</li>
+                <li><strong>Analytical:</strong> help us understand how visitors use the site (e.g., Google Analytics) so we can improve it.</li>
+                <li><strong>Marketing:</strong> used to measure marketing campaigns and deliver relevant advertising — only if you consent.</li>
             </ul>
 
-            <h2>3. Managing cookies</h2>
-            <p>Most web browsers accept cookies by default. You can change your browser settings at any time to block cookies or be notified each time they are sent. Detailed information on how to handle cookies is available in your software (browser) settings.</p>
+            <h2>3. How to Manage Cookies</h2>
+            <p>You can manage cookies via our consent banner and through your browser settings (block, delete, or limit cookies). Please note that blocking necessary cookies may affect website functionality.</p>
+
+            <h3>Browser settings</h3>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+                <li><a href="https://support.mozilla.org/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+            </ul>
+
+            <h2>4. Effects of Disabling Cookies</h2>
+            <p>If you disable cookies, some features may not work as intended. Disabling analytical and marketing cookies does not affect basic use of the website.</p>
         `,
+
+        // Cookie Consent Banner
+        'cookie-text': 'We use cookies to ensure the website works properly and to improve your experience.',
+        'cookie-accept': 'Accept All',
+        'cookie-settings': 'Settings',
     }
 };
