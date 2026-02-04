@@ -850,8 +850,8 @@ const translations = {
         `,
 
         // Cookie Consent Banner
-        'cookie-text': 'Używamy plików cookie, aby zapewnić prawidłowe działanie strony i ulepszać nasze usługi.',
-        'cookie-accept': 'Zaakceptuj',
+        'cookie-text': 'Używamy plików cookie, aby zapewnić prawidłowe działanie strony i poprawić Twoje doświadczenie.',
+        'cookie-accept': 'Zaakceptuj wszystko',
         'cookie-settings': 'Ustawienia',
     },
 
@@ -1706,8 +1706,8 @@ const translations = {
         `,
 
         // Cookie Consent Banner
-        'cookie-text': 'Ми використовуємо файли cookie, щоб забезпечити роботу сайту та покращити ваш досвід.',
-        'cookie-accept': 'Прийняти все',
+        'cookie-text': 'Ми використовуємо файли cookie, щоб забезпечити коректну роботу сайту та покращити ваш досвід.',
+        'cookie-accept': 'Прийняти всі',
         'cookie-settings': 'Налаштування',
     },
 
