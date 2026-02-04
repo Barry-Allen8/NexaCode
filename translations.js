@@ -9,7 +9,7 @@ const translations = {
         'pricing': 'Ceny',
         'contact': 'Kontakt',
         'order-button': 'Zamów',
-        
+
         // Hero
         'working-with-ai': 'Pracujemy z technologiami AI',
         'hero-title': 'Tworzymy strony internetowe i chatboty dla Twojego biznesu',
@@ -20,7 +20,7 @@ const translations = {
         'satisfied-clients': 'Klientów',
         'years-experience': 'Lat doświadczenia',
         'scroll-down': 'Przewiń w dół',
-        
+
         // Services Preview
         'our-services-label': 'Nasze usługi',
         'what-we-can-do': 'Co możemy dla Ciebie zrobić',
@@ -36,7 +36,7 @@ const translations = {
         'learn-more': 'Dowiedz się więcej →',
         'popular': 'Popularne',
         'view-all-services': 'Zobacz wszystkie usługi',
-        
+
         // Why Us
         'why-us-label': 'Dlaczego my',
         'how-we-work-title': 'Pracujemy na wynik, a nie na ilość godzin',
@@ -48,7 +48,7 @@ const translations = {
         'learn-more-about-us': 'Dowiedz się więcej o nas',
         'satisfied-clients-stat': 'Zadowolonych klientów',
         'tech-support': 'Wsparcie techniczne',
-        
+
         // Process
         'work-process': 'Proces pracy',
         'how-we-work-process': 'Jak pracujemy',
@@ -61,7 +61,7 @@ const translations = {
         'step-development-desc': 'Tworzymy design i implementujemy funkcjonalność',
         'step-launch': 'Uruchomienie',
         'step-launch-desc': 'Testujemy, uruchamiamy i szkolimy Cię',
-        
+
         // Testimonials
         'reviews': 'Opinie',
         'what-clients-say': 'Co mówią nasi klienci',
@@ -74,13 +74,13 @@ const translations = {
         'testimonial-3': '"Rozwiązanie AI, które nam wdrożyli, zautomatyzowało 70% rutynowej pracy. Teraz możemy skupić się na rozwoju biznesu zamiast na zadaniach operacyjnych."',
         'testimonial-3-name': 'Piotr Wiśniewski',
         'testimonial-3-role': 'COO, LogiTrans',
-        
+
         // CTA
         'cta-title': 'Gotowi do rozpoczęcia?',
         'cta-description': 'Uzyskaj bezpłatną konsultację i dowiedz się, jak możemy pomóc Twojej firmie',
         'contact-us-cta': 'Skontaktuj się z nami',
         'view-prices-cta': 'Zobacz ceny',
-        
+
         // Footer
         'footer-tagline': 'Tworzymy cyfrowe rozwiązania dla biznesu',
         'footer-services-heading': 'Usługi',
@@ -88,7 +88,7 @@ const translations = {
         'footer-company-heading': 'Firma',
         'footer-follow-us-heading': 'Śledź nas',
         'footer-copyright': '© 2025 NexaCode. Wszystkie prawa zastrzeżone.',
-        
+
         // Services Page
         'services-page-title': 'Kompleksowe rozwiązania dla Twojego biznesu',
         'services-page-description': 'Od prostego landing page\'a po złożone systemy AI — pomożemy zrealizować każdy pomysł',
@@ -113,7 +113,7 @@ const translations = {
         'websites-feature-4': 'Szybkie ładowanie (Core Web Vitals)',
         'websites-feature-5': 'Integracja z CRM i analityką',
         'order-website': 'Zamów stronę',
-        
+
         // Chatbots
         'chatbots-full-description': 'Inteligentne boty do automatyzacji komunikacji z klientami. Działają 24/7, odpowiadają na pytania, przyjmują zamówienia i integrują się z Twoimi systemami.',
         'telegram-bots': 'Boty Telegram',
@@ -132,7 +132,7 @@ const translations = {
         'user-question': 'Jakie usługi oferujecie?',
         'bot-answer': 'Tworzymy strony internetowe, chatboty i rozwiązania AI. Co Cię interesuje?',
         'write-message': 'Napisz wiadomość...',
-        
+
         // AI Solutions
         'ai-solutions-full-description': 'Wdrażamy sztuczną inteligencję w Twoje procesy biznesowe. Od prostej generacji treści po złożone systemy analizy i prognozowania.',
         'ai-assistants': 'Asystenci AI',
@@ -149,7 +149,7 @@ const translations = {
         'order-ai-solution': 'Zamów rozwiązanie AI',
         'routine-work': 'Rutynowej pracy',
         'productivity': 'Produktywności',
-        
+
         // Automation
         'automation-full-description': 'Konfigurujemy integracje między Twoimi usługami i automatyzujemy procesy pracy. Oszczędzaj czas na rutynowych zadaniach.',
         'api-integrations': 'Integracje API',
@@ -167,7 +167,7 @@ const translations = {
         'form': 'Formularz',
         'payment': 'Płatność',
         'delivery': 'Dostawa',
-        
+
         // Mobile Apps
         'mobile-apps-title': 'Aplikacje mobilne',
         'mobile-apps-short-desc': 'PWA i aplikacje cross-platform dla iOS i Android',
@@ -182,7 +182,7 @@ const translations = {
         'mobile-feature-3': 'Tryb offline',
         'mobile-feature-4': 'Integracja z urządzeniem',
         'order-mobile-app': 'Zamów aplikację',
-        
+
         // E-commerce
         'ecommerce-title': 'E-commerce',
         'ecommerce-short-desc': 'Sklepy internetowe z płatnościami i systemami lojalnościowymi',
@@ -200,7 +200,7 @@ const translations = {
         'ecommerce-feature-4': 'Systemy lojalnościowe',
         'order-ecommerce': 'Zamów sklep',
         'items': 'produkty',
-        
+
         // Analytics
         'analytics-title': 'Analityka i dashboardy',
         'analytics-short-desc': 'BI dashboardy, Google Analytics, systemy CRM',
@@ -216,7 +216,7 @@ const translations = {
         'analytics-feature-3': 'Integracja z różnymi źródłami danych',
         'analytics-feature-4': 'Prognozowanie i trendy',
         'order-analytics': 'Zamów analitykę',
-        
+
         // Cybersecurity
         'security-title': 'Cyberbezpieczeństwo',
         'security-short-desc': 'Audyty bezpieczeństwa, SSL, ochrona DDoS',
@@ -233,7 +233,7 @@ const translations = {
         'security-feature-3': 'Raporty o zagrożeniach',
         'security-feature-4': 'Backup i recovery',
         'order-security': 'Zamów audyt',
-        
+
         // Digital Marketing
         'marketing-title': 'Digital Marketing',
         'marketing-short-desc': 'SEO, reklama PPC, email marketing',
@@ -249,7 +249,7 @@ const translations = {
         'marketing-feature-3': 'Automatyzacja SMM',
         'marketing-feature-4': 'Analityka i raporty ROI',
         'order-marketing': 'Zamów marketing',
-        
+
         // UX/UI Design
         'design-title': 'UX/UI Design',
         'design-short-desc': 'Prototypy, design systemy, audyty UX',
@@ -265,7 +265,7 @@ const translations = {
         'design-feature-3': 'Responsywny design',
         'design-feature-4': 'Testy użyteczności',
         'order-design': 'Zamów design',
-        
+
         // Voice Assistants
         'voice-title': 'Asystenci głosowi',
         'voice-short-desc': 'Boty głosowe, IVR, integracje z Alexa',
@@ -281,7 +281,7 @@ const translations = {
         'voice-feature-4': 'Analityka rozmów',
         'order-voice': 'Zamów bota głosowego',
         'voice-listening': 'Słucham...',
-        
+
         // Video & Content
         'video-title': 'Wideo i animacje',
         'video-short-desc': 'Wideo promocyjne, animacje webowe, 3D',
@@ -297,7 +297,7 @@ const translations = {
         'video-feature-3': 'Optymalizacja dla web',
         'video-feature-4': 'Różne formaty',
         'order-video': 'Zamów wideo',
-        
+
         // Technical Support
         'support-title': 'Wsparcie techniczne',
         'support-short-desc': 'Obsługa stron, hosting, backup, monitoring',
@@ -316,7 +316,7 @@ const translations = {
         'support-feature-4': 'Raporty miesięczne',
         'order-support': 'Zamów wsparcie',
         'all-systems-online': 'Wszystkie systemy działają',
-        
+
         // Training & Consulting
         'consulting-title': 'Szkolenia i konsulting',
         'consulting-short-desc': 'Szkolenia AI, konsulting IT, audyty',
@@ -332,12 +332,12 @@ const translations = {
         'consulting-feature-3': 'Materiały szkoleniowe',
         'consulting-feature-4': 'Wsparcie po szkoleniu',
         'order-consulting': 'Zamów konsultację',
-        
+
         // Services CTA
         'not-found-service-title': 'Nie znalazłeś tego, czego potrzebujesz?',
         'not-found-service-description': 'Opowiedz nam o swoim projekcie — znajdziemy najlepsze rozwiązanie',
         'get-consultation': 'Uzyskaj konsultację',
-        
+
         // About Page
         'about-page-title': 'O nas',
         'about-intro-title': 'Pomagamy firmom rozwijać się dzięki technologii',
@@ -381,7 +381,7 @@ const translations = {
         'mobile-apps': 'Mobile',
         'ready-to-work-title': 'Gotowi do współpracy?',
         'ready-to-work-description': 'Opowiedz nam o swoim projekcie — z przyjemnością pomożemy',
-        
+
         // Pricing Page
         'tariffs': 'Cennik',
         'pricing-page-title': 'Przejrzyste ceny bez ukrytych opłat',
@@ -494,7 +494,7 @@ const translations = {
         'get-quote': 'Uzyskaj wycenę',
         'additional-services-title': 'Dodatkowe usługi',
         'additional-services-desc': 'Kompleksowe wsparcie dla Twojego biznesu',
-        
+
         // Contact Page
         'contact-page-title': 'Kontakt',
         'lets-talk-about-project': 'Porozmawiajmy o Twoim projekcie',
@@ -764,6 +764,51 @@ const translations = {
         'popup-note': 'Bez karty kredytowej. Wyniki w 24h.',
         'popup-gdpr': 'Akceptuje polityke prywatnosci',
         'popup-email-placeholder': 'Twoj email',
+
+        // Privacy Policy
+        'privacy-page-label': 'Informacje prawne',
+        'privacy-page-title': 'Polityka Prywatności i Cookies',
+        'privacy-policy': 'Polityka prywatności',
+        'privacy-policy-text': `
+            <h2>1. Postanowienia ogólne</h2>
+            <p>Niniejsza Polityka Prywatności określa zasady gromadzenia, przetwarzania i wykorzystywania danych osobowych użytkowników serwisu NexaCode.</p>
+            <p>Korzystając z naszej strony, wyrażasz zgodę na postanowienia zawarte w niniejszej Polityce.</p>
+            
+            <h2>2. Gromadzenie danych</h2>
+            <p>Możemy gromadzić dane osobowe, które dobrowolnie nam przekazujesz, takie jak:</p>
+            <ul>
+                <li>Imię i nazwisko;</li>
+                <li>Adres e-mail;</li>
+                <li>Numer telefonu.</li>
+            </ul>
+
+            <h2>3. Pliki Cookies</h2>
+            <p>Stosujemy pliki cookies w celu zapewnienia poprawnego działania strony, zapamiętywania preferencji użytkownika oraz w celach analitycznych (Google Analytics).</p>
+            <p>Możesz zarządzać ustawieniami cookies w swojej przeglądarce internetowej.</p>
+
+            <h2>4. Bezpieczeństwo danych</h2>
+            <p>Wdrażamy odpowiednie środki techniczne i organizacyjne, aby chronić Twoje dane przed nieuprawnionym dostępem.</p>
+
+            <h2>5. Kontakt</h2>
+            <p>W przypadku pytań dotyczących polityki prywatności, prosimy o kontakt poprzez formularz na stronie.</p>
+        `,
+        'cookies-page-label': 'Prawne',
+        'cookies-page-title': 'Polityka Cookies',
+        'cookies-policy-text': `
+            <h2>1. Czym są pliki cookies?</h2>
+            <p>Pliki cookies (tzw. "ciasteczka") to małe pliki tekstowe, które są zapisywane na Twoim urządzeniu (komputerze, smartfonie, tablecie) podczas przeglądania stron internetowych.</p>
+            
+            <h2>2. Jakie pliki cookies wykorzystujemy?</h2>
+            <p>Wykorzystujemy następujące rodzaje plików cookies:</p>
+            <ul>
+                <li><strong>Niezbędne:</strong> Konieczne do prawidłowego funkcjonowania strony.</li>
+                <li><strong>Analityczne:</strong> Pozwalają nam badać ruch na stronie i zachowania użytkowników (np. Google Analytics), co pomaga nam ulepszać nasze usługi.</li>
+                <li><strong>Funkcjonalne:</strong> Umożliwiają zapamiętanie Twoich preferencji, np. wyboru języka.</li>
+            </ul>
+
+            <h2>3. Zarządzanie plikami cookies</h2>
+            <p>Większość przeglądarek internetowych domyślnie akceptuje pliki cookies. Możesz w każdej chwili zmienić ustawienia swojej przeglądarki, aby blokować cookies lub być informowanym o ich każdorazowym przesłaniu. Szczegółowe informacje o możliwości i sposobach obsługi plików cookies dostępne są w ustawieniach oprogramowania (przeglądarki internetowej).</p>
+        `,
     },
 
     'uk': { // Ukrainian
@@ -774,7 +819,7 @@ const translations = {
         'pricing': 'Ціни',
         'contact': 'Контакти',
         'order-button': 'Замовити',
-        
+
         // Hero
         'working-with-ai': 'Працюємо з AI технологіями',
         'hero-title': 'Створюємо сайти та чат-боти для вашого бізнесу',
@@ -785,7 +830,7 @@ const translations = {
         'satisfied-clients': 'Клієнтів',
         'years-experience': 'Років досвіду',
         'scroll-down': 'Прокрутіть вниз',
-        
+
         // Services Preview
         'our-services-label': 'Наші послуги',
         'what-we-can-do': 'Що ми можемо для вас зробити',
@@ -801,7 +846,7 @@ const translations = {
         'learn-more': 'Дізнатися більше →',
         'popular': 'Популярне',
         'view-all-services': 'Переглянути всі послуги',
-        
+
         // Why Us
         'why-us-label': 'Чому ми',
         'how-we-work-title': 'Працюємо на результат, а не на кількість годин',
@@ -813,7 +858,7 @@ const translations = {
         'learn-more-about-us': 'Дізнатися більше про нас',
         'satisfied-clients-stat': 'Задоволених клієнтів',
         'tech-support': 'Технічна підтримка',
-        
+
         // Process
         'work-process': 'Процес роботи',
         'how-we-work-process': 'Як ми працюємо',
@@ -826,7 +871,7 @@ const translations = {
         'step-development-desc': 'Створюємо дизайн та реалізуємо функціонал',
         'step-launch': 'Запуск',
         'step-launch-desc': 'Тестуємо, запускаємо та навчаємо вас',
-        
+
         // Testimonials
         'reviews': 'Відгуки',
         'what-clients-say': 'Що кажуть наші клієнти',
@@ -839,13 +884,13 @@ const translations = {
         'testimonial-3': '"AI-рішення, яке нам впровадили, автоматизувало 70% рутинної роботи. Тепер можемо фокусуватися на розвитку бізнесу замість операційних задач."',
         'testimonial-3-name': 'Дмитро Петренко',
         'testimonial-3-role': 'COO, LogiTrans',
-        
+
         // CTA
         'cta-title': 'Готові почати?',
         'cta-description': 'Отримайте безкоштовну консультацію та дізнайтесь, як ми можемо допомогти вашому бізнесу',
         'contact-us-cta': 'Зв\'язатися з нами',
         'view-prices-cta': 'Переглянути ціни',
-        
+
         // Footer
         'footer-tagline': 'Створюємо цифрові рішення для бізнесу',
         'footer-services-heading': 'Послуги',
@@ -853,7 +898,7 @@ const translations = {
         'footer-company-heading': 'Компанія',
         'footer-follow-us-heading': 'Слідкуйте за нами',
         'footer-copyright': '© 2025 NexaCode. Всі права захищені.',
-        
+
         // Services Page
         'services-page-title': 'Комплексні рішення для вашого бізнесу',
         'services-page-description': 'Від простого лендінгу до складних AI-систем — ми допоможемо реалізувати будь-яку ідею',
@@ -878,7 +923,7 @@ const translations = {
         'websites-feature-4': 'Швидке завантаження (Core Web Vitals)',
         'websites-feature-5': 'Інтеграція з CRM та аналітикою',
         'order-website': 'Замовити сайт',
-        
+
         // Chatbots
         'chatbots-full-description': 'Розумні боти для автоматизації комунікації з клієнтами. Працюють 24/7, відповідають на питання, приймають замовлення та інтегруються з вашими системами.',
         'telegram-bots': 'Telegram боти',
@@ -897,7 +942,7 @@ const translations = {
         'user-question': 'Які послуги ви надаєте?',
         'bot-answer': 'Ми створюємо сайти, чат-боти та AI-рішення. Що вас цікавить?',
         'write-message': 'Написати повідомлення...',
-        
+
         // AI Solutions
         'ai-solutions-full-description': 'Впроваджуємо штучний інтелект у ваші бізнес-процеси. Від простої генерації контенту до складних систем аналізу та прогнозування.',
         'ai-assistants': 'AI-асистенти',
@@ -914,7 +959,7 @@ const translations = {
         'order-ai-solution': 'Замовити AI-рішення',
         'routine-work': 'Рутинної роботи',
         'productivity': 'Продуктивності',
-        
+
         // Automation
         'automation-full-description': 'Налаштовуємо інтеграції між вашими сервісами та автоматизуємо робочі процеси. Економте час на рутинних задачах.',
         'api-integrations': 'API інтеграції',
@@ -932,7 +977,7 @@ const translations = {
         'form': 'Форма',
         'payment': 'Оплата',
         'delivery': 'Доставка',
-        
+
         // Mobile Apps
         'mobile-apps-title': 'Мобільні додатки',
         'mobile-apps-short-desc': 'PWA та кросплатформні додатки для iOS і Android',
@@ -947,7 +992,7 @@ const translations = {
         'mobile-feature-3': 'Офлайн режим',
         'mobile-feature-4': 'Інтеграція з пристроєм',
         'order-mobile-app': 'Замовити додаток',
-        
+
         // E-commerce
         'ecommerce-title': 'E-commerce',
         'ecommerce-short-desc': 'Інтернет-магазини з оплатою та програмами лояльності',
@@ -965,7 +1010,7 @@ const translations = {
         'ecommerce-feature-4': 'Системи лояльності',
         'order-ecommerce': 'Замовити магазин',
         'items': 'товари',
-        
+
         // Analytics
         'analytics-title': 'Аналітика та дашборди',
         'analytics-short-desc': 'BI дашборди, Google Analytics, CRM системи',
@@ -981,7 +1026,7 @@ const translations = {
         'analytics-feature-3': 'Інтеграція з різними джерелами даних',
         'analytics-feature-4': 'Прогнозування та тренди',
         'order-analytics': 'Замовити аналітику',
-        
+
         // Cybersecurity
         'security-title': 'Кібербезпека',
         'security-short-desc': 'Аудит безпеки, SSL, захист від DDoS',
@@ -998,7 +1043,7 @@ const translations = {
         'security-feature-3': 'Звіти про загрози',
         'security-feature-4': 'Бекап та відновлення',
         'order-security': 'Замовити аудит',
-        
+
         // Digital Marketing
         'marketing-title': 'Digital Marketing',
         'marketing-short-desc': 'SEO, PPC реклама, email маркетинг',
@@ -1014,7 +1059,7 @@ const translations = {
         'marketing-feature-3': 'SMM автоматизація',
         'marketing-feature-4': 'Аналітика та ROI звіти',
         'order-marketing': 'Замовити маркетинг',
-        
+
         // UX/UI Design
         'design-title': 'UX/UI Дизайн',
         'design-short-desc': 'Прототипи, дизайн-системи, UX аудити',
@@ -1030,7 +1075,7 @@ const translations = {
         'design-feature-3': 'Адаптивний дизайн',
         'design-feature-4': 'Тестування юзабіліті',
         'order-design': 'Замовити дизайн',
-        
+
         // Voice Assistants
         'voice-title': 'Голосові асистенти',
         'voice-short-desc': 'Голосові боти, IVR, інтеграції з Alexa',
@@ -1046,7 +1091,7 @@ const translations = {
         'voice-feature-4': 'Аналітика розмов',
         'order-voice': 'Замовити голосового бота',
         'voice-listening': 'Слухаю...',
-        
+
         // Video & Content
         'video-title': 'Відео та анімації',
         'video-short-desc': 'Промо відео, веб-анімації, 3D',
@@ -1062,7 +1107,7 @@ const translations = {
         'video-feature-3': 'Оптимізація для web',
         'video-feature-4': 'Різні формати',
         'order-video': 'Замовити відео',
-        
+
         // Technical Support
         'support-title': 'Технічна підтримка',
         'support-short-desc': 'Обслуговування сайтів, хостинг, бекап, моніторинг',
@@ -1081,7 +1126,7 @@ const translations = {
         'support-feature-4': 'Щомісячні звіти',
         'order-support': 'Замовити підтримку',
         'all-systems-online': 'Всі системи працюють',
-        
+
         // Training & Consulting
         'consulting-title': 'Навчання та консалтинг',
         'consulting-short-desc': 'AI навчання, IT консалтинг, аудити',
@@ -1097,12 +1142,12 @@ const translations = {
         'consulting-feature-3': 'Навчальні матеріали',
         'consulting-feature-4': 'Підтримка після навчання',
         'order-consulting': 'Замовити консультацію',
-        
+
         // Services CTA
         'not-found-service-title': 'Не знайшли потрібне?',
         'not-found-service-description': 'Розкажіть про ваш проєкт — ми знайдемо найкраще рішення',
         'get-consultation': 'Отримати консультацію',
-        
+
         // About Page
         'about-page-title': 'Про нас',
         'about-intro-title': 'Ми допомагаємо бізнесу рости за допомогою технологій',
@@ -1146,7 +1191,7 @@ const translations = {
         'mobile-apps': 'Mobile',
         'ready-to-work-title': 'Готові працювати разом?',
         'ready-to-work-description': 'Розкажіть нам про ваш проєкт — ми з радістю допоможемо',
-        
+
         // Pricing Page
         'tariffs': 'Тарифи',
         'pricing-page-title': 'Прозорі ціни без прихованих платежів',
@@ -1259,7 +1304,7 @@ const translations = {
         'get-quote': 'Отримати розрахунок',
         'additional-services-title': 'Додаткові послуги',
         'additional-services-desc': 'Комплексна підтримка для вашого бізнесу',
-        
+
         // Contact Page
         'contact-page-title': 'Контакти',
         'lets-talk-about-project': 'Давайте поговоримо про ваш проєкт',
@@ -1529,6 +1574,51 @@ const translations = {
         'popup-note': 'Без кредитної картки. Результати за 24 год.',
         'popup-gdpr': 'Приймаю політику конфіденційності',
         'popup-email-placeholder': 'Ваш email',
+
+        // Privacy Policy
+        'privacy-page-label': 'Юридична інформація',
+        'privacy-page-title': 'Політика конфіденційності та Cookie',
+        'privacy-policy': 'Політика конфіденційності',
+        'privacy-policy-text': `
+            <h2>1. Загальні положення</h2>
+            <p>Ця Політика конфіденційності визначає принципи збору, обробки та використання персональних даних користувачів сервісу NexaCode.</p>
+            <p>Використовуючи наш веб-сайт, ви погоджуєтеся з положеннями цієї Політики.</p>
+            
+            <h2>2. Збір персональних даних</h2>
+            <p>Ми можемо збирати наступні дані:</p>
+            <ul>
+                <li>Ім'я та прізвище;</li>
+                <li>Контактний номер телефону;</li>
+                <li>Адреса електронної пошти;</li>
+                <li>Інші дані, які ви добровільно надаєте через форми на Сайті.</li>
+            </ul>
+
+            <h2>3. Використання файлів Cookies</h2>
+            <p>Ми використовуємо файли cookie для покращення роботи Сайту. Cookie – це невеликі текстові файли, які зберігаються на вашому пристрої.</p>
+            <p>Ми використовуємо:</p>
+            <ul>
+                <li><strong>Необхідні cookie:</strong> для коректної роботи основних функцій сайту.</li>
+                <li><strong>Аналітичні cookie:</strong> для збору статистики відвідувань (Google Analytics).</li>
+            </ul>
+            <p>Ви можете вимкнути файли cookie у налаштуваннях вашого браузера.</p>
+
+            <h2>4. Мета обробки даних</h2>
+            <p>Ваші дані використовуються для:</p>
+            <ul>
+                <li>Надання послуг та консультацій;</li>
+                <li>Зв'язку з вами щодо вашого запиту;</li>
+                <li>Покращення роботи Сайту.</li>
+            </ul>
+
+            <h2>5. Передача даних третім особам</h2>
+            <p>Ми не передаємо ваші персональні дані третім особам, за винятком випадків, передбачених законодавством, або якщо це необхідно для надання послуг (наприклад, хостинг-провайдери, сервіси аналітики).</p>
+
+            <h2>6. Безпека даних</h2>
+            <p>Ми вживаємо всіх необхідних заходів для захисту ваших даних від несанкціонованого доступу, зміни або знищення.</p>
+
+            <h2>7. Ваші права</h2>
+            <p>Ви маєте право на доступ до своїх даних, їх виправлення, видалення або обмеження обробки. Для цього зв'яжіться з нами через сторінку Контакти.</p>
+        `,
     },
 
     'en': { // English
@@ -1539,7 +1629,7 @@ const translations = {
         'pricing': 'Pricing',
         'contact': 'Contact',
         'order-button': 'Order',
-        
+
         // Hero
         'working-with-ai': 'Working with AI technologies',
         'hero-title': 'We Create Websites and Chatbots for Your Business',
@@ -1550,7 +1640,7 @@ const translations = {
         'satisfied-clients': 'Clients',
         'years-experience': 'Years of Experience',
         'scroll-down': 'Scroll down',
-        
+
         // Services Preview
         'our-services-label': 'Our services',
         'what-we-can-do': 'What we can do for you',
@@ -1566,7 +1656,7 @@ const translations = {
         'learn-more': 'Learn more →',
         'popular': 'Popular',
         'view-all-services': 'View all services',
-        
+
         // Why Us
         'why-us-label': 'Why us',
         'how-we-work-title': 'We work for results, not for hours spent',
@@ -1578,7 +1668,7 @@ const translations = {
         'learn-more-about-us': 'Learn more about us',
         'satisfied-clients-stat': 'Satisfied clients',
         'tech-support': 'Technical support',
-        
+
         // Process
         'work-process': 'Work process',
         'how-we-work-process': 'How we work',
@@ -1591,7 +1681,7 @@ const translations = {
         'step-development-desc': 'We create the design and implement functionality',
         'step-launch': 'Launch',
         'step-launch-desc': 'We test, launch, and train you',
-        
+
         // Testimonials
         'reviews': 'Reviews',
         'what-clients-say': 'What our clients say',
@@ -1604,13 +1694,13 @@ const translations = {
         'testimonial-3': '"The AI solution they implemented automated 70% of routine work. Now we can focus on business development instead of operational tasks."',
         'testimonial-3-name': 'Peter Jones',
         'testimonial-3-role': 'COO, LogiTrans',
-        
+
         // CTA
         'cta-title': 'Ready to start?',
         'cta-description': 'Get a free consultation and find out how we can help your business',
         'contact-us-cta': 'Contact Us',
         'view-prices-cta': 'View prices',
-        
+
         // Footer
         'footer-tagline': 'Creating digital solutions for business',
         'footer-services-heading': 'Services',
@@ -1618,7 +1708,7 @@ const translations = {
         'footer-company-heading': 'Company',
         'footer-follow-us-heading': 'Follow us',
         'footer-copyright': '© 2025 NexaCode. All rights reserved.',
-        
+
         // Services Page
         'services-page-title': 'Comprehensive solutions for your business',
         'services-page-description': 'From simple landing pages to complex AI systems — we\'ll help bring any idea to life',
@@ -1643,7 +1733,7 @@ const translations = {
         'websites-feature-4': 'Fast loading (Core Web Vitals)',
         'websites-feature-5': 'Integration with CRM and analytics',
         'order-website': 'Order Website',
-        
+
         // Chatbots
         'chatbots-full-description': 'Smart bots for automating client communication. They work 24/7, answer questions, take orders, and integrate with your systems.',
         'telegram-bots': 'Telegram bots',
@@ -1662,7 +1752,7 @@ const translations = {
         'user-question': 'What services do you offer?',
         'bot-answer': 'We create websites, chatbots, and AI solutions. What are you interested in?',
         'write-message': 'Write a message...',
-        
+
         // AI Solutions
         'ai-solutions-full-description': 'We implement artificial intelligence into your business processes. From simple content generation to complex analysis and forecasting systems.',
         'ai-assistants': 'AI Assistants',
@@ -1679,7 +1769,7 @@ const translations = {
         'order-ai-solution': 'Order AI Solution',
         'routine-work': 'Routine work',
         'productivity': 'Productivity',
-        
+
         // Automation
         'automation-full-description': 'We set up integrations between your services and automate workflows. Save time on routine tasks.',
         'api-integrations': 'API integrations',
@@ -1697,7 +1787,7 @@ const translations = {
         'form': 'Form',
         'payment': 'Payment',
         'delivery': 'Delivery',
-        
+
         // Mobile Apps
         'mobile-apps-title': 'Mobile Apps',
         'mobile-apps-short-desc': 'PWA and cross-platform apps for iOS and Android',
@@ -1712,7 +1802,7 @@ const translations = {
         'mobile-feature-3': 'Offline mode',
         'mobile-feature-4': 'Device integration',
         'order-mobile-app': 'Order App',
-        
+
         // E-commerce
         'ecommerce-title': 'E-commerce',
         'ecommerce-short-desc': 'Online stores with payments and loyalty systems',
@@ -1730,7 +1820,7 @@ const translations = {
         'ecommerce-feature-4': 'Loyalty systems',
         'order-ecommerce': 'Order Store',
         'items': 'items',
-        
+
         // Analytics
         'analytics-title': 'Analytics & Dashboards',
         'analytics-short-desc': 'BI dashboards, Google Analytics, CRM systems',
@@ -1746,7 +1836,7 @@ const translations = {
         'analytics-feature-3': 'Integration with multiple data sources',
         'analytics-feature-4': 'Forecasting and trends',
         'order-analytics': 'Order Analytics',
-        
+
         // Cybersecurity
         'security-title': 'Cybersecurity',
         'security-short-desc': 'Security audits, SSL, DDoS protection',
@@ -1763,7 +1853,7 @@ const translations = {
         'security-feature-3': 'Threat reports',
         'security-feature-4': 'Backup and recovery',
         'order-security': 'Order Audit',
-        
+
         // Digital Marketing
         'marketing-title': 'Digital Marketing',
         'marketing-short-desc': 'SEO, PPC advertising, email marketing',
@@ -1779,7 +1869,7 @@ const translations = {
         'marketing-feature-3': 'SMM automation',
         'marketing-feature-4': 'Analytics and ROI reports',
         'order-marketing': 'Order Marketing',
-        
+
         // UX/UI Design
         'design-title': 'UX/UI Design',
         'design-short-desc': 'Prototypes, design systems, UX audits',
@@ -1795,7 +1885,7 @@ const translations = {
         'design-feature-3': 'Responsive design',
         'design-feature-4': 'Usability testing',
         'order-design': 'Order Design',
-        
+
         // Voice Assistants
         'voice-title': 'Voice Assistants',
         'voice-short-desc': 'Voice bots, IVR, Alexa integrations',
@@ -1811,7 +1901,7 @@ const translations = {
         'voice-feature-4': 'Call analytics',
         'order-voice': 'Order Voice Bot',
         'voice-listening': 'Listening...',
-        
+
         // Video & Content
         'video-title': 'Video & Animations',
         'video-short-desc': 'Promo videos, web animations, 3D',
@@ -1827,7 +1917,7 @@ const translations = {
         'video-feature-3': 'Web optimization',
         'video-feature-4': 'Multiple formats',
         'order-video': 'Order Video',
-        
+
         // Technical Support
         'support-title': 'Technical Support',
         'support-short-desc': 'Site maintenance, hosting, backup, monitoring',
@@ -1846,7 +1936,7 @@ const translations = {
         'support-feature-4': 'Monthly reports',
         'order-support': 'Order Support',
         'all-systems-online': 'All systems operational',
-        
+
         // Training & Consulting
         'consulting-title': 'Training & Consulting',
         'consulting-short-desc': 'AI training, IT consulting, audits',
@@ -1862,12 +1952,12 @@ const translations = {
         'consulting-feature-3': 'Training materials',
         'consulting-feature-4': 'Post-training support',
         'order-consulting': 'Order Consultation',
-        
+
         // Services CTA
         'not-found-service-title': 'Didn\'t find what you need?',
         'not-found-service-description': 'Tell us about your project — we will find the best solution',
         'get-consultation': 'Get a consultation',
-        
+
         // About Page
         'about-page-title': 'About Us',
         'about-intro-title': 'We help businesses grow with technology',
@@ -1911,7 +2001,7 @@ const translations = {
         'mobile-apps': 'Mobile',
         'ready-to-work-title': 'Ready to work together?',
         'ready-to-work-description': 'Tell us about your project — we\'d be happy to help',
-        
+
         // Pricing Page
         'tariffs': 'Pricing',
         'pricing-page-title': 'Transparent prices without hidden fees',
@@ -2024,7 +2114,7 @@ const translations = {
         'get-quote': 'Get a Quote',
         'additional-services-title': 'Additional Services',
         'additional-services-desc': 'Comprehensive support for your business',
-        
+
         // Contact Page
         'contact-page-title': 'Contact',
         'lets-talk-about-project': 'Let\'s talk about your project',
@@ -2301,5 +2391,50 @@ const translations = {
         'popup-note': 'No credit card required. Results in 24h.',
         'popup-gdpr': 'I accept the privacy policy',
         'popup-email-placeholder': 'Your email',
+
+        // Privacy Policy
+        'privacy-page-label': 'Legal Information',
+        'privacy-page-title': 'Privacy & Cookie Policy',
+        'privacy-policy': 'Privacy Policy',
+        'privacy-policy-text': `
+            <h2>1. General Provisions</h2>
+            <p>This Privacy Policy outlines how NexaCode collects, processes, and uses personal data of website users.</p>
+            <p>By using our website, you agree to the terms of this Policy.</p>
+            
+            <h2>2. Data Collection</h2>
+            <p>We may collect personal data that you voluntarily provide to us, such as:</p>
+            <ul>
+                <li>Name and surname;</li>
+                <li>Email address;</li>
+                <li>Phone number.</li>
+            </ul>
+
+            <h2>3. Cookies</h2>
+            <p>We use cookies to improve our services, remember user preferences, and analyze website traffic (Google Analytics).</p>
+            <p>You can manage cookie settings in your browser.</p>
+
+            <h2>4. Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect your data against unauthorized access.</p>
+
+            <h2>5. Contact</h2>
+            <p>If you have any questions about our privacy policy, please contact us via the contact form on the website.</p>
+        `,
+        'cookies-page-label': 'Legal',
+        'cookies-page-title': 'Cookies Policy',
+        'cookies-policy-text': `
+            <h2>1. What are cookies?</h2>
+            <p>Cookies are small text files that are stored on your device (computer, smartphone, tablet) when you browse websites.</p>
+            
+            <h2>2. What cookies do we use?</h2>
+            <p>We use the following types of cookies:</p>
+            <ul>
+                <li><strong>Necessary:</strong> Required for the website to function properly.</li>
+                <li><strong>Analytical:</strong> Allow us to analyze website traffic and user behavior (e.g., Google Analytics), which helps us improve our services.</li>
+                <li><strong>Functional:</strong> Allow us to remember your preferences, such as language selection.</li>
+            </ul>
+
+            <h2>3. Managing cookies</h2>
+            <p>Most web browsers accept cookies by default. You can change your browser settings at any time to block cookies or be notified each time they are sent. Detailed information on how to handle cookies is available in your software (browser) settings.</p>
+        `,
     }
 };

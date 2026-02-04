@@ -23,13 +23,13 @@ function initLanguage() {
     // Get saved language or default to Polish
     const savedLang = localStorage.getItem('aihelper_lang') || 'pl';
     currentLang = savedLang;
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = currentLang;
-    
+
     // Apply translations
     applyTranslations(currentLang);
-    
+
     // Update language switcher UI
     updateLanguageSwitcherUI();
 }
@@ -38,14 +38,14 @@ function initLanguageSwitcher() {
     const langSwitcher = document.querySelector('.lang-switcher');
     const langToggle = document.querySelector('.lang-switcher-toggle');
     const langButtons = document.querySelectorAll('.lang-btn');
-    
+
     // Toggle dropdown
     if (langToggle && langSwitcher) {
         langToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             langSwitcher.classList.toggle('active');
         });
-        
+
         // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
             if (!langSwitcher.contains(e.target)) {
@@ -53,7 +53,7 @@ function initLanguageSwitcher() {
             }
         });
     }
-    
+
     // Handle language button clicks
     langButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -72,20 +72,20 @@ function initLanguageSwitcher() {
 
 function switchLanguage(lang) {
     if (!translations || !translations[lang]) return;
-    
+
     currentLang = lang;
     localStorage.setItem('aihelper_lang', lang);
     document.documentElement.lang = lang;
-    
+
     applyTranslations(lang);
     updateLanguageSwitcherUI();
 }
 
 function applyTranslations(lang) {
     if (!translations || !translations[lang]) return;
-    
+
     const t = translations[lang];
-    
+
     // Translate all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
@@ -93,7 +93,15 @@ function applyTranslations(lang) {
             el.textContent = t[key];
         }
     });
-    
+
+    // Translate all elements with data-i18n-html attribute
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if (t[key]) {
+            el.innerHTML = t[key];
+        }
+    });
+
     // Translate placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.dataset.i18nPlaceholder;
@@ -101,7 +109,7 @@ function applyTranslations(lang) {
             el.placeholder = t[key];
         }
     });
-    
+
     // Translate titles
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
         const key = el.dataset.i18nTitle;
@@ -117,12 +125,12 @@ function updateLanguageSwitcherUI() {
     if (langCurrent) {
         langCurrent.textContent = currentLang.toUpperCase();
     }
-    
+
     // Update active state on buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === currentLang);
     });
-    
+
     // Update active state on dropdown items
     document.querySelectorAll('.lang-dropdown-item').forEach(item => {
         item.classList.toggle('active', item.dataset.lang === currentLang);
@@ -134,14 +142,14 @@ function initMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
-    
+
     if (!menuBtn || !mobileMenu) return;
-    
+
     menuBtn.addEventListener('click', () => {
         menuBtn.classList.toggle('active');
         mobileMenu.classList.toggle('active');
         document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        
+
         // Animate hamburger to X
         const spans = menuBtn.querySelectorAll('span');
         if (menuBtn.classList.contains('active')) {
@@ -154,14 +162,14 @@ function initMobileMenu() {
             spans[2].style.transform = 'none';
         }
     });
-    
+
     // Close menu on link click
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             menuBtn.classList.remove('active');
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
-            
+
             const spans = menuBtn.querySelectorAll('span');
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
@@ -175,16 +183,16 @@ function initSmoothScroll() {
     const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href === '#') return;
-            
+
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: prefersReducedMotion ? 'auto' : 'smooth'
@@ -198,30 +206,30 @@ function initSmoothScroll() {
 function initHeaderScroll() {
     const header = document.querySelector('.header');
     if (!header) return;
-    
+
     let lastScrollY = window.scrollY;
     let ticking = false;
-    
+
     function updateHeader() {
         const scrollY = window.scrollY;
-        
+
         if (scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-        
+
         // Hide/show header on scroll
         if (scrollY > lastScrollY && scrollY > 200) {
             header.style.transform = 'translateY(-100%)';
         } else {
             header.style.transform = 'translateY(0)';
         }
-        
+
         lastScrollY = scrollY;
         ticking = false;
     }
-    
+
     window.addEventListener('scroll', () => {
         if (!ticking) {
             requestAnimationFrame(updateHeader);
@@ -244,12 +252,12 @@ function initScrollAnimations() {
         rootMargin: '0px',
         threshold: 0.1
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
-                
+
                 // Stagger children animations
                 const children = entry.target.querySelectorAll('.animate-child');
                 children.forEach((child, index) => {
@@ -261,13 +269,13 @@ function initScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe sections
     document.querySelectorAll('section').forEach(section => {
         section.classList.add('animate-on-scroll');
         observer.observe(section);
     });
-    
+
     // Observe cards and items
     document.querySelectorAll('.service-card, .pricing-card, .step, .value-card, .team-member, .testimonial-card, .faq-item').forEach(item => {
         item.classList.add('animate-on-scroll');
@@ -279,27 +287,27 @@ function initScrollAnimations() {
 function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
-    
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
-        
+
         // Show loading state
         submitBtn.innerHTML = '<span class="btn-loading"></span>';
         submitBtn.disabled = true;
-        
+
         // Simulate form submission
         await new Promise(resolve => setTimeout(resolve, 1500));
-        
+
         // Show success state
         submitBtn.innerHTML = '✓ ' + (translations[currentLang]?.contact_form_submit || 'Sent!');
         submitBtn.classList.add('btn-success');
-        
+
         // Reset form
         form.reset();
-        
+
         // Reset button after delay
         setTimeout(() => {
             submitBtn.innerHTML = originalText;
@@ -307,17 +315,17 @@ function initContactForm() {
             submitBtn.classList.remove('btn-success');
         }, 3000);
     });
-    
+
     // Animate form fields on focus
     const formGroups = form.querySelectorAll('.form-group');
     formGroups.forEach(group => {
         const input = group.querySelector('input, textarea, select');
         if (!input) return;
-        
+
         input.addEventListener('focus', () => {
             group.classList.add('focused');
         });
-        
+
         input.addEventListener('blur', () => {
             if (!input.value) {
                 group.classList.remove('focused');
@@ -330,9 +338,9 @@ function initContactForm() {
 function initParallaxEffect() {
     const heroGlow = document.querySelector('.hero-glow');
     if (!heroGlow) return;
-    
+
     let ticking = false;
-    
+
     window.addEventListener('mousemove', (e) => {
         if (!ticking) {
             requestAnimationFrame(() => {
