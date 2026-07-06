@@ -209,11 +209,42 @@ const translations = {
         "footer-legal-privacy": "Polityka Prywatności",
         "footer-legal-cookies": "Polityka Cookies",
         "footer-copyright": "&copy; 2026 NexaCode. Wszelkie prawa zastrzeżone.",
-        "footer-dev-note": "Większe projekty B2B i zaawansowane automatyzacje: <a href=\"https://vektadev.pl\" target=\"_blank\" rel=\"noopener noreferrer\">VektaDev</a>",
+        "footer-dev-note": "Większe projekty B2B i zaawansowane automatyzacje: <a href=\"https://vektadev.com\" target=\"_blank\" rel=\"noopener noreferrer\">VektaDev</a>",
         
         // Messages
         "validation-alert": "Proszę wypełnić wszystkie pola formularza.",
-        "submit-success": "✓ Zapytanie zostało wysłane!"
+        "submit-success": "✓ Zapytanie zostało wysłane!",
+        
+        // Privacy Policy Page
+        "privacy-title": "Polityka Prywatności",
+        "privacy-last-updated": "Ostatnia aktualizacja: 6 lipca 2026",
+        "privacy-intro": "NexaCode dba o Twoją prywatność. Poniższa polityka wyjaśnia zasady przetwarzania danych osobowych oraz prawa, które Ci przysługują.",
+        "privacy-h1": "1. Administrator danych",
+        "privacy-p1": "Administratorem danych osobowych zbieranych za pośrednictwem serwisu jest NexaCode z siedzibą w Polsce (kontakt@nexacode.net).",
+        "privacy-h2": "2. Jakie dane przetwarzamy i w jakim celu?",
+        "privacy-p2-item": "<strong>Formularz kontaktowy:</strong> Przetwarzamy Twoje imię, adres e-mail, numer telefonu, branżę oraz treść wiadomości, aby odpowiedzieć na zapytanie ofertowe i przedstawić szczegóły pakietów (art. 6 ust. 1 lit. b RODO).",
+        "privacy-h3": "3. Czas przechowywania danych",
+        "privacy-p3": "Dane z formularza kontaktowego są przechowywane przez czas niezbędny do obsługi korespondencji i realizacji ewentualnego zlecenia.",
+        "privacy-h4": "4. Odbiorcy danych",
+        "privacy-p4": "Twoje dane mogą być przekazywane dostawcom usług hostingowych, obsługi poczty elektronicznej oraz narzędzi analitycznych, wyłącznie w celach technicznych.",
+        "privacy-h5": "5. Twoje prawa",
+        "privacy-p5": "Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu. W każdym momencie możesz się z nami skontaktować w celu realizacji swoich praw.",
+
+        // Cookies Policy Page
+        "cookies-title": "Polityka Cookies",
+        "cookies-last-updated": "Ostatnia aktualizacja: 6 lipca 2026",
+        "cookies-intro": "Niniejsza Polityka Cookies wyjaśnia, czym są pliki cookies oraz jak i w jakim celu korzysta z nich NexaCode.",
+        "cookies-h1": "1. Czym są pliki cookies?",
+        "cookies-p1": "Cookies to małe pliki tekstowe zapisywane na Twoim urządzeniu (komputerze, telefonie, tablecie) podczas przeglądania stron internetowych. Służą one do zapewnienia prawidłowego funkcjonowania witryny oraz do zbierania danych statystycznych.",
+        "cookies-h2": "2. Jakie rodzaje cookies wykorzystujemy?",
+        "cookies-p2": "W ramach naszej strony internetowej wykorzystujemy następujące kategorie plików cookies:",
+        "cookies-f1": "<strong>Niezbędne:</strong> Umożliwiają prawidłowe wyświetlanie strony, nawigację oraz poprawne funkcjonowanie formularzy. Bez nich strona nie mogłaby działać bezpiecznie i poprawnie.",
+        "cookies-f2": "<strong>Analityczne:</strong> Pomagają nam analizować statystyki odwiedzin (np. czas spędzony na stronie, najpopularniejsze sekcje), aby stale ulepszać naszą ofertę. Dane te są zbierane anonimowo.",
+        "cookies-h3": "3. Zarządzanie plikami cookies",
+        "cookies-p3-1": "Możesz samodzielnie zarządzać plikami cookies za pomocą ustawień swojej przeglądarki internetowej. Masz możliwość zablokowania zapisu nowych plików cookies, a także usunięcia dotychczas zgromadzonych danych.",
+        "cookies-p3-2": "Informacje o konfiguracji w popularnych przeglądarkach znajdziesz poniżej:",
+        "cookies-h4": "4. Skutki ograniczenia plików cookies",
+        "cookies-p4": "Wyłączenie lub ograniczenie plików cookies niezbędnych może negatywnie wpłynąć na niektóre funkcje strony, takie jak poprawne wysyłanie zapytań przez formularz kontaktowy. Wyłączenie plików analitycznych nie ogranicza funkcjonalności serwisu."
     },
     uk: {
         // Navigation
@@ -228,6 +259,7 @@ const translations = {
         
         // Hero Section
         "hero-badge": "Пакет Старт від 500 злотих",
+        "hero-title": "Proste strony i <span class=\"gradient-text\">automatyzacje</span> dla nowych firm",
         "hero-title": "Прості сайти та <span class=\"gradient-text\">автоматизація</span> для нових компаній",
         "hero-description": "Стартовий веб-сайт, контактна форма та базова автоматизація без великого бюджету.",
         "hero-cta-start": "Запитати про пакет Старт",
@@ -243,7 +275,7 @@ const translations = {
         "terminal-price": "Кінцева ціна: від 500 PLN",
         
         // Problem Section
-        "problem-title": "Новій компанії потрібна довіра з першого контакту",
+        "problem-title": "Новій компанії потрібна довіра з першого kontaktu",
         "problem-subtitle": "Багато клієнтів шукають компанію в інтернеті, перш ніж написати або зателефонувати. Якщо бізнес представлений лише у Facebook, OLX чи WhatsApp, це може виглядати менш професійно.",
         "problem-c1-title": "Відсутність веб-сайту",
         "problem-c1-desc": "Клієнти, які шукають ваші послуги в Google, не можуть знайти вас. Ви втрачаєте цінний трафік і замовлення на користь конкурентів, які мають власні сайти.",
@@ -303,7 +335,7 @@ const translations = {
         "offer-p4-f4": "Простий workflow (сценарій обробки)",
         "offer-p4-f5": "Суттєве зменшення ручної роботи",
         "offer-p4-f6": "Економія часу при обробці лідів",
-        "offer-p4-f7": "Можливість подальшого розширення",
+        "offer-p4-f7": "Moжливість подальшого розширення",
         "offer-p4-cta": "Замовити Автоматизацію",
         
         // Scope Details Section
@@ -322,7 +354,7 @@ const translations = {
         "scope-in-f5-title": "Контактна форма або WhatsApp",
         "scope-in-f5-desc": "Можливість швидкого зв'язку для клієнтів прямо з сайту.",
         "scope-in-f6-title": "Мобільна версія",
-        "scope-in-f6-desc": "Повна адаптивність — сайт ідеально працює на смартфонах та планшетах.",
+        "scope-in-f6-desc": "Повна адаптивність — сайт ідеально працює на smartфонах та планшетах.",
         "scope-in-f7-title": "1 раунд правок",
         "scope-in-f7-desc": "Час для внесення ваших зауважень та побажань перед фінальним запуском.",
         
@@ -398,7 +430,7 @@ const translations = {
         "faq-title": "Часті запитання (FAQ)",
         "faq-subtitle": "Маєте запитання щодо розробки? Ми зібрали відповіді на найпопулярніші запити наших клієнтів.",
         "faq-q1": "Чи 500 злотих — це ціна за повний сайт?",
-        "faq-a1": "Ні. Це ціна за базовий стартовий пакет: простий односторінковий сайт на нашій готовій структурі.",
+        "faq-a1": "Ні. Це ціна за базовий стартовый пакет: простий односторінковий сайт на нашій готовій структурі.",
         "faq-q2": "Чи входять домен та хостинг у вартість?",
         "faq-a2": "Ні, покупка домену та хостингу оплачується окремо, або клієнт може використати свої діючі акаунти.",
         "faq-q3": "Скільки часу триває розробка?",
@@ -425,11 +457,42 @@ const translations = {
         "footer-legal-privacy": "Політика Конфіденційності",
         "footer-legal-cookies": "Політика Cookies",
         "footer-copyright": "&copy; 2026 NexaCode. Всі права захищені.",
-        "footer-dev-note": "Великі B2B-проекти та складна автоматизація: <a href=\"https://vektadev.pl\" target=\"_blank\" rel=\"noopener noreferrer\">VektaDev</a>",
+        "footer-dev-note": "Великі B2B-проекти та складна автоматизація: <a href=\"https://vektadev.com\" target=\"_blank\" rel=\"noopener noreferrer\">VektaDev</a>",
         
         // Messages
         "validation-alert": "Будь ласка, заповніть усі поля форми.",
-        "submit-success": "✓ Вашу заявку успішно надіслано!"
+        "submit-success": "✓ Вашу заявку успішно надіслано!",
+        
+        // Privacy Policy Page
+        "privacy-title": "Політика Конфіденційності",
+        "privacy-last-updated": "Останнє оновлення: 6 липня 2026",
+        "privacy-intro": "NexaCode піклується про вашу конфіденційність. Наступна політика пояснює правила обробки персональних даних та права, які вам належать.",
+        "privacy-h1": "1. Адміністратор даних",
+        "privacy-p1": "Адміністратором персональних даних, зібраних за допомогою сервісу, є NexaCode з місцезнаходженням у Польщі (kontakt@nexacode.net).",
+        "privacy-h2": "2. Які дані ми обробляємо та з якою метою?",
+        "privacy-p2-item": "<strong>Контактна форма:</strong> Ми обробляємо ваше ім'я, адресу електронної пошти, номер телефону, галузь діяльності та вміст повідомлення, щоб відповісти на запит та надати деталі пакетів (ст. 6 абз. 1 літ. b GDPR).",
+        "privacy-h3": "3. Термін зберігання даних",
+        "privacy-p3": "Данi з контактної форми зберігаються протягом терміну, необхідного для ведення листування та виконання можливого замовлення.",
+        "privacy-h4": "4. Одержувачі даних",
+        "privacy-p4": "Ваші дані можуть передаватися постачальникам послуг хостингу, обслуговування електронної пошти та аналітичних інструментів виключно з технічною метою.",
+        "privacy-h5": "5. Ваші права",
+        "privacy-p5": "Ви маєте право на доступ до своїх даних, їх виправлення, видалення, обмеження обробки, перенесення даних та заперечення проти обробки. Ви можете зв'язатися з нами в будь-який час для реалізації своїх прав.",
+
+        // Cookies Policy Page
+        "cookies-title": "Політика Cookies",
+        "cookies-last-updated": "Останнє оновлення: 6 липня 2026",
+        "cookies-intro": "Ця Політика Cookies пояснює, що таке файли cookies, а також як і з якою метою їх використовує NexaCode.",
+        "cookies-h1": "1. Що таке файли cookies?",
+        "cookies-p1": "Cookies — це невеликі текстові файли, які зберігаються на вашому пристрої (комп'ютері, телефоні, планшеті) під час перегляду веб-сайтів. Вони служать для забезпечення належного функціонування сайту та збору статистичних даних.",
+        "cookies-h2": "2. Які типи cookies ми використовуємо?",
+        "cookies-p2": "В межах нашого сайту використовуються такі категорії файлів cookies:",
+        "cookies-f1": "<strong>Необхідні:</strong> Дозволяють коректно відображати сторінку, навігацію та правильну роботу форм. Без них сайт не може функціонувати безпечно та належним чином.",
+        "cookies-f2": "<strong>Аналітичні:</strong> Допомагають нам аналізувати статистику відвідувань (наприклад, час на сайті, найпопулярніші розділи), щоб постійно вдосконалювати наші пропозиції. Ці дані збираються анонімно.",
+        "cookies-h3": "3. Управління файлами cookies",
+        "cookies-p3-1": "Ви можете самостійно керувати файлами cookies за допомогою налаштувань вашого веб-браузера. У вас є можливість заблокувати збереження нових cookies, а також видалити вже накопичені дані.",
+        "cookies-p3-2": "Інформацію про налаштування у популярних браузерах ви знайдете нижче:",
+        "cookies-h4": "4. Наслідки обмеження файлів cookies",
+        "cookies-p4": "Вимкнення або обмеження необхідних файлів cookies може негативно вплинути на деякі функції сайту, наприклад, на коректне надсилання запитів через контактну форму. Вимкнення аналітичних cookies не обмежує функціональність сайту."
     },
     en: {
         // Navigation
@@ -564,6 +627,7 @@ const translations = {
         // For Whom Section
         "target-title": "Who is NexaCode for",
         "target-subtitle": "We help small businesses and startups establish a professional online presence without spending thousands of zlotys.",
+        "target-c1-title": "Who is NexaCode for",
         "target-c1-title": "New recruitment agencies",
         "target-c1-desc": "Need to collect applications quickly? We will deploy a simple form that dumps data straight into your Google Sheet.",
         "target-c2-title": "Small service providers",
@@ -641,10 +705,41 @@ const translations = {
         "footer-legal-privacy": "Privacy Policy",
         "footer-legal-cookies": "Cookies Policy",
         "footer-copyright": "&copy; 2026 NexaCode. All rights reserved.",
-        "footer-dev-note": "Larger B2B projects and custom automations: <a href=\"https://vektadev.pl\" target=\"_blank\" rel=\"noopener noreferrer\">VektaDev</a>",
+        "footer-dev-note": "Larger B2B projects and custom automations: <a href=\"https://vektadev.com\" target=\"_blank\" rel=\"noopener noreferrer\">VektaDev</a>",
         
         // Messages
         "validation-alert": "Please fill out all the input fields.",
-        "submit-success": "✓ Your inquiry has been sent successfully!"
+        "submit-success": "✓ Your inquiry has been sent successfully!",
+        
+        // Privacy Policy Page
+        "privacy-title": "Privacy Policy",
+        "privacy-last-updated": "Last updated: July 6, 2026",
+        "privacy-intro": "NexaCode cares about your privacy. The following policy explains the rules of processing personal data and the rights you hold.",
+        "privacy-h1": "1. Data administrator",
+        "privacy-p1": "The administrator of personal data collected through the service is NexaCode based in Poland (kontakt@nexacode.net).",
+        "privacy-h2": "2. What data we process and for what purpose?",
+        "privacy-p2-item": "<strong>Contact form:</strong> We process your name, e-mail address, phone number, industry, and message content to answer inquiries and present package details (art. 6 sec. 1 lit. b GDPR).",
+        "privacy-h3": "3. Data retention period",
+        "privacy-p3": "Data from the contact form is stored for the time necessary to handle correspondence and implement potential orders.",
+        "privacy-h4": "4. Data recipients",
+        "privacy-p4": "Your data may be transferred to providers of hosting services, e-mail management, and analytical tools, solely for technical purposes.",
+        "privacy-h5": "5. Your rights",
+        "privacy-p5": "You have the right to access your data, rectify it, erase it, limit processing, transfer data, and object to processing. You can contact us at any time to exercise your rights.",
+
+        // Cookies Policy Page
+        "cookies-title": "Cookies Policy",
+        "cookies-last-updated": "Last updated: July 6, 2026",
+        "cookies-intro": "This Cookies Policy explains what cookies are, and how and for what purpose NexaCode uses them.",
+        "cookies-h1": "1. What are cookies?",
+        "cookies-p1": "Cookies are small text files saved on your device (computer, phone, tablet) while browsing websites. They serve to ensure the proper functioning of the site and collect statistical data.",
+        "cookies-h2": "2. What types of cookies do we use?",
+        "cookies-p2": "Within our website we utilize the following categories of cookies:",
+        "cookies-f1": "<strong>Necessary:</strong> Enable proper page display, navigation, and form operation. Without them, the page cannot function securely and correctly.",
+        "cookies-f2": "<strong>Analytical:</strong> Help us analyze visit statistics (e.g. time spent on page, most popular sections) to continuously improve our offers. This data is collected anonymously.",
+        "cookies-h3": "3. Managing cookies",
+        "cookies-p3-1": "You can manage cookies on your own via your web browser settings. You have the option to block the saving of new cookies, as well as delete previously gathered data.",
+        "cookies-p3-2": "Information on configuration in popular browsers can be found below:",
+        "cookies-h4": "4. Effects of limiting cookies",
+        "cookies-p4": "Disabling or limiting necessary cookies may negatively affect some site functions, such as sending inquiries through the contact form. Disabling analytical cookies does not limit the website functionality."
     }
 };
