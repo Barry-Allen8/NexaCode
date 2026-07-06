@@ -132,6 +132,8 @@ function applyTranslations(lang) {
             metaDesc.setAttribute('content', t['seo-description']);
         }
     }
+
+    refreshFaqHeights();
 }
 
 // ===== 2. Sticky Header Scroll Effect =====
@@ -179,7 +181,7 @@ function initMobileMenu() {
 
 // ===== 4. Smooth Scroll & Active Nav Highlights =====
 function initSmoothScrollAndActiveLinks() {
-    const navLinks = document.querySelectorAll('.nav-link, .header-cta, .hero-actions a, .offer-footer a');
+    const navLinks = document.querySelectorAll('a[href^="#"]');
     const sections = document.querySelectorAll('section[id]');
 
     // Smooth scrolling for anchor links
@@ -190,7 +192,8 @@ function initSmoothScrollAndActiveLinks() {
                 e.preventDefault();
                 const targetSection = document.querySelector(targetId);
                 if (targetSection) {
-                    const headerHeight = 72;
+                    const header = document.querySelector('.header');
+                    const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) + 18 : 90;
                     const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
                     
                     window.scrollTo({
@@ -331,23 +334,52 @@ function initTerminalSimulator() {
 
 // ===== 6. FAQ Accordion Accordance =====
 function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item, index) => {
+        const btn = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        if (!btn || !answer) return;
+
+        const answerId = answer.id || `faq-answer-${index + 1}`;
+        answer.id = answerId;
+        btn.setAttribute('aria-controls', answerId);
+        btn.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+        answer.style.height = item.classList.contains('active') ? `${answer.scrollHeight}px` : '0px';
+    });
+
     const faqQuestions = document.querySelectorAll('.faq-question');
     
     faqQuestions.forEach(btn => {
         btn.addEventListener('click', () => {
             const item = btn.parentElement;
+            const answer = item.querySelector('.faq-answer');
             const isActive = item.classList.contains('active');
             
             // Close all items
             document.querySelectorAll('.faq-item').forEach(el => {
+                const elButton = el.querySelector('.faq-question');
+                const elAnswer = el.querySelector('.faq-answer');
                 el.classList.remove('active');
+                if (elButton) elButton.setAttribute('aria-expanded', 'false');
+                if (elAnswer) elAnswer.style.height = '0px';
             });
             
             // Toggle clicked item
             if (!isActive) {
                 item.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+                if (answer) answer.style.height = `${answer.scrollHeight}px`;
             }
         });
+    });
+
+    window.addEventListener('resize', refreshFaqHeights);
+}
+
+function refreshFaqHeights() {
+    document.querySelectorAll('.faq-item.active .faq-answer').forEach(answer => {
+        answer.style.height = `${answer.scrollHeight}px`;
     });
 }
 
