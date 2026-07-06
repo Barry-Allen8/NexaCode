@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | NexaCode</title>
-    <meta name="description" content="Polityka Prywatności NexaCode">
+    <title>NexaCode | Polityka Prywatności</title>
+    <meta name="description"
+        content="Zasady przetwarzania danych osobowych w NexaCode.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap"
@@ -13,40 +14,17 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .privacy-content {
-            padding: 80px 0;
-            color: var(--color-text-secondary);
+            padding: var(--spacing-3xl) 0;
         }
 
         .legal-text-wrapper {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 40px;
-        }
-
-        .legal-text-wrapper h2,
-        .legal-text-wrapper h3 {
-            position: relative;
-            color: var(--color-text-primary);
-            padding-left: 1rem;
-        }
-
-        .legal-text-wrapper h2::before,
-        .legal-text-wrapper h3::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.25em;
-            width: 4px;
-            height: 1.1em;
-            border-radius: 9999px;
-            background: var(--color-accent-secondary);
-            box-shadow: 0 0 0 1px rgba(123, 97, 255, 0.2), 0 0 24px rgba(123, 97, 255, 0.25);
+            color: var(--color-text-muted);
         }
 
         .legal-text-wrapper h2 {
+            color: var(--color-text-primary);
             font-size: 1.5rem;
             margin-bottom: 1.25rem;
             margin-top: 2.5rem;
@@ -134,9 +112,9 @@
                         </svg>
                     </button>
                     <div class="lang-dropdown">
-                        <button class="lang-option lang-btn" data-lang="pl">🇵🇱 Polski</button>
-                        <button class="lang-option lang-btn" data-lang="uk">🇺🇦 Українська</button>
-                        <button class="lang-option lang-btn" data-lang="en">🇬🇧 English</button>
+                        <button class="lang-option lang-btn" data-lang="pl">🇵🇱 PL</button>
+                        <button class="lang-option lang-btn" data-lang="uk">🇺🇦 UA</button>
+                        <button class="lang-option lang-btn" data-lang="en">🇬🇧 EN</button>
                     </div>
                 </div>
             </div>
@@ -149,17 +127,13 @@
     </header>
 
     <!-- Page Hero -->
-    <section class="page-hero">
+    <section class="page-hero" style="padding: var(--spacing-3xl) 0 0 0;">
         <div class="hero-bg">
             <div class="hero-gradient"></div>
             <div class="grid-pattern"></div>
-            <div class="blob-container">
-                <div class="blob blob-1"></div>
-                <div class="blob blob-2"></div>
-            </div>
         </div>
         <div class="container">
-            <div class="page-hero-content">
+            <div class="page-hero-content" style="text-align: center;">
                 <span class="section-label" data-i18n="privacy-page-label">Informacje prawne</span>
                 <h1 class="page-title" data-i18n="privacy-page-title">Polityka Prywatności</h1>
             </div>
@@ -170,69 +144,26 @@
     <section class="privacy-content">
         <div class="container">
             <div class="legal-text-wrapper" data-i18n-html="privacy-policy-text">
-                <!-- Fallback Content (Polish) -->
                 <p><strong>Ostatnia aktualizacja:</strong> 4 lutego 2026</p>
-                <p>NexaCode ("my") szanuje Twoją prywatność. Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób
-                    zbieramy, wykorzystujemy i chronimy dane osobowe w związku z korzystaniem z naszej strony
-                    internetowej oraz kontaktem z nami. Przetwarzamy dane zgodnie z RODO (GDPR) oraz innymi właściwymi
-                    przepisami.</p>
+                <p>NexaCode dba o Twoją prywatność. Poniższa polityka wyjaśnia zasady przetwarzania danych osobowych oraz prawa, które Ci przysługują.</p>
 
-                <h2>1. Jakie dane zbieramy</h2>
-                <p>Możemy zbierać:</p>
+                <h2>1. Administrator danych</h2>
+                <p>Administratorem danych osobowych zbieranych za pośrednictwem serwisu jest NexaCode z siedzibą w Polsce (hello@nexacode.pl).</p>
+
+                <h2>2. Jakie dane przetwarzamy i w jakim celu?</h2>
                 <ul>
-                    <li><strong>Dane z formularzy:</strong> imię i nazwisko (lub nazwa), adres e‑mail, numer telefonu,
-                        treść wiadomości oraz inne informacje, które dobrowolnie podasz.</li>
-                    <li><strong>Dane techniczne:</strong> adres IP, informacje o przeglądarce i urządzeniu, logi
-                        serwera, przybliżona lokalizacja (na podstawie IP) oraz identyfikatory online.</li>
-                    <li><strong>Dane z plików cookies:</strong> informacje niezbędne do działania strony oraz – za
-                        zgodą – dane analityczne lub marketingowe.</li>
+                    <li><strong>Formularz kontaktowy i kalkulator cen:</strong> Przetwarzamy Twoje imię, adres e-mail, numer telefonu oraz treść wiadomości, aby odpowiedzieć na zapytanie ofertowe i przygotować wycenę (art. 6 ust. 1 lit. b RODO).</li>
+                    <li><strong>Pobranie bezpłatnego poradnika (Newsletter):</strong> Adres e-mail jest przetwarzany w celu wysyłki zamówionych materiałów marketingowych na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO).</li>
                 </ul>
 
-                <h2>2. Cele i podstawy prawne przetwarzania</h2>
-                <p>Przetwarzamy dane w następujących celach:</p>
-                <ul>
-                    <li>obsługa zapytań i <strong>konsultacje</strong> (w tym działania przed zawarciem umowy);</li>
-                    <li>świadczenie usług IT, w tym tworzenie stron internetowych, chatbotów i <strong>rozwiązań
-                            AI</strong>;</li>
-                    <li>zapewnienie bezpieczeństwa oraz prawidłowego działania strony;</li>
-                    <li>analityka i rozwój serwisu (np. statystyki odwiedzin);</li>
-                    <li>marketing i kontakt handlowy – wyłącznie, gdy wyrazisz na to zgodę.</li>
-                </ul>
-                <p>Podstawą prawną może być: Twoja zgoda (art. 6 ust. 1 lit. a RODO), niezbędność do zawarcia lub
-                    wykonania umowy (art. 6 ust. 1 lit. b), nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f) albo
-                    obowiązek prawny (art. 6 ust. 1 lit. c).</p>
+                <h2>3. Czas przechowywania danych</h2>
+                <p>Dane z formularza kontaktowego są przechowywane przez czas niezbędny do obsługi korespondencji i realizacji ewentualnego zlecenia. Dane marketingowe są przetwarzane do momentu wycofania zgody.</p>
 
-                <h2>3. Odbiorcy danych</h2>
-                <p>Możemy korzystać z zaufanych dostawców usług (np. hosting, narzędzia komunikacji, analityka,
-                    podwykonawcy). Podmioty te przetwarzają dane w naszym imieniu na podstawie umów powierzenia i zgodnie
-                    z naszymi instrukcjami. Nie sprzedajemy danych osobowych.</p>
+                <h2>4. Odbiorcy danych</h2>
+                <p>Twoje dane mogą być przekazywane dostawcom usług hostingowych, narzędzi analitycznych oraz systemów do wysyłki e-maili, wyłącznie w celach technicznych.</p>
 
-                <h2>4. Przechowywanie danych</h2>
-                <p>Przechowujemy dane tylko tak długo, jak jest to niezbędne do realizacji wskazanych celów, a następnie
-                    usuwamy je lub anonimizujemy, o ile przepisy nie wymagają dłuższego przechowywania.</p>
-
-                <h2>5. Bezpieczeństwo</h2>
-                <p>Stosujemy odpowiednie środki techniczne i organizacyjne (m.in. kontrola dostępu, szyfrowanie
-                    transmisji, kopie zapasowe) w celu ochrony danych przed utratą, nieuprawnionym dostępem lub
-                    ujawnieniem.</p>
-
-                <h2>6. Twoje prawa (RODO)</h2>
-                <p>Masz prawo do:</p>
-                <ul>
-                    <li>dostępu do danych i uzyskania ich kopii;</li>
-                    <li>sprostowania danych;</li>
-                    <li>usunięcia danych ("prawo do bycia zapomnianym");</li>
-                    <li>ograniczenia przetwarzania;</li>
-                    <li>przenoszenia danych;</li>
-                    <li>wniesienia sprzeciwu wobec przetwarzania;</li>
-                    <li>wycofania zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania sprzed
-                        wycofania);</li>
-                    <li>wniesienia skargi do właściwego organu nadzorczego.</li>
-                </ul>
-
-                <h2>7. Kontakt</h2>
-                <p>Aby skorzystać ze swoich praw lub zadać pytanie, skontaktuj się z nami przez formularz kontaktowy na
-                    stronie lub napisz na <a href="mailto:hello@aihelper.ua">hello@aihelper.ua</a>.</p>
+                <h2>5. Twoje prawa</h2>
+                <p>Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wycofania zgody w dowolnym momencie (bez wpływu na zgodność z prawem wcześniejszego przetwarzania).</p>
             </div>
         </div>
     </section>
@@ -240,7 +171,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
                         <svg class="logo-icon-svg" width="32" height="35" viewBox="0 0 36 40" fill="none">
@@ -256,31 +187,16 @@
                         </svg>
                         <span class="logo-text">NexaCode</span>
                     </a>
-                    <p class="footer-description" data-i18n="footer-tagline">Tworzymy cyfrowe rozwiązania dla biznesu
-                    </p>
+                    <p class="footer-description" data-i18n="footer-tagline">Proste strony i automatyzacje na start dla nowych firm</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4 data-i18n="footer-services-heading">Usługi</h4>
                         <ul>
-                            <li><a href="services.html#websites" data-i18n="websites-title">Strony internetowe</a></li>
-                            <li><a href="services.html#chatbots" data-i18n="chatbots-title">Chatboty</a></li>
-                            <li><a href="services.html#ai" data-i18n="ai-solutions-title">Rozwiązania AI</a></li>
-                            <li><a href="services.html#automation" data-i18n="automation-title">Automatyzacja</a></li>
-                            <li><a href="services.html#mobile-apps" data-i18n="mobile-apps-title">Aplikacje mobilne</a>
-                            </li>
-                            <li><a href="services.html#ecommerce" data-i18n="ecommerce-title">E-commerce</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4 data-i18n="footer-more-services">Więcej usług</h4>
-                        <ul>
-                            <li><a href="services.html#analytics" data-i18n="analytics-title">Analityka</a></li>
-                            <li><a href="services.html#security" data-i18n="security-title">Cyberbezpieczeństwo</a></li>
-                            <li><a href="services.html#marketing" data-i18n="marketing-title">Digital Marketing</a></li>
-                            <li><a href="services.html#design" data-i18n="design-title">UX/UI Design</a></li>
-                            <li><a href="services.html#support" data-i18n="support-title">Wsparcie techniczne</a></li>
-                            <li><a href="services.html#consulting" data-i18n="consulting-title">Szkolenia</a></li>
+                            <li><a href="services.html#start" data-i18n="service-start-title">Pakiet Start</a></li>
+                            <li><a href="services.html#company" data-i18n="service-company-title">Strona firmowa</a></li>
+                            <li><a href="services.html#form" data-i18n="service-form-title">Formularz kandydata / zapytania</a></li>
+                            <li><a href="services.html#auto" data-i18n="service-auto-title">Podstawowa automatyzacja zgłoszeń</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -311,17 +227,14 @@
                                 <circle cx="18" cy="6" r="1" />
                             </svg>
                         </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer-copyright">© 2025 NexaCode. Wszystkie prawa zastrzeżone.</p>
+                <p data-i18n="footer-copyright">© 2026 NexaCode. Wszelkie prawa zastrzeżone.</p>
+                <p class="footer-note" data-i18n="footer-b2b-note" style="margin-top: 8px; font-size: var(--font-xs); color: var(--color-text-muted);">
+                    Większe projekty B2B i zaawansowane automatyzacje realizujemy przez VektaDev.
+                </p>
             </div>
         </div>
     </footer>
@@ -338,15 +251,10 @@
                 <li><a href="privacy-policy.html" data-i18n="privacy-policy">Polityka prywatności</a></li>
                 <li><a href="cookies-policy.html" data-i18n="cookies-page-title">Polityka Cookies</a></li>
             </ul>
-            <a href="contact.html" class="btn btn-primary btn-block" data-i18n="order-button">Zamów</a>
-            <div class="mobile-lang-switcher">
-                <button class="lang-btn" data-lang="pl">🇵🇱 PL</button>
-                <button class="lang-btn" data-lang="uk">🇺🇦 UA</button>
-                <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
-            </div>
         </nav>
     </div>
 
+    <!-- Scripts -->
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

@@ -289,6 +289,56 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
+    // 1. Pre-select service from URL parameter (e.g. contact.html?service=start)
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+        const serviceSelect = document.getElementById('service');
+        if (serviceSelect) {
+            const option = serviceSelect.querySelector(`option[value="${serviceParam}"]`);
+            if (option) {
+                serviceSelect.value = serviceParam;
+                const group = serviceSelect.closest('.form-group');
+                if (group) group.classList.add('focused');
+            }
+        }
+    }
+
+    // 2. Pre-populate from calculator estimate stored in localStorage
+    const quoteServices = localStorage.getItem('quote_services');
+    const quoteTotal = localStorage.getItem('quote_total');
+    const quoteSingleValue = localStorage.getItem('quote_single_value');
+
+    if (quoteSingleValue) {
+        const serviceSelect = document.getElementById('service');
+        if (serviceSelect) {
+            const option = serviceSelect.querySelector(`option[value="${quoteSingleValue}"]`);
+            if (option) {
+                serviceSelect.value = quoteSingleValue;
+                const group = serviceSelect.closest('.form-group');
+                if (group) group.classList.add('focused');
+            }
+        }
+    }
+
+    if (quoteServices && quoteTotal) {
+        const messageTextarea = document.getElementById('message');
+        if (messageTextarea) {
+            const lang = typeof currentLang !== 'undefined' ? currentLang : 'pl';
+            const prefix = lang === 'pl' ? 'Szacunkowa wycena z kalkulatora' : (lang === 'uk' ? 'Розрахунок з калькулятора' : 'Calculator estimate');
+            const servicesLabel = lang === 'pl' ? 'Wybrane usługi' : (lang === 'uk' ? 'Обрані послуги' : 'Selected services');
+            const totalLabel = lang === 'pl' ? 'Koszt orientacyjny' : (lang === 'uk' ? 'Koszt orientacyjny' : 'Estimated cost');
+            
+            messageTextarea.value = `[${prefix}]\\n- ${servicesLabel}: ${quoteServices}\\n- ${totalLabel}: ${quoteTotal} zł\\n\\n`;
+            const group = messageTextarea.closest('.form-group');
+            if (group) group.classList.add('focused');
+        }
+        // Clear so it doesn't persist on subsequent loads
+        localStorage.removeItem('quote_services');
+        localStorage.removeItem('quote_total');
+        localStorage.removeItem('quote_single_value');
+    }
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -323,12 +373,26 @@ function initContactForm() {
         const input = group.querySelector('input, textarea, select');
         if (!input) return;
 
+        // Set focused class if already populated
+        if (input.value) {
+            group.classList.add('focused');
+        }
+
         input.addEventListener('focus', () => {
             group.classList.add('focused');
         });
 
         input.addEventListener('blur', () => {
             if (!input.value) {
+                group.classList.remove('focused');
+            }
+        });
+
+        // Trigger change handling for selects
+        input.addEventListener('change', () => {
+            if (input.value) {
+                group.classList.add('focused');
+            } else {
                 group.classList.remove('focused');
             }
         });
@@ -544,19 +608,12 @@ function initPortfolioFilters() {
 function initPricingCalculator() {
     const checkboxes = document.querySelectorAll('.calculator-option input[type="checkbox"]');
     const totalElement = document.getElementById('calculatorTotal');
-    const currencyBtns = document.querySelectorAll('.currency-btn');
-    const currencyDisplay = document.querySelector('.amount-currency');
     const packageBtns = document.querySelectorAll('.package-btn');
     const getQuoteBtn = document.getElementById('getQuoteBtn');
 
     if (!checkboxes.length || !totalElement) return;
 
-    let currentCurrency = 'PLN';
-    const exchangeRates = {
-        'PLN': 1,
-        'EUR': 0.23,
-        'USD': 0.25
-    };
+    let currentCurrency = 'zł';
 
     // Calculate total
     function calculateTotal() {
@@ -572,11 +629,7 @@ function initPricingCalculator() {
     // Update display
     function updateDisplay() {
         const totalPLN = calculateTotal();
-        const converted = Math.round(totalPLN * exchangeRates[currentCurrency]);
-        totalElement.textContent = converted.toLocaleString();
-        if (currencyDisplay) {
-            currencyDisplay.textContent = currentCurrency;
-        }
+        totalElement.textContent = totalPLN.toLocaleString();
 
         // Save to localStorage
         const selectedServices = [];
@@ -591,16 +644,6 @@ function initPricingCalculator() {
     // Checkbox change handler
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', updateDisplay);
-    });
-
-    // Currency toggle
-    currencyBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            currencyBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentCurrency = btn.dataset.currency;
-            updateDisplay();
-        });
     });
 
     // Package presets
@@ -645,19 +688,26 @@ function initPricingCalculator() {
     // Get Quote button - pass selection to contact form
     if (getQuoteBtn) {
         getQuoteBtn.addEventListener('click', (e) => {
-            const selectedServices = [];
+            const selectedLabels = [];
+            const selectedValues = [];
             checkboxes.forEach(checkbox => {
                 if (checkbox.checked) {
                     const label = checkbox.closest('.calculator-option').querySelector('.option-name');
                     if (label) {
-                        selectedServices.push(label.textContent);
+                        selectedLabels.push(label.textContent.trim());
                     }
+                    selectedValues.push(checkbox.value);
                 }
             });
 
-            if (selectedServices.length > 0) {
-                localStorage.setItem('quote_services', selectedServices.join(', '));
+            if (selectedLabels.length > 0) {
+                localStorage.setItem('quote_services', selectedLabels.join(', '));
                 localStorage.setItem('quote_total', calculateTotal());
+                if (selectedValues.length === 1) {
+                    localStorage.setItem('quote_single_value', selectedValues[0]);
+                } else {
+                    localStorage.removeItem('quote_single_value');
+                }
             }
         });
     }
@@ -850,11 +900,8 @@ function initChatbot() {
         if (response.action) {
             setTimeout(() => {
                 if (response.action === 'scrollToPortfolio') {
-                    const portfolio = document.getElementById('portfolio');
-                    if (portfolio) {
-                        chatbot.classList.remove('active');
-                        portfolio.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    chatbot.classList.remove('active');
+                    window.location.href = 'services.html';
                 } else if (response.action === 'scrollToCalculator') {
                     const calculator = document.getElementById('calculator');
                     if (calculator) {
