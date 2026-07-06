@@ -15,73 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
 });
 
-// ===== 1. Language Swapping System =====
+// ===== 1. Language Enforcer System =====
 function initLanguage() {
-    // Get saved language or default to Polish
-    const savedLang = localStorage.getItem('nexacode_lang') || 'pl';
-    currentLang = savedLang;
+    // Force to Polish language to prevent mixing languages
+    currentLang = 'pl';
+    localStorage.setItem('nexacode_lang', 'pl');
 
     // Apply translations
     applyTranslations(currentLang);
-    updateLanguageSwitcherUI(currentLang);
     initTerminalSimulator();
-
-    // Dropdown toggling
-    const langSwitcher = document.querySelector('.lang-switcher');
-    const langToggle = document.querySelector('.lang-toggle');
-    const langSelectButtons = document.querySelectorAll('.lang-select');
-
-    if (langToggle && langSwitcher) {
-        langToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langSwitcher.classList.toggle('active');
-            
-            const isExpanded = langSwitcher.classList.contains('active');
-            langToggle.setAttribute('aria-expanded', isExpanded);
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!langSwitcher.contains(e.target)) {
-                langSwitcher.classList.remove('active');
-                langToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    }
-
-    // Select language
-    langSelectButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = btn.dataset.lang;
-            if (lang && lang !== currentLang) {
-                switchLanguage(lang);
-            }
-            if (langSwitcher) {
-                langSwitcher.classList.remove('active');
-                if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
-}
-
-function switchLanguage(lang) {
-    if (!translations || !translations[lang]) return;
-    
-    currentLang = lang;
-    localStorage.setItem('nexacode_lang', lang);
-    
-    applyTranslations(lang);
-    updateLanguageSwitcherUI(lang);
-    initTerminalSimulator(); // Restart terminal with localized logs
-}
-
-function updateLanguageSwitcherUI(lang) {
-    const langCurrentSpan = document.querySelector('.lang-current');
-    if (langCurrentSpan) {
-        // Display UA for 'uk' language for better user recognition
-        langCurrentSpan.textContent = lang === 'uk' ? 'UA' : lang.toUpperCase();
-    }
 }
 
 function applyTranslations(lang) {
