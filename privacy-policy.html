@@ -4,81 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexaCode | Polityka Prywatności</title>
-    <meta name="description"
-        content="Zasady przetwarzania danych osobowych w NexaCode.">
+    <title>NexaCode — Polityka Prywatności</title>
+    <meta name="description" content="Zasady przetwarzania danych osobowych w NexaCode.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .privacy-content {
-            padding: var(--spacing-3xl) 0;
-        }
-
-        .legal-text-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--color-text-muted);
-        }
-
-        .legal-text-wrapper h2 {
-            color: var(--color-text-primary);
-            font-size: 1.5rem;
-            margin-bottom: 1.25rem;
-            margin-top: 2.5rem;
-        }
-
-        .legal-text-wrapper h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .legal-text-wrapper h2:first-of-type {
-            margin-top: 0;
-        }
-
-        .legal-text-wrapper p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .legal-text-wrapper ul {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-            list-style: disc;
-        }
-
-        .legal-text-wrapper li::marker {
-            color: var(--color-accent-secondary);
-        }
-
-        .legal-text-wrapper li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-text-wrapper a {
-            color: var(--color-accent-primary);
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
-            transition: color var(--transition-fast), opacity var(--transition-fast);
-        }
-
-        .legal-text-wrapper a:hover {
-            color: var(--color-accent-secondary);
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- 1. Header -->
     <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
+        <div class="container header-container">
+            <a href="index.html#start" class="logo">
                 <svg class="logo-icon-svg" width="36" height="40" viewBox="0 0 36 40" fill="none">
                     <defs>
                         <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -87,175 +26,103 @@
                         </linearGradient>
                     </defs>
                     <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradient)" />
-                    <text x="18" y="26" text-anchor="middle" fill="#0D0D0D" font-family="Onest, sans-serif"
-                        font-size="18" font-weight="700">N</text>
+                    <text x="18" y="26" text-anchor="middle" fill="#020814" font-family="Onest, sans-serif"
+                        font-size="18" font-weight="800">N</text>
                 </svg>
                 <span class="logo-text">NexaCode</span>
             </a>
-            <nav class="nav">
+            
+            <nav class="nav" id="navMenu">
                 <ul class="nav-list">
-                    <li><a href="index.html" data-i18n="home">Strona główna</a></li>
-                    <li><a href="services.html" data-i18n="services">Usługi</a></li>
-                    <li><a href="about.html" data-i18n="about">O nas</a></li>
-                    <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
-                    <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
+                    <li><a href="index.html#start" class="nav-link">Start</a></li>
+                    <li><a href="index.html#problem" class="nav-link">O nas</a></li>
+                    <li><a href="index.html#pakiety" class="nav-link">Pakiety</a></li>
+                    <li><a href="index.html#dla-kogo" class="nav-link">Dla kogo</a></li>
+                    <li><a href="index.html#proces" class="nav-link">Proces</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="index.html#kontakt" class="nav-link">Kontakt</a></li>
                 </ul>
             </nav>
+            
             <div class="header-actions">
-                <a href="contact.html" class="btn btn-primary header-cta" data-i18n="order-button">Zamów</a>
-                <div class="lang-switcher">
-                    <button class="lang-switcher-toggle">
-                        <span class="lang-current">PL</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
-                            height="16">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="lang-dropdown">
-                        <button class="lang-option lang-btn" data-lang="pl">🇵🇱 PL</button>
-                        <button class="lang-option lang-btn" data-lang="uk">🇺🇦 UA</button>
-                        <button class="lang-option lang-btn" data-lang="en">🇬🇧 EN</button>
-                    </div>
-                </div>
+                <a href="index.html#kontakt" class="btn btn-sm btn-primary header-cta">Zapytaj o Pakiet Start</a>
+                <button class="mobile-menu-btn" aria-label="Otwórz menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero" style="padding: var(--spacing-3xl) 0 0 0;">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="grid-pattern"></div>
-        </div>
-        <div class="container">
-            <div class="page-hero-content" style="text-align: center;">
-                <span class="section-label" data-i18n="privacy-page-label">Informacje prawne</span>
-                <h1 class="page-title" data-i18n="privacy-page-title">Polityka Prywatności</h1>
-            </div>
-        </div>
-    </section>
+    <main class="policy-body">
+        <section class="policy-content container">
+            <h1>Polityka Prywatności</h1>
+            <p><strong>Ostatnia aktualizacja:</strong> 6 lipca 2026</p>
+            <p>NexaCode dba o Twoją prywatność. Poniższa polityka wyjaśnia zasady przetwarzania danych osobowych oraz prawa, które Ci przysługują.</p>
 
-    <!-- Privacy Content -->
-    <section class="privacy-content">
-        <div class="container">
-            <div class="legal-text-wrapper" data-i18n-html="privacy-policy-text">
-                <p><strong>Ostatnia aktualizacja:</strong> 4 lutego 2026</p>
-                <p>NexaCode dba o Twoją prywatność. Poniższa polityka wyjaśnia zasady przetwarzania danych osobowych oraz prawa, które Ci przysługują.</p>
+            <h2>1. Administrator danych</h2>
+            <p>Administratorem danych osobowych zbieranych za pośrednictwem serwisu jest NexaCode z siedzibą w Polsce (kontakt@nexacode.net).</p>
 
-                <h2>1. Administrator danych</h2>
-                <p>Administratorem danych osobowych zbieranych za pośrednictwem serwisu jest NexaCode z siedzibą w Polsce (hello@nexacode.pl).</p>
+            <h2>2. Jakie dane przetwarzamy i w jakim celu?</h2>
+            <ul>
+                <li><strong>Formularz kontaktowy:</strong> Przetwarzamy Twoje imię, adres e-mail, numer telefonu, branżę oraz treść wiadomości, aby odpowiedzieć na zapytanie ofertowe i przedstawić szczegóły pakietów (art. 6 ust. 1 lit. b RODO).</li>
+            </ul>
 
-                <h2>2. Jakie dane przetwarzamy i w jakim celu?</h2>
-                <ul>
-                    <li><strong>Formularz kontaktowy i kalkulator cen:</strong> Przetwarzamy Twoje imię, adres e-mail, numer telefonu oraz treść wiadomości, aby odpowiedzieć na zapytanie ofertowe i przygotować wycenę (art. 6 ust. 1 lit. b RODO).</li>
-                    <li><strong>Pobranie bezpłatnego poradnika (Newsletter):</strong> Adres e-mail jest przetwarzany w celu wysyłki zamówionych materiałów marketingowych na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO).</li>
-                </ul>
+            <h2>3. Czas przechowywania danych</h2>
+            <p>Dane z formularza kontaktowego są przechowywane przez czas niezbędny do obsługi korespondencji i realizacji ewentualnego zlecenia.</p>
 
-                <h2>3. Czas przechowywania danych</h2>
-                <p>Dane z formularza kontaktowego są przechowywane przez czas niezbędny do obsługi korespondencji i realizacji ewentualnego zlecenia. Dane marketingowe są przetwarzane do momentu wycofania zgody.</p>
+            <h2>4. Odbiorcy danych</h2>
+            <p>Twoje dane mogą być przekazywane dostawcom usług hostingowych, obsługi poczty elektronicznej oraz narzędzi analitycznych, wyłącznie w celach technicznych.</p>
 
-                <h2>4. Odbiorcy danych</h2>
-                <p>Twoje dane mogą być przekazywane dostawcom usług hostingowych, narzędzi analitycznych oraz systemów do wysyłki e-maili, wyłącznie w celach technicznych.</p>
+            <h2>5. Twoje prawa</h2>
+            <p>Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu. W każdym momencie możesz się z nami skontaktować w celu realizacji swoich praw.</p>
+        </section>
+    </main>
 
-                <h2>5. Twoje prawa</h2>
-                <p>Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wycofania zgody w dowolnym momencie (bez wpływu na zgodność z prawem wcześniejszego przetwarzania).</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- 12. Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <svg class="logo-icon-svg" width="32" height="35" viewBox="0 0 36 40" fill="none">
-                            <defs>
-                                <linearGradient id="hexGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#00F5D4" />
-                                    <stop offset="100%" style="stop-color:#7B61FF" />
-                                </linearGradient>
-                            </defs>
-                            <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradientFooter)" />
-                            <text x="18" y="26" text-anchor="middle" fill="#0D0D0D" font-family="Onest, sans-serif"
-                                font-size="18" font-weight="700">N</text>
-                        </svg>
-                        <span class="logo-text">NexaCode</span>
-                    </a>
-                    <p class="footer-description" data-i18n="footer-tagline">Proste strony i automatyzacje na start dla nowych firm</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 data-i18n="footer-services-heading">Usługi</h4>
-                        <ul>
-                            <li><a href="services.html#start" data-i18n="service-start-title">Pakiet Start</a></li>
-                            <li><a href="services.html#company" data-i18n="service-company-title">Strona firmowa</a></li>
-                            <li><a href="services.html#form" data-i18n="service-form-title">Formularz kandydata / zapytania</a></li>
-                            <li><a href="services.html#auto" data-i18n="service-auto-title">Podstawowa automatyzacja zgłoszeń</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4 data-i18n="footer-company-heading">Firma</h4>
-                        <ul>
-                            <li><a href="about.html" data-i18n="about">O nas</a></li>
-                            <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
-                            <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
-                            <li><a href="privacy-policy.html" data-i18n="privacy-policy">Polityka prywatności</a></li>
-                            <li><a href="cookies-policy.html" data-i18n="cookies-page-title">Polityka Cookies</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-social">
-                    <h4 data-i18n="footer-follow-us-heading">Śledź nas</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Telegram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <rect x="2" y="2" width="20" height="20" rx="5" />
-                                <circle cx="12" cy="12" r="4" />
-                                <circle cx="18" cy="6" r="1" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="index.html#start" class="logo">
+                    <svg class="logo-icon-svg" width="24" height="27" viewBox="0 0 36 40" fill="none">
+                        <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradient)" />
+                        <text x="18" y="26" text-anchor="middle" fill="#020814" font-family="Onest, sans-serif"
+                            font-size="18" font-weight="800">N</text>
+                    </svg>
+                    <span class="logo-text">NexaCode</span>
+                </a>
+                <p class="footer-tagline">Proste strony i automatyzacje dla nowych firm</p>
             </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer-copyright">© 2026 NexaCode. Wszelkie prawa zastrzeżone.</p>
-                <p class="footer-note" data-i18n="footer-b2b-note" style="margin-top: 8px; font-size: var(--font-xs); color: var(--color-text-muted);">
-                    Większe projekty B2B i zaawansowane automatyzacje realizujemy przez VektaDev.
-                </p>
+            
+            <div class="footer-links">
+                <h4>Nawigacja</h4>
+                <ul>
+                    <li><a href="index.html#start">Start</a></li>
+                    <li><a href="index.html#problem">O nas</a></li>
+                    <li><a href="index.html#pakiety">Pakiety</a></li>
+                    <li><a href="index.html#dla-kogo">Dla kogo</a></li>
+                    <li><a href="index.html#proces">Proces</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                </ul>
             </div>
+
+            <div class="footer-links">
+                <h4>Prawo</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Polityka Prywatności</a></li>
+                    <li><a href="cookies-policy.html">Polityka Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NexaCode. Wszelkie prawa zastrzeżone.</p>
+            <p class="footer-dev-note">Większe projekty B2B i zaawansowane automatyzacje: <a href="https://vektadev.pl" target="_blank" rel="noopener noreferrer">VektaDev</a></p>
         </div>
     </footer>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="index.html" data-i18n="home">Strona główna</a></li>
-                <li><a href="services.html" data-i18n="services">Usługi</a></li>
-                <li><a href="about.html" data-i18n="about">O nas</a></li>
-                <li><a href="pricing.html" data-i18n="pricing">Ceny</a></li>
-                <li><a href="contact.html" data-i18n="contact">Kontakt</a></li>
-                <li><a href="privacy-policy.html" data-i18n="privacy-policy">Polityka prywatności</a></li>
-                <li><a href="cookies-policy.html" data-i18n="cookies-page-title">Polityka Cookies</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Scripts -->
-    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 
