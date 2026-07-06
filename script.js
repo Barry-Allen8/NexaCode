@@ -1,17 +1,115 @@
 /**
- * NexaCode - Interactive Landing Page Logic
+ * NexaCode - Interactive Multilingual Landing Page Logic
  */
 
+let currentLang = 'pl';
+let terminalInterval = null;
+let terminalTimeout = null;
+
 document.addEventListener('DOMContentLoaded', () => {
+    initLanguage();
     initHeaderScroll();
     initMobileMenu();
     initSmoothScrollAndActiveLinks();
-    initTerminalSimulator();
     initFaqAccordion();
     initContactForm();
 });
 
-// ===== 1. Sticky Header Scroll Effect =====
+// ===== 1. Language Swapping System =====
+function initLanguage() {
+    // Get saved language or default to Polish
+    const savedLang = localStorage.getItem('nexacode_lang') || 'pl';
+    currentLang = savedLang;
+
+    // Apply translations
+    applyTranslations(currentLang);
+    updateLanguageSwitcherUI(currentLang);
+    initTerminalSimulator();
+
+    // Dropdown toggling
+    const langSwitcher = document.querySelector('.lang-switcher');
+    const langToggle = document.querySelector('.lang-toggle');
+    const langSelectButtons = document.querySelectorAll('.lang-select');
+
+    if (langToggle && langSwitcher) {
+        langToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langSwitcher.classList.toggle('active');
+            
+            const isExpanded = langSwitcher.classList.contains('active');
+            langToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langSwitcher.contains(e.target)) {
+                langSwitcher.classList.remove('active');
+                langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    // Select language
+    langSelectButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.dataset.lang;
+            if (lang && lang !== currentLang) {
+                switchLanguage(lang);
+            }
+            if (langSwitcher) {
+                langSwitcher.classList.remove('active');
+                if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+}
+
+function switchLanguage(lang) {
+    if (!translations || !translations[lang]) return;
+    
+    currentLang = lang;
+    localStorage.setItem('nexacode_lang', lang);
+    
+    applyTranslations(lang);
+    updateLanguageSwitcherUI(lang);
+    initTerminalSimulator(); // Restart terminal with localized logs
+}
+
+function updateLanguageSwitcherUI(lang) {
+    const langCurrentSpan = document.querySelector('.lang-current');
+    if (langCurrentSpan) {
+        // Display UA for 'uk' language for better user recognition
+        langCurrentSpan.textContent = lang === 'uk' ? 'UA' : lang.toUpperCase();
+    }
+}
+
+function applyTranslations(lang) {
+    if (!translations || !translations[lang]) return;
+
+    const t = translations[lang];
+
+    // Set document lang attribute
+    document.documentElement.lang = lang === 'uk' ? 'uk' : lang;
+
+    // Translate all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key]) {
+            el.innerHTML = t[key];
+        }
+    });
+
+    // Translate all elements with data-i18n-placeholder attribute
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (t[key]) {
+            el.setAttribute('placeholder', t[key]);
+        }
+    });
+}
+
+// ===== 2. Sticky Header Scroll Effect =====
 function initHeaderScroll() {
     const header = document.querySelector('.header');
     if (!header) return;
@@ -25,7 +123,7 @@ function initHeaderScroll() {
     });
 }
 
-// ===== 2. Mobile Menu Toggle =====
+// ===== 3. Mobile Menu Toggle =====
 function initMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav');
@@ -54,7 +152,7 @@ function initMobileMenu() {
     });
 }
 
-// ===== 3. Smooth Scroll & Active Nav Highlights =====
+// ===== 4. Smooth Scroll & Active Nav Highlights =====
 function initSmoothScrollAndActiveLinks() {
     const navLinks = document.querySelectorAll('.nav-link, .header-cta, .hero-actions a, .offer-footer a');
     const sections = document.querySelectorAll('section[id]');
@@ -113,21 +211,27 @@ function initSmoothScrollAndActiveLinks() {
     }
 }
 
-// ===== 4. Hero Section Terminal Simulator =====
+// ===== 5. Hero Section Terminal Simulator =====
 function initTerminalSimulator() {
     const terminalBody = document.querySelector('.terminal-body');
     if (!terminalBody) return;
 
-    // Define simulation steps
+    // Clear any currently running animations from previous language switches
+    if (terminalInterval) clearInterval(terminalInterval);
+    if (terminalTimeout) clearTimeout(terminalTimeout);
+
+    const t = translations[currentLang];
+    
+    // Define localized simulation steps
     const steps = [
-        { type: 'typewriter', text: ' nexacode init project --package start', selector: null, prefix: '<span class="text-purple">$</span>' },
-        { type: 'print', text: 'Inicjowanie modułów wdrażania...', delay: 600, class: 'text-muted' },
-        { type: 'print', text: '<span class="text-teal">[OK]</span> Strona internetowa status: <span class="status-badge status-active">ACTIVE</span>', delay: 800 },
-        { type: 'print', text: '<span class="text-teal">[OK]</span> Formularz kontaktowy: <span class="status-badge status-active">CONNECTED</span>', delay: 500 },
-        { type: 'print', text: '<span class="text-teal">[OK]</span> Integracja WhatsApp: <span class="status-badge status-active">READY</span>', delay: 400 },
-        { type: 'print', text: 'Generowanie parametrów projektu...', delay: 700, class: 'text-muted' },
-        { type: 'print', text: '<span class="text-purple">[RUN]</span> Wdrażanie projektu... 100% SUCCESS', delay: 900 },
-        { type: 'print', text: '<span class="text-teal">[INFO]</span> Wycena końcowa: od 500 PLN', delay: 500, class: 'text-glow' },
+        { type: 'typewriter', text: ' nexacode init project --package start', prefix: '<span class="text-purple">$</span>' },
+        { type: 'print', text: t['terminal-init'] || 'Inicjowanie modułów wdrażania...', delay: 600, class: 'text-muted' },
+        { type: 'print', text: `<span class="text-teal">[OK]</span> ${t['terminal-status-web'] || 'Strona internetowa status:'} <span class="status-badge status-active">ACTIVE</span>`, delay: 800 },
+        { type: 'print', text: `<span class="text-teal">[OK]</span> ${t['terminal-status-form'] || 'Formularz kontaktowy:'} <span class="status-badge status-active">CONNECTED</span>`, delay: 500 },
+        { type: 'print', text: `<span class="text-teal">[OK]</span> ${t['terminal-status-wa'] || 'Integracja WhatsApp:'} <span class="status-badge status-active">READY</span>`, delay: 400 },
+        { type: 'print', text: t['terminal-generating'] || 'Generowanie parametrów projektu...', delay: 700, class: 'text-muted' },
+        { type: 'print', text: `<span class="text-purple">[RUN]</span> ${t['terminal-deploying'] || 'Wdrażanie projektu...'} 100% SUCCESS`, delay: 900 },
+        { type: 'print', text: `<span class="text-teal">[INFO]</span> ${t['terminal-price'] || 'Wycena końcowa: od 500 PLN'}`, delay: 500, class: 'text-glow' },
         { type: 'cursor-line', text: '', delay: 600 }
     ];
 
@@ -159,21 +263,21 @@ function initTerminalSimulator() {
             // Re-create command line container
             lastLine.innerHTML = step.prefix;
             
-            const typingInterval = setInterval(() => {
+            terminalInterval = setInterval(() => {
                 if (charIndex < textToType.length) {
                     lastLine.innerHTML += textToType.charAt(charIndex);
                     charIndex++;
                 } else {
-                    clearInterval(typingInterval);
+                    clearInterval(terminalInterval);
                     // Add cursor back temporarily
                     lastLine.innerHTML += '<span class="terminal-cursor"></span>';
                     stepIndex++;
-                    setTimeout(runStep, 400);
+                    terminalTimeout = setTimeout(runStep, 400);
                 }
             }, 50); // Typing speed
             
         } else if (step.type === 'print') {
-            setTimeout(() => {
+            terminalTimeout = setTimeout(() => {
                 const newLine = document.createElement('div');
                 newLine.className = 'terminal-line' + (step.class ? ' ' + step.class : '');
                 newLine.innerHTML = step.text + '<span class="terminal-cursor"></span>';
@@ -184,7 +288,7 @@ function initTerminalSimulator() {
             }, step.delay);
             
         } else if (step.type === 'cursor-line') {
-            setTimeout(() => {
+            terminalTimeout = setTimeout(() => {
                 const newLine = document.createElement('div');
                 newLine.className = 'terminal-line';
                 newLine.innerHTML = '<span class="text-purple">$</span><span class="terminal-cursor"></span>';
@@ -197,10 +301,10 @@ function initTerminalSimulator() {
     }
 
     // Start simulation after page load delay
-    setTimeout(runStep, 800);
+    terminalTimeout = setTimeout(runStep, 800);
 }
 
-// ===== 5. FAQ Accordion Accordance =====
+// ===== 6. FAQ Accordion Accordance =====
 function initFaqAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -222,7 +326,7 @@ function initFaqAccordion() {
     });
 }
 
-// ===== 6. Contact Form Validation & Handler =====
+// ===== 7. Contact Form Validation & Handler =====
 function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
@@ -242,8 +346,10 @@ function initContactForm() {
         const industry = form.querySelector('#industry').value.trim();
         const message = form.querySelector('#message').value.trim();
 
+        const t = translations[currentLang];
+
         if (!name || !email || !phone || !industry || !message) {
-            alert('Proszę wypełnić wszystkie pola formularza.');
+            alert(t['validation-alert'] || 'Proszę wypełnić wszystkie pola formularza.');
             return;
         }
 
@@ -255,7 +361,7 @@ function initContactForm() {
         await new Promise(resolve => setTimeout(resolve, 1500));
 
         // Show success state
-        submitBtn.innerHTML = '✓ Zapytanie zostało wysłane!';
+        submitBtn.innerHTML = t['submit-success'] || '✓ Zapytanie zostało wysłane!';
         submitBtn.classList.add('btn-success');
         
         // Reset inputs

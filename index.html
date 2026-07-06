@@ -42,18 +42,33 @@
             
             <nav class="nav" id="navMenu">
                 <ul class="nav-list">
-                    <li><a href="#start" class="nav-link active">Start</a></li>
-                    <li><a href="#problem" class="nav-link">O nas</a></li>
-                    <li><a href="#pakiety" class="nav-link">Pakiety</a></li>
-                    <li><a href="#dla-kogo" class="nav-link">Dla kogo</a></li>
-                    <li><a href="#proces" class="nav-link">Proces</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                    <li><a href="#start" class="nav-link active" data-i18n="nav-start">Start</a></li>
+                    <li><a href="#problem" class="nav-link" data-i18n="nav-about">O nas</a></li>
+                    <li><a href="#pakiety" class="nav-link" data-i18n="nav-pakiety">Pakiety</a></li>
+                    <li><a href="#dla-kogo" class="nav-link" data-i18n="nav-target">Dla kogo</a></li>
+                    <li><a href="#proces" class="nav-link" data-i18n="nav-proces">Proces</a></li>
+                    <li><a href="#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
+                    <li><a href="#kontakt" class="nav-link" data-i18n="nav-contact">Kontakt</a></li>
                 </ul>
             </nav>
             
             <div class="header-actions">
-                <a href="#kontakt" class="btn btn-sm btn-primary header-cta">Zapytaj o Pakiet Start</a>
+                <!-- Language Selector Dropdown -->
+                <div class="lang-switcher">
+                    <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Zmień język">
+                        <span class="lang-current">PL</span>
+                        <svg class="lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><button class="lang-select" data-lang="pl">PL</button></li>
+                        <li><button class="lang-select" data-lang="uk">UA</button></li>
+                        <li><button class="lang-select" data-lang="en">EN</button></li>
+                    </ul>
+                </div>
+                
+                <a href="#kontakt" class="btn btn-sm btn-primary header-cta" data-i18n="header-cta">Zapytaj o Pakiet Start</a>
                 <button class="mobile-menu-btn" aria-label="Otwórz menu" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
@@ -76,17 +91,17 @@
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="badge-dot"></span>
-                        <span class="badge-text">Pakiet Start od 500 zł</span>
+                        <span class="badge-text" data-i18n="hero-badge">Pakiet Start od 500 zł</span>
                     </div>
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-i18n="hero-title">
                         Proste strony i <span class="gradient-text">automatyzacje</span> dla nowych firm
                     </h1>
-                    <p class="hero-description">
+                    <p class="hero-description" data-i18n="hero-description">
                         Startowa strona internetowa, formularz kontaktowy i podstawowa automatyzacja bez dużego budżetu.
                     </p>
                     <div class="hero-actions">
-                        <a href="#kontakt" class="btn btn-primary">Zapytaj o Pakiet Start</a>
-                        <a href="#pakiety" class="btn btn-secondary">Zobacz pakiety</a>
+                        <a href="#kontakt" class="btn btn-primary" data-i18n="hero-cta-start">Zapytaj o Pakiet Start</a>
+                        <a href="#pakiety" class="btn btn-secondary" data-i18n="hero-cta-pakiety">Zobacz pakiety</a>
                     </div>
                 </div>
                 
@@ -101,15 +116,7 @@
                             <span class="terminal-title">nexacode-dashboard.sh</span>
                         </div>
                         <div class="terminal-body font-mono">
-                            <div class="terminal-line"><span class="text-purple">$</span> nexacode init project --package start</div>
-                            <div class="terminal-line text-muted">Inicjowanie modułów wdrażania...</div>
-                            <div class="terminal-line"><span class="text-teal">[OK]</span> Strona internetowa status: <span class="status-badge status-active">ACTIVE</span></div>
-                            <div class="terminal-line"><span class="text-teal">[OK]</span> Formularz kontaktowy: <span class="status-badge status-active">CONNECTED</span></div>
-                            <div class="terminal-line"><span class="text-teal">[OK]</span> Integracja WhatsApp: <span class="status-badge status-active">READY</span></div>
-                            <div class="terminal-line text-muted">Generowanie parametrów projektu...</div>
-                            <div class="terminal-line"><span class="text-purple">[RUN]</span> Wdrażanie projektu... 100% SUCCESS</div>
-                            <div class="terminal-line text-glow"><span class="text-teal">[INFO]</span> Wycena końcowa: od 500 PLN</div>
-                            <div class="terminal-line cursor-line"><span class="text-purple">$</span><span class="terminal-cursor"></span></div>
+                            <!-- Populated dynamically via JS translations -->
                         </div>
                     </div>
                 </div>
@@ -120,8 +127,8 @@
         <section id="problem" class="section problem-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Nowa firma potrzebuje zaufania od pierwszego kontaktu</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" data-i18n="problem-title">Nowa firma potrzebuje zaufania od pierwszego kontaktu</h2>
+                    <p class="section-subtitle" data-i18n="problem-subtitle">
                         Wielu klientów sprawdza firmę w internecie zanim napisze lub zadzwoni. Jeśli firma działa tylko przez Facebook, OLX albo WhatsApp, może wyglądać mniej profesjonalnie.
                     </p>
                 </div>
@@ -135,8 +142,8 @@
                                 <line x1="9" y1="9" x2="15" y2="15"/>
                             </svg>
                         </div>
-                        <h3 class="card-title">Brak strony internetowej</h3>
-                        <p class="card-text">
+                        <h3 class="card-title" data-i18n="problem-c1-title">Brak strony internetowej</h3>
+                        <p class="card-text" data-i18n="problem-c1-desc">
                             Klienci szukający Twoich usług w Google nie mogą Cię znaleźć. Tracisz wartościowy ruch i zapytania na rzecz konkurencji posiadającej własne witryny.
                         </p>
                     </div>
@@ -148,8 +155,8 @@
                                 <polyline points="22,6 12,13 2,6"/>
                             </svg>
                         </div>
-                        <h3 class="card-title">Brak formularza kontaktowego</h3>
-                        <p class="card-text">
+                        <h3 class="card-title" data-i18n="problem-c2-title">Brak formularza kontaktowego</h3>
+                        <p class="card-text" data-i18n="problem-c2-desc">
                             Konieczność ręcznego kopiowania e-maila lub dzwonienia zniechęca wielu użytkowników. Formularz to najprostsza droga do pozyskania klienta.
                         </p>
                     </div>
@@ -160,8 +167,8 @@
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                             </svg>
                         </div>
-                        <h3 class="card-title">Brak profesjonalnego wizerunku</h3>
-                        <p class="card-text">
+                        <h3 class="card-title" data-i18n="problem-c3-title">Brak profesjonalnego wizerunku</h3>
+                        <p class="card-text" data-i18n="problem-c3-desc">
                             Własna, estetyczna domena buduje zaufanie od pierwszych sekund. Sam profil na social media lub portalach ogłoszeniowych to dzisiaj za mało.
                         </p>
                     </div>
@@ -173,8 +180,8 @@
         <section id="pakiety" class="section offer-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Co możemy uruchomić dla Twojej firmy</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" data-i18n="offer-title">Co możemy uruchomić dla Twojej firmy</h2>
+                    <p class="section-subtitle" data-i18n="offer-subtitle">
                         Oferujemy sprawdzone i zoptymalizowane cenowo pakiety dopasowane do potrzeb nowych i rozwijających się biznesów.
                     </p>
                 </div>
@@ -182,95 +189,95 @@
                 <div class="grid grid-2">
                     <!-- Pakiet Start -->
                     <div class="card offer-card featured">
-                        <div class="offer-badge-glow">Najpopularniejszy</div>
+                        <div class="offer-badge-glow" data-i18n="offer-p1-badge">Najpopularniejszy</div>
                         <div class="offer-header">
-                            <h3 class="offer-title">Pakiet Start</h3>
-                            <div class="offer-price">od 500 zł</div>
-                            <p class="offer-description">Prosta strona-wizytówka dla nowej firmy, idealna na start.</p>
+                            <h3 class="offer-title" data-i18n="offer-p1-title">Pakiet Start</h3>
+                            <div class="offer-price" data-i18n="offer-p1-price">od 500 zł</div>
+                            <p class="offer-description" data-i18n="offer-p1-desc">Prosta strona-wizytówka dla nowej firmy, idealna na start.</p>
                         </div>
                         <div class="offer-body">
                             <ul class="offer-features">
-                                <li><span>✓</span> Jedna strona (One Page)</li>
-                                <li><span>✓</span> 3–5 przemyślanych sekcji</li>
-                                <li><span>✓</span> Czytelny opis firmy</li>
-                                <li><span>✓</span> Oferta i zakres usług</li>
-                                <li><span>✓</span> Pełne dane kontaktowe</li>
-                                <li><span>✓</span> Formularz kontaktowy lub WhatsApp</li>
-                                <li><span>✓</span> Wersja mobilna (responsywna)</li>
-                                <li><span>✓</span> Ekspresowe uruchomienie</li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f1">Jedna strona (One Page)</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f2">3–5 przemyślanych sekcji</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f3">Czytelny opis firmy</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f4">Oferta i zakres usług</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f5">Pełne dane kontaktowe</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f6">Formularz kontaktowy lub WhatsApp</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f7">Wersja mobilna (responsywna)</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p1-f8">Ekspresowe uruchomienie</span></li>
                             </ul>
                         </div>
                         <div class="offer-footer">
-                            <a href="#kontakt" class="btn btn-block btn-primary">Wybierz Pakiet Start</a>
+                            <a href="#kontakt" class="btn btn-block btn-primary" data-i18n="offer-p1-cta">Wybierz Pakiet Start</a>
                         </div>
                     </div>
 
                     <!-- Strona Firmowa -->
                     <div class="card offer-card">
                         <div class="offer-header">
-                            <h3 class="offer-title">Strona Firmowa</h3>
-                            <div class="offer-price">od 1200 zł</div>
-                            <p class="offer-description">Rozbudowana i w pełni zoptymalizowana strona dla firmy usługowej.</p>
+                            <h3 class="offer-title" data-i18n="offer-p2-title">Strona Firmowa</h3>
+                            <div class="offer-price" data-i18n="offer-p2-price">od 1200 zł</div>
+                            <p class="offer-description" data-i18n="offer-p2-desc">Rozbudowana i w pełni zoptymalizowana strona dla firmy usługowej.</p>
                         </div>
                         <div class="offer-body">
                             <ul class="offer-features">
-                                <li><span>✓</span> Więcej sekcji i lepsza struktura</li>
-                                <li><span>✓</span> Rozbudowana prezentacja oferty</li>
-                                <li><span>✓</span> Zaawansowany formularz kontaktowy</li>
-                                <li><span>✓</span> Podstawowa optymalizacja SEO</li>
-                                <li><span>✓</span> Podpięcie Google Analytics</li>
-                                <li><span>✓</span> Pełna responsywność (mobile)</li>
-                                <li><span>✓</span> Integracja z mediami społecznościowymi</li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f1">Więcej sekcji i lepsza struktura</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f2">Rozbudowana prezentacja oferty</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f3">Zaawansowany formularz kontaktowy</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f4">Podstawowa optymalizacja SEO</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f5">Podpięcie Google Analytics</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f6">Pełna responsywność (mobile)</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p2-f7">Integracja z mediami społecznościowymi</span></li>
                             </ul>
                         </div>
                         <div class="offer-footer">
-                            <a href="#kontakt" class="btn btn-block btn-secondary">Wybierz Stronę Firmową</a>
+                            <a href="#kontakt" class="btn btn-block btn-secondary" data-i18n="offer-p2-cta">Wybierz Stronę Firmową</a>
                         </div>
                     </div>
 
                     <!-- Formularz Kandydata -->
                     <div class="card offer-card">
                         <div class="offer-header">
-                            <h3 class="offer-title">Formularz Kandydata / Zapytania</h3>
-                            <div class="offer-price">od 1800 zł</div>
-                            <p class="offer-description">System zbierania zgłoszeń dla agencji pracy lub firm usługowych.</p>
+                            <h3 class="offer-title" data-i18n="offer-p3-title">Formularz Kandydata / Zapytania</h3>
+                            <div class="offer-price" data-i18n="offer-p3-price">od 1800 zł</div>
+                            <p class="offer-description" data-i18n="offer-p3-desc">System zbierania zgłoszeń dla agencji pracy lub firm usługowych.</p>
                         </div>
                         <div class="offer-body">
                             <ul class="offer-features">
-                                <li><span>✓</span> Dedykowany formularz zgłoszeniowy</li>
-                                <li><span>✓</span> Pola i pytania dopasowane do branży</li>
-                                <li><span>✓</span> Automatyczna wysyłka zgłoszeń na e-mail</li>
-                                <li><span>✓</span> Bezpośrednie połączenie z Google Sheets</li>
-                                <li><span>✓</span> Podstawowe powiadomienia systemowe</li>
-                                <li><span>✓</span> Walidacja przesyłanych danych</li>
-                                <li><span>✓</span> Zgodność z wymogami RODO</li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f1">Dedykowany formularz zgłoszeniowy</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f2">Pola i pytania dopasowane do branży</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f3">Automatyczna wysyłka zgłoszeń na e-mail</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f4">Bezpośrednie połączenie z Google Sheets</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f5">Podstawowe powiadomienia systemowe</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f6">Walidacja przesyłanych danych</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p3-f7">Zgodność z wymogami RODO</span></li>
                             </ul>
                         </div>
                         <div class="offer-footer">
-                            <a href="#kontakt" class="btn btn-block btn-secondary">Zamów Formularz</a>
+                            <a href="#kontakt" class="btn btn-block btn-secondary" data-i18n="offer-p3-cta">Zamów Formularz</a>
                         </div>
                     </div>
 
                     <!-- Automatyzacja Zgłoszeń -->
                     <div class="card offer-card">
                         <div class="offer-header">
-                            <h3 class="offer-title">Automatyzacja Zgłoszeń</h3>
-                            <div class="offer-price">od 2500 zł</div>
-                            <p class="offer-description">Wygodne narzędzia automatyzujące obsługę napływających zapytań.</p>
+                            <h3 class="offer-title" data-i18n="offer-p4-title">Automatyzacja Zgłoszeń</h3>
+                            <div class="offer-price" data-i18n="offer-p4-price">od 2500 zł</div>
+                            <p class="offer-description" data-i18n="offer-p4-desc">Wygodne narzędzia automatyzujące obsługę napływających zapytań.</p>
                         </div>
                         <div class="offer-body">
                             <ul class="offer-features">
-                                <li><span>✓</span> Automatyczne powiadomienia zwrotne</li>
-                                <li><span>✓</span> System statusów dla zgłoszeń</li>
-                                <li><span>✓</span> Integracja z Google Sheets / Airtable</li>
-                                <li><span>✓</span> Prosty workflow (scenariusz obsługi)</li>
-                                <li><span>✓</span> Wyraźne zmniejszenie pracy ręcznej</li>
-                                <li><span>✓</span> Oszczędność czasu przy obsłudze leadów</li>
-                                <li><span>✓</span> Wytrzymałość i skalowalność</li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f1">Automatyczne powiadomienia zwrotne</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f2">System statusów dla zgłoszeń</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f3">Integracja z Google Sheets / Airtable</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f4">Prosty workflow (scenariusz obsługi)</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f5">Wyraźne zmniejszenie pracy ręcznej</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f6">Oszczędność czasu przy obsłudze leadów</span></li>
+                                <li><span>✓</span> <span data-i18n="offer-p4-f7">Możliwość dalszej rozbudowy</span></li>
                             </ul>
                         </div>
                         <div class="offer-footer">
-                            <a href="#kontakt" class="btn btn-block btn-secondary">Zamów Automatyzację</a>
+                            <a href="#kontakt" class="btn btn-block btn-secondary" data-i18n="offer-p4-cta">Zamów Automatyzację</a>
                         </div>
                     </div>
                 </div>
@@ -281,62 +288,62 @@
         <section class="section border-top">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Szczegóły oferty: Pakiet Start</h2>
-                    <p class="section-subtitle">Chcemy, aby warunki współpracy były w pełni przejrzyste. Zobacz, co dokładnie otrzymujesz w cenie 500 zł, a co wymaga dodatkowego budżetu.</p>
+                    <h2 class="section-title" data-i18n="scope-title">Szczegóły oferty: Pakiet Start</h2>
+                    <p class="section-subtitle" data-i18n="scope-subtitle">Chcemy, aby warunki współpracy były w pełni przejrzyste. Zobacz, co dokładnie otrzymujesz w cenie 500 zł, a co wymaga dodatkowego budżetu.</p>
                 </div>
 
                 <div class="grid grid-2 scope-grid">
                     <!-- Inclusions -->
                     <div class="card scope-card scope-in">
-                        <h3 class="scope-title">Co zawiera Pakiet Start za 500 zł</h3>
+                        <h3 class="scope-title" data-i18n="scope-in-title">Co zawiera Pakiet Start za 500 zł</h3>
                         <ul class="scope-list">
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>Jedna prosta strona</strong>
-                                    <p>Estetyczna wizytówka skupiająca wszystkie informacje w jednym miejscu.</p>
+                                    <strong data-i18n="scope-in-f1-title">Jedna prosta strona</strong>
+                                    <p data-i18n="scope-in-f1-desc">Estetyczna wizytówka skupiająca wszystkie informacje w jednym miejscu.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>Układ na gotowej strukturze</strong>
-                                    <p>Szybkie wdrożenie oparte o sprawdzony, konwertujący szablon technologiczny.</p>
+                                    <strong data-i18n="scope-in-f2-title">Układ na gotowej strukturze</strong>
+                                    <p data-i18n="scope-in-f2-desc">Szybkie wdrożenie oparte o sprawdzony, konwertujący szablon technologiczny.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>Podstawowy opis firma</strong>
-                                    <p>Krótka, czytelna sekcja przedstawiająca Twój biznes.</p>
+                                    <strong data-i18n="scope-in-f3-title">Podstawowy opis firmy</strong>
+                                    <p data-i18n="scope-in-f3-desc">Krótka, czytelna sekcja przedstawiająca Twój biznes.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>Sekcja usług</strong>
-                                    <p>Lista i krótki opis oferowanych przez Ciebie usług lub produktów.</p>
+                                    <strong data-i18n="scope-in-f4-title">Sekcja usług</strong>
+                                    <p data-i18n="scope-in-f4-desc">Lista i krótki opis oferowanych przez Ciebie usług lub produktów.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>Formularz kontaktowy lub WhatsApp</strong>
-                                    <p>Szybka możliwość kontaktu dla klientów bezpośrednio ze strony.</p>
+                                    <strong data-i18n="scope-in-f5-title">Formularz kontaktowy lub WhatsApp</strong>
+                                    <p data-i18n="scope-in-f5-desc">Szybka możliwość kontaktu dla klientów bezpośrednio ze strony.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>Wersja mobilna</strong>
-                                    <p>Pełna responsywność — strona działa idealnie na smartfonach i tabletach.</p>
+                                    <strong data-i18n="scope-in-f6-title">Wersja mobilna</strong>
+                                    <p data-i18n="scope-in-f6-desc">Pełna responsywność — strona działa idealnie na smartfonach i tabletach.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✓</span>
                                 <div>
-                                    <strong>1 runda poprawek</strong>
-                                    <p>Czas na wprowadzenie Twoich uwag przed ostatecznym uruchomieniem strony.</p>
+                                    <strong data-i18n="scope-in-f7-title">1 runda poprawek</strong>
+                                    <p data-i18n="scope-in-f7-desc">Czas na wprowadzenie Twoich uwag przed ostatecznym uruchomieniem strony.</p>
                                 </div>
                             </li>
                         </ul>
@@ -344,66 +351,66 @@
 
                     <!-- Exclusions -->
                     <div class="card scope-card scope-out">
-                        <h3 class="scope-title">Czego nie obejmuje Pakiet Start</h3>
+                        <h3 class="scope-title" data-i18n="scope-out-title">Czego nie obejmuje Pakiet Start</h3>
                         <ul class="scope-list">
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Indywidualny projekt graficzny od zera</strong>
-                                    <p>Pracujemy na gotowym szkielecie, co drastycznie obniża koszty wdrożenia.</p>
+                                    <strong data-i18n="scope-out-f1-title">Indywidualny projekt graficzny od zera</strong>
+                                    <p data-i18n="scope-out-f1-desc">Pracujemy na gotowym szkielecie, co drastycznie obniża koszty wdrożenia.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Wiele podstron</strong>
-                                    <p>Wszystkie informacje znajdują się na jednej stronie głównej.</p>
+                                    <strong data-i18n="scope-out-f2-title">Wiele podstron</strong>
+                                    <p data-i18n="scope-out-f2-desc">Wszelkie informacje znajdują się na jednej stronie głównej.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Zaawansowane pozycjonowanie SEO</strong>
-                                    <p>Optymalizujemy podstawowe tagi, ale nie prowadzimy długofalowej kampanii SEO.</p>
+                                    <strong data-i18n="scope-out-f3-title">Zaawansowane pozycjonowanie SEO</strong>
+                                    <p data-i18n="scope-out-f3-desc">Optymalizujemy podstawowe tagi, ale nie prowadzimy długofalowej kampanii SEO.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Pisanie tekstów (copywriting)</strong>
-                                    <p>Treści i opisy usług dostarcza klient we własnym zakresie.</p>
+                                    <strong data-i18n="scope-out-f4-title">Pisanie tekstów (copywriting)</strong>
+                                    <p data-i18n="scope-out-f4-desc">Treści i opisy usług dostarcza klient we własnym zakresie.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Wdrożenie CRM i chatbotów AI</strong>
-                                    <p>Nie łączymy strony z zewnętrznymi systemami zarządzania klientami.</p>
+                                    <strong data-i18n="scope-out-f5-title">Wdrożenie CRM i chatbotów AI</strong>
+                                    <p data-i18n="scope-out-f5-desc">Nie łączymy strony z zewnętrznymi systemami zarządzania klientami.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Automatyzacje</strong>
-                                    <p>W cenie nie ma integracji z zewnętrznymi bazami i automatycznych przepływów.</p>
+                                    <strong data-i18n="scope-out-f6-title">Automatyzacje</strong>
+                                    <p data-i18n="scope-out-f6-desc">W cenie nie ma integracji z zewnętrznymi bazami i automatycznych przepływów.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Domeny i hostingu</strong>
-                                    <p>Koszty utrzymania serwera oraz rejestracji domeny opłacane są bezpośrednio u dostawców.</p>
+                                    <strong data-i18n="scope-out-f7-title">Domeny i hostingu</strong>
+                                    <p data-i18n="scope-out-f7-desc">Koszty utrzymania serwera oraz rejestracji domeny opłacane są bezpośrednio u dostawców.</p>
                                 </div>
                             </li>
                             <li>
                                 <span class="scope-icon">✕</span>
                                 <div>
-                                    <strong>Wielu rund poprawek</strong>
-                                    <p>Wszelkie poprawki realizujemy w ramach jednej wspólnej sesji zmian.</p>
+                                    <strong data-i18n="scope-out-f8-title">Wielu rund poprawek</strong>
+                                    <p data-i18n="scope-out-f8-desc">Wszelkie poprawki realizujemy w ramach jednej wspólnej sesji zmian.</p>
                                 </div>
                             </li>
                         </ul>
-                        <div class="scope-note">
+                        <div class="scope-note" data-i18n="scope-disclaimer">
                             <strong>Ważna informacja:</strong> Jeśli potrzebujesz bardziej rozbudowanej strony B2B, indywidualnego projektu lub zaawansowanych automatyzacji, możemy przygotować osobną wycenę dopasowaną do Twoich wymagań.
                         </div>
                     </div>
@@ -415,45 +422,45 @@
         <section id="dla-kogo" class="section target-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Dla kogo jest NexaCode</h2>
-                    <p class="section-subtitle">Pomagamy małym firmom i nowym inicjatywom zyskać profesjonalny wizerunek cyfrowy bez wydawania tysięcy złotych.</p>
+                    <h2 class="section-title" data-i18n="target-title">Dla kogo jest NexaCode</h2>
+                    <p class="section-subtitle" data-i18n="target-subtitle">Pomagamy małym firmom i nowym inicjatywom zyskać profesjonalny wizerunek cyfrowy bez wydawania tysięcy złotych.</p>
                 </div>
 
                 <div class="grid grid-3">
                     <div class="card target-card">
                         <div class="target-num">01</div>
-                        <h3 class="card-title">Nowe agencje pracy</h3>
-                        <p class="card-text">Potrzebujesz szybko zbierać zgłoszenia od kandydatów? Wdrożymy prosty formularz, który prześle dane bezpośrednio do Twojego arkusza.</p>
+                        <h3 class="card-title" data-i18n="target-c1-title">Nowe agencje pracy</h3>
+                        <p class="card-text" data-i18n="target-c1-desc">Potrzebujesz szybko zbierać zgłoszenia od kandydatów? Wdrożymy prosty formularz, który prześle dane bezpośrednio do Twojego arkusza.</p>
                     </div>
                     
                     <div class="card target-card">
                         <div class="target-num">02</div>
-                        <h3 class="card-title">Małe firmy usługowe</h3>
-                        <p class="card-text">Fryzjerzy, kosmetyczki, mechanicy samochodowi czy lokalne punkty serwisowe potrzebujące profesjonalnej wizytówki z dojazdem.</p>
+                        <h3 class="card-title" data-i18n="target-c2-title">Małe firmy usługowe</h3>
+                        <p class="card-text" data-i18n="target-c2-desc">Fryzjerzy, kosmetyczki, mechanicy samochodowi czy lokalne punkty serwisowe potrzebujące profesjonalnej wizytówki z dojazdem.</p>
                     </div>
 
                     <div class="card target-card">
                         <div class="target-num">03</div>
-                        <h3 class="card-title">Firmy budowlane i montażowe</h3>
-                        <p class="card-text">Ekipy remontowe, monterzy pomp ciepła czy klimatyzacji, którzy chcą pokazać zakres usług i ułatwić kontakt telefoniczny.</p>
+                        <h3 class="card-title" data-i18n="target-c3-title">Firmy budowlane i montażowe</h3>
+                        <p class="card-text" data-i18n="target-c3-desc">Ekipy remontowe, monterzy pomp ciepła czy klimatyzacji, którzy chcą pokazać zakres usług i ułatwić kontakt telefoniczny.</p>
                     </div>
 
                     <div class="card target-card">
                         <div class="target-num">04</div>
-                        <h3 class="card-title">Firmy sprzątające</h3>
-                        <p class="card-text">Szybka strona z cennikiem usług dla klientów indywidualnych oraz firm, wraz z formularzem bezpłatnej wyceny.</p>
+                        <h3 class="card-title" data-i18n="target-c4-title">Firmy sprzątające</h3>
+                        <p class="card-text" data-i18n="target-c4-desc">Szybka strona z cennikiem usług dla klientów indywidualnych oraz firm, wraz z formularzem bezpłatnej wyceny.</p>
                     </div>
 
                     <div class="card target-card">
                         <div class="target-num">05</div>
-                        <h3 class="card-title">Freelancerzy i JDG</h3>
-                        <p class="card-text">Fotografowie, trenerzy personalni, konsultanci. Każdy, kto potrzebuje własnego miejsca w sieci zamiast linku do profilu social media.</p>
+                        <h3 class="card-title" data-i18n="target-c5-title">Freelancerzy i JDG</h3>
+                        <p class="card-text" data-i18n="target-c5-desc">Fotografowie, trenerzy personalni, konsultanci. Każdy, kto potrzebuje własnego miejsca w sieci zamiast linku do profilu social media.</p>
                     </div>
 
                     <div class="card target-card">
                         <div class="target-num">06</div>
-                        <h3 class="card-title">Firmy bez strony internetowej</h3>
-                        <p class="card-text">Przedsiębiorstwa, które dotychczas korzystały wyłącznie z Facebooka, WhatsAppa lub OLX i chcą wejść na wyższy poziom wiarygodności.</p>
+                        <h3 class="card-title" data-i18n="target-c6-title">Firmy bez strony internetowej</h3>
+                        <p class="card-text" data-i18n="target-c6-desc">Przedsiębiorstwa, które dotychczas korzystały wyłącznie z Facebooka, WhatsAppa lub OLX i chcą wejść na wyższy poziom wiarygodności.</p>
                     </div>
                 </div>
             </div>
@@ -463,45 +470,45 @@
         <section id="proces" class="section process-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Jak wygląda współpraca</h2>
-                    <p class="section-subtitle">Cały proces projektowania i uruchomienia strony zamknęliśmy w kilku prostych, przejrzystych krokach.</p>
+                    <h2 class="section-title" data-i18n="process-title">Jak wygląda współpraca</h2>
+                    <p class="section-subtitle" data-i18n="process-subtitle">Cały proces projektowania i uruchomienia strony zamknęliśmy w kilku prostych, przejrzystych krokach.</p>
                 </div>
 
                 <div class="process-timeline">
                     <div class="process-step">
                         <div class="process-icon">1</div>
-                        <h3 class="process-step-title">Krótka rozmowa</h3>
-                        <p class="process-step-text">Ustalamy Twoje potrzeby, branżę oraz to, jakie informacje muszą znaleźć się na stronie.</p>
+                        <h3 class="process-step-title" data-i18n="process-s1-title">Krótka rozmowa</h3>
+                        <p class="process-step-text" data-i18n="process-s1-desc">Ustalamy Twoje potrzeby, branżę oraz to, jakie informacje muszą znaleźć się na stronie.</p>
                     </div>
 
                     <div class="process-step">
                         <div class="process-icon">2</div>
-                        <h3 class="process-step-title">Wybór pakietu</h3>
-                        <p class="process-step-text">Dobieramy pakiet najbardziej dopasowany do Twojego budżetu i celów biznesowych.</p>
+                        <h3 class="process-step-title" data-i18n="process-s2-title">Wybór pakietu</h3>
+                        <p class="process-step-text" data-i18n="process-s2-desc">Dobieramy pakiet najbardziej dopasowany do Twojego budżetu i celów biznesowych.</p>
                     </div>
 
                     <div class="process-step">
                         <div class="process-icon">3</div>
-                        <h3 class="process-step-title">Materiały od klienta</h3>
-                        <p class="process-step-text">Przesyłasz nam podstawowe informacje o firmie, logotyp, dane kontaktowe oraz listę usług.</p>
+                        <h3 class="process-step-title" data-i18n="process-s3-title">Materiały od klienta</h3>
+                        <p class="process-step-text" data-i18n="process-s3-desc">Przesyłasz nam podstawowe informacje o firmie, logotyp, dane kontaktowe oraz listę usług.</p>
                     </div>
 
                     <div class="process-step">
                         <div class="process-icon">4</div>
-                        <h3 class="process-step-title">Budowa strony</h3>
-                        <p class="process-step-text">Wdrażamy szablon, konfigurujemy sekcje, podpinamy formularz i przygotowujemy wersję mobilną.</p>
+                        <h3 class="process-step-title" data-i18n="process-s4-title">Budowa strony</h3>
+                        <p class="process-step-text" data-i18n="process-s4-desc">Wdrażamy szablon, konfigurujemy sekcje, podpinamy formularz i przygotowujemy wersję mobilną.</p>
                     </div>
 
                     <div class="process-step">
                         <div class="process-icon">5</div>
-                        <h3 class="process-step-title">Poprawki</h3>
-                        <p class="process-step-text">Przesyłamy Ci stronę do weryfikacji. Wprowadzamy Twoje uwagi w ramach jednej rundy poprawek.</p>
+                        <h3 class="process-step-title" data-i18n="process-s5-title">Poprawki</h3>
+                        <p class="process-step-text" data-i18n="process-s5-desc">Przesyłamy Ci stronę do weryfikacji. Wprowadzamy Twoje uwagi w ramach jednej rundy poprawek.</p>
                     </div>
 
                     <div class="process-step">
                         <div class="process-icon">6</div>
-                        <h3 class="process-step-title">Publikacja</h3>
-                        <p class="process-step-text">Uruchamiamy stronę pod Twoją domeną. Od teraz Twoja nowa wizytówka jest w pełni widoczna w sieci.</p>
+                        <h3 class="process-step-title" data-i18n="process-s6-title">Publikacja</h3>
+                        <p class="process-step-text" data-i18n="process-s6-desc">Uruchamiamy stronę pod Twoją domeną. Od teraz Twoja nowa wizytówka jest w pełni widoczna w sieci.</p>
                     </div>
                 </div>
             </div>
@@ -511,35 +518,35 @@
         <section class="section border-top">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Pakiet Start czy rozbudowany projekt?</h2>
-                    <p class="section-subtitle">Porównaj warianty i zdecyduj, co najlepiej odpowiada aktualnym potrzebom Twojego przedsiębiorstwa.</p>
+                    <h2 class="section-title" data-i18n="comparison-title">Pakiet Start czy rozbudowany projekt?</h2>
+                    <p class="section-subtitle" data-i18n="comparison-subtitle">Porównaj warianty i zdecyduj, co najlepiej odpowiada aktualnym potrzebom Twojego przedsiębiorstwa.</p>
                 </div>
 
                 <div class="grid grid-2 comparison-grid">
                     <div class="card comparison-card">
-                        <h3 class="comparison-title text-teal">Pakiet Start</h3>
+                        <h3 class="comparison-title text-teal" data-i18n="comparison-c1-title">Pakiet Start</h3>
                         <ul class="comparison-list">
-                            <li>Szybki start (uruchomienie nawet w 3-5 dni)</li>
-                            <li>Niska cena (koszt jednorazowy od 500 zł)</li>
-                            <li>Jedna strona skupiająca najważniejsze dane</li>
-                            <li>Podstawowa, estetyczna obecność w wyszukiwarce</li>
-                            <li>Uproszczony kontakt przez formularz/WhatsApp</li>
+                            <li data-i18n="comparison-c1-f1">Szybki start (uruchomienie nawet w 3-5 dni)</li>
+                            <li data-i18n="comparison-c1-f2">Niska cena (koszt jednorazowy od 500 zł)</li>
+                            <li data-i18n="comparison-c1-f3">Jedna strona skupiająca najważniejsze dane</li>
+                            <li data-i18n="comparison-c1-f4">Podstawowa, estetyczna obecność w wyszukiwarce</li>
+                            <li data-i18n="comparison-c1-f5">Uproszczony kontakt przez formularz/WhatsApp</li>
                         </ul>
                     </div>
 
                     <div class="card comparison-card">
-                        <h3 class="comparison-title text-purple">Rozbudowany projekt</h3>
+                        <h3 class="comparison-title text-purple" data-i18n="comparison-c2-title">Rozbudowany projekt</h3>
                         <ul class="comparison-list">
-                            <li>Indywidualna strategia i dedykowana grafika</li>
-                            <li>Wiele dedykowanych podstron i sekcji</li>
-                            <li>Zaawansowane automatyzacje procesów</li>
-                            <li>Połączenie z systemami CRM i bazami danych</li>
-                            <li>Większy budżet i dłuższy czas realizacji</li>
+                            <li data-i18n="comparison-c2-f1">Indywidualna strategia i dedykowana grafika</li>
+                            <li data-i18n="comparison-c2-f2">Wiele dedykowanych podstron i sekcji</li>
+                            <li data-i18n="comparison-c2-f3">Zaawansowane automatyzacje procesów</li>
+                            <li data-i18n="comparison-c2-f4">Połączenie z systemami CRM i bazami danych</li>
+                            <li data-i18n="comparison-c2-f5">Większy budżet i dłuższy czas realizacji</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="comparison-note text-center">
+                <div class="comparison-note text-center" data-i18n="comparison-note">
                     <p><strong>Uwaga:</strong> Większe projekty B2B, zaawansowane sklepy internetowe oraz dedykowane automatyzacje realizujemy w ramach naszej marki partnerskiej przez <strong>VektaDev</strong>.</p>
                 </div>
             </div>
@@ -549,58 +556,58 @@
         <section id="faq" class="section faq-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Często zadawane pytania (FAQ)</h2>
-                    <p class="section-subtitle">Masz pytania dotyczące wdrożenia? Przygotowaliśmy odpowiedzi na najczęstsze wątpliwości naszych klientów.</p>
+                    <h2 class="section-title" data-i18n="faq-title">Często zadawane pytania (FAQ)</h2>
+                    <p class="section-subtitle" data-i18n="faq-subtitle">Masz pytania dotyczące wdrożenia? Przygotowaliśmy odpowiedzi na najczęstsze wątpliwości naszych klientów.</p>
                 </div>
 
                 <div class="faq-accordion">
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Czy 500 zł to cena za pełną stronę?</span>
+                            <span data-i18n="faq-q1">Czy 500 zł to cena za pełną stronę?</span>
                             <span class="faq-icon"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Nie. To cena za podstawowy pakiet startowy: prostą jedną stronę na gotowej strukturze.</p>
+                            <p data-i18n="faq-a1">Nie. To cena za podstawowy pakiet startowy: prostą jedną stronę na gotowej strukturze.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Czy domena i hosting są w cenie?</span>
+                            <span data-i18n="faq-q2">Czy domena i hosting są w cenie?</span>
                             <span class="faq-icon"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Nie, domena i hosting są rozliczane osobno lub klient może użyć własnego konta.</p>
+                            <p data-i18n="faq-a2">Nie, domena i hosting są rozliczane osobno lub klient może użyć własnego konta.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Ile trwa realizacja?</span>
+                            <span data-i18n="faq-q3">Ile trwa realizacja?</span>
                             <span class="faq-icon"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Najprostszy wariant zwykle 3–5 dni roboczych po otrzymaniu materiałów.</p>
+                            <p data-i18n="faq-a3">Najprostszy wariant zwykle 3–5 dni roboczych po otrzymaniu materiałów.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Czy można później rozbudować stronę?</span>
+                            <span data-i18n="faq-q4">Czy można później rozbudować stronę?</span>
                             <span class="faq-icon"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Tak, stronę można później rozbudować o kolejne sekcje, formularze, automatyzacje lub AI.</p>
+                            <p data-i18n="faq-a4">Tak, stronę można później rozbudować o kolejne sekcje, formularze, automatyzacje lub AI.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Czy robicie strony dla agencji pracy?</span>
+                            <span data-i18n="faq-q5">Czy robicie strony dla agencji pracy?</span>
                             <span class="faq-icon"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Tak, możemy przygotować stronę z opisem agencji, ofertą dla pracodawców, sekcją dla kandydatów i formularzem zgłoszeniowym.</p>
+                            <p data-i18n="faq-a5">Tak, możemy przygotować stronę z opisem agencji, ofertą dla pracodawców, sekcją dla kandydatów i formularzem zgłoszeniowym.</p>
                         </div>
                     </div>
                 </div>
@@ -611,8 +618,8 @@
         <section id="kontakt" class="section contact-section">
             <div class="container contact-container">
                 <div class="contact-info-block">
-                    <h2 class="section-title">Chcesz szybko wystartować?</h2>
-                    <p class="contact-text">
+                    <h2 class="section-title" data-i18n="contact-title">Chcesz szybko wystartować?</h2>
+                    <p class="contact-text" data-i18n="contact-subtitle">
                         Napisz, czym zajmuje się Twoja firma. Odpowiemy, który pakiet będzie najlepszy.
                     </p>
                     <div class="contact-methods">
@@ -627,49 +634,39 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                             </svg>
-                            <span>WhatsApp: +48 573 568 255</span>
+                            <span>WhatsApp / Tel: +48 537 890 776</span>
                         </div>
-                    </div>
-                    
-                    <div class="contact-whatsapp-block">
-                        <p class="whatsapp-label">Wolisz szybki kontakt tekstowy?</p>
-                        <a href="https://wa.me/48573568255" target="_blank" rel="noopener noreferrer" class="btn btn-secondary whatsapp-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            <span>Napisz na WhatsApp</span>
-                        </a>
                     </div>
                 </div>
 
                 <div class="contact-form-block card">
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
-                            <label for="name">Imię</label>
-                            <input type="text" id="name" name="name" required placeholder="np. Jan">
+                            <label for="name" data-i18n="form-label-name">Imię</label>
+                            <input type="text" id="name" name="name" required data-i18n-placeholder="form-placeholder-name" placeholder="np. Jan">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="np. jan@example.pl">
+                            <label for="email" data-i18n="form-label-email">E-mail</label>
+                            <input type="email" id="email" name="email" required data-i18n-placeholder="form-placeholder-email" placeholder="np. jan@example.pl">
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Telefon / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="np. +48 123 456 789">
+                            <label for="phone" data-i18n="form-label-phone">Telefon / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required data-i18n-placeholder="form-placeholder-phone" placeholder="np. +48 123 456 789">
                         </div>
 
                         <div class="form-group">
-                            <label for="industry">Branża</label>
-                            <input type="text" id="industry" name="industry" required placeholder="np. agencja pracy, firma remontowa">
+                            <label for="industry" data-i18n="form-label-industry">Branża</label>
+                            <input type="text" id="industry" name="industry" required data-i18n-placeholder="form-placeholder-industry" placeholder="np. agencja pracy, firma remontowa">
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Wiadomość / Czym zajmuje się Twoja firma?</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Opisz krótko czego potrzebujesz..."></textarea>
+                            <label for="message" data-i18n="form-label-message">Wiadomość / Czym zajmuje się Twoja firma?</label>
+                            <textarea id="message" name="message" rows="4" required data-i18n-placeholder="form-placeholder-message" placeholder="Opisz krótko czego potrzebujesz..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">Wyślij zapytanie</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="form-submit">Wyślij zapytanie</button>
                     </form>
                 </div>
             </div>
@@ -688,37 +685,45 @@
                     </svg>
                     <span class="logo-text">NexaCode</span>
                 </a>
-                <p class="footer-tagline">Proste strony i automatyzacje dla nowych firm</p>
+                <p class="footer-tagline" data-i18n="footer-tagline">Proste strony i automatyzacje dla nowych firm</p>
             </div>
             
             <div class="footer-links">
-                <h4>Nawigacja</h4>
+                <h4 data-i18n="footer-h-nav">Nawigacja</h4>
                 <ul>
-                    <li><a href="#start">Start</a></li>
-                    <li><a href="#problem">O nas</a></li>
-                    <li><a href="#pakiety">Pakiety</a></li>
-                    <li><a href="#dla-kogo">Dla kogo</a></li>
-                    <li><a href="#proces">Proces</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#start" data-i18n="nav-start">Start</a></li>
+                    <li><a href="#problem" data-i18n="nav-about">O nas</a></li>
+                    <li><a href="#pakiety" data-i18n="nav-pakiety">Pakiety</a></li>
+                    <li><a href="#dla-kogo" data-i18n="nav-target">Dla kogo</a></li>
+                    <li><a href="#proces" data-i18n="nav-proces">Proces</a></li>
+                    <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+                    <li><a href="#kontakt" data-i18n="nav-contact">Kontakt</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
-                <h4>Prawo</h4>
+                <h4 data-i18n="footer-h-legal">Prawo</h4>
                 <ul>
-                    <li><a href="privacy-policy.html">Polityka Prywatności</a></li>
-                    <li><a href="cookies-policy.html">Polityka Cookies</a></li>
+                    <li><a href="privacy-policy.html" data-i18n="footer-legal-privacy">Polityka Prywatności</a></li>
+                    <li><a href="cookies-policy.html" data-i18n="footer-legal-cookies">Polityka Cookies</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="container footer-bottom">
-            <p>&copy; 2026 NexaCode. Wszelkie prawa zastrzeżone.</p>
-            <p class="footer-dev-note">Większe projekty B2B i zaawansowane automatyzacje: <a href="https://vektadev.pl" target="_blank" rel="noopener noreferrer">VektaDev</a></p>
+            <p data-i18n="footer-copyright">&copy; 2026 NexaCode. Wszelkie prawa zastrzeżone.</p>
+            <p class="footer-dev-note" data-i18n="footer-dev-note">Większe projekty B2B i zaawansowane automatyzacje: <a href="https://vektadev.pl" target="_blank" rel="noopener noreferrer">VektaDev</a></p>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Action Button in Bottom-Right -->
+    <a href="https://wa.me/48537890776" target="_blank" rel="noopener noreferrer" class="whatsapp-floating-btn" aria-label="Napisz do nas na WhatsApp">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.456h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 
