@@ -1407,6 +1407,30 @@ ul {
     background-color: rgba(255, 255, 255, 0.03);
 }
 
+.mobile-lang-switcher-container {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .mobile-lang-switcher-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+        margin-top: var(--space-8);
+        padding-top: var(--space-6);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        max-width: 200px;
+    }
+    
+    .mobile-lang-label {
+        font-size: 0.8125rem;
+        color: var(--color-text-muted);
+        font-weight: 500;
+        margin-bottom: var(--space-1);
+    }
+}
+
 /* ===== 17. Floating WhatsApp Button ===== */
 .whatsapp-floating-btn {
     position: fixed;

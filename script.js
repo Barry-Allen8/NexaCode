@@ -15,15 +15,86 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
 });
 
-// ===== 1. Language Enforcer System =====
+// ===== 1. Language Swapping System =====
 function initLanguage() {
-    // Force to Polish language to prevent mixing languages
-    currentLang = 'pl';
-    localStorage.setItem('nexacode_lang', 'pl');
+    // Get saved language or default to Polish
+    const savedLang = localStorage.getItem('nexacode_lang') || 'pl';
+    currentLang = savedLang;
 
     // Apply translations
     applyTranslations(currentLang);
+    updateLanguageSwitcherUI(currentLang);
     initTerminalSimulator();
+
+    // Support multiple switchers (e.g. Header and Mobile Menu)
+    const langSwitchers = document.querySelectorAll('.lang-switcher');
+
+    langSwitchers.forEach(switcher => {
+        const toggle = switcher.querySelector('.lang-toggle');
+        const selectButtons = switcher.querySelectorAll('.lang-select');
+
+        if (toggle) {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                // Close all other switchers first
+                langSwitchers.forEach(other => {
+                    if (other !== switcher) {
+                        other.classList.remove('active');
+                        const otherToggle = other.querySelector('.lang-toggle');
+                        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                switcher.classList.toggle('active');
+                const isExpanded = switcher.classList.contains('active');
+                toggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        selectButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = btn.dataset.lang;
+                if (lang && lang !== currentLang) {
+                    switchLanguage(lang);
+                }
+                switcher.classList.remove('active');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        langSwitchers.forEach(switcher => {
+            if (!switcher.contains(e.target)) {
+                switcher.classList.remove('active');
+                const toggle = switcher.querySelector('.lang-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+}
+
+function switchLanguage(lang) {
+    if (!translations || !translations[lang]) return;
+    
+    currentLang = lang;
+    localStorage.setItem('nexacode_lang', lang);
+    
+    applyTranslations(lang);
+    updateLanguageSwitcherUI(lang);
+    initTerminalSimulator(); // Restart terminal with localized logs
+}
+
+function updateLanguageSwitcherUI(lang) {
+    const langSwitchers = document.querySelectorAll('.lang-switcher');
+    langSwitchers.forEach(switcher => {
+        const langCurrentSpan = switcher.querySelector('.lang-current');
+        if (langCurrentSpan) {
+            langCurrentSpan.textContent = lang === 'uk' ? 'UA' : lang.toUpperCase();
+        }
+    });
 }
 
 function applyTranslations(lang) {
@@ -49,6 +120,18 @@ function applyTranslations(lang) {
             el.setAttribute('placeholder', t[key]);
         }
     });
+
+    // Dynamic SEO update for index.html only
+    const isMainPage = !window.location.pathname.includes('privacy-policy') && !window.location.pathname.includes('cookies-policy');
+    if (isMainPage) {
+        if (t['seo-title']) {
+            document.title = t['seo-title'];
+        }
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && t['seo-description']) {
+            metaDesc.setAttribute('content', t['seo-description']);
+        }
+    }
 }
 
 // ===== 2. Sticky Header Scroll Effect =====
