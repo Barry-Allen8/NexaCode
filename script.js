@@ -278,7 +278,7 @@ function initScrollAnimations() {
     });
 
     // Observe cards and items
-    document.querySelectorAll('.service-card, .pricing-card, .step, .value-card, .team-member, .testimonial-card, .faq-item').forEach(item => {
+    document.querySelectorAll('.service-card, .pricing-card, .step, .value-card, .team-member, .testimonial-card, .faq-item, .hero-terminal').forEach(item => {
         item.classList.add('animate-on-scroll');
         observer.observe(item);
     });

@@ -1,11 +1,11 @@
 /* ===== CSS Variables ===== */
 :root {
     /* Colors - Dark theme (default) */
-    --color-bg-primary: #0a0a0f;
-    --color-bg-secondary: #12121a;
-    --color-bg-tertiary: #1a1a25;
-    --color-bg-card: rgba(26, 26, 37, 0.6);
-    --color-bg-card-hover: rgba(35, 35, 50, 0.8);
+    --color-bg-primary: #020814;
+    --color-bg-secondary: #030f26;
+    --color-bg-tertiary: #051636;
+    --color-bg-card: rgba(255, 255, 255, 0.07);
+    --color-bg-card-hover: rgba(255, 255, 255, 0.12);
 
     --color-text-primary: #ffffff;
     --color-text-secondary: #a0a0b0;
@@ -5160,4 +5160,153 @@ section {
     /* blue-600 */
     transform: translateY(-1px);
     box-shadow: 0 12px 40px rgba(59, 130, 246, 0.35);
+}
+
+/* ===== CYBERTECH DESIGN SYSTEM UPDATES ===== */
+
+/* Terminal widget */
+.hero-terminal {
+    background: rgba(10, 10, 15, 0.75);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(0, 245, 212, 0.2);
+    color: var(--color-text-primary);
+    box-shadow: 0 20px 55px rgba(0,0,0,0.4);
+    border-radius: var(--radius-xl);
+    position: relative;
+    overflow: hidden;
+    animation: terminalGlow 4s ease-in-out infinite;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+    .hero-terminal {
+        margin-top: var(--spacing-xl);
+    }
+}
+
+.terminal-top {
+    background: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid rgba(0, 245, 212, 0.15);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-body {
+    padding: var(--spacing-lg);
+    font-family: monospace;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--lh-relaxed);
+}
+
+.terminal-line {
+    margin-bottom: var(--spacing-sm);
+}
+
+.terminal-body code {
+    color: var(--color-accent-primary);
+}
+
+/* Card Scan Animation Effect */
+.card-scan,
+.service-card,
+.why-us-card,
+.trust-stat-card,
+.why-us-stat-card,
+.calculator-option .option-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-scan::after,
+.service-card::after,
+.why-us-card::after,
+.trust-stat-card::after,
+.why-us-stat-card::after,
+.calculator-option .option-card::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 245, 212, 0.12),
+        transparent
+    );
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.card-scan.active::after,
+.card-scan:hover::after,
+.service-card:hover::after,
+.why-us-card:hover::after,
+.trust-stat-card:hover::after,
+.why-us-stat-card:hover::after,
+.calculator-option .option-card:hover::after {
+    top: 130%;
+}
+
+/* 3D Tilt Card hover effect */
+.stats-box:hover,
+.service-card:hover,
+.calculator-option:hover,
+.why-us-stat-card:hover,
+.trust-stat-card:hover {
+    transform: translateY(-8px) rotateX(3deg) rotateY(-3deg) !important;
+    border-color: rgba(0, 245, 212, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(0, 245, 212, 0.15) !important;
+}
+
+/* Glowing Animations */
+@keyframes terminalGlow {
+    0%, 100% { box-shadow: 0 20px 55px rgba(0,0,0,0.4); }
+    50% { box-shadow: 0 20px 70px rgba(0, 245, 212, 0.18); }
+}
+
+@keyframes gridMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 45px 45px; }
+}
+
+/* Hero structure updates */
+@media (min-width: 1024px) {
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--spacing-2xl);
+        align-items: center;
+        text-align: left;
+    }
+    
+    .hero-content {
+        text-align: left;
+        margin: 0;
+    }
+
+    .hero-actions {
+        justify-content: flex-start !important;
+    }
+
+    .hero-stats {
+        justify-content: flex-start !important;
+    }
 }
