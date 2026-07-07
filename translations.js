@@ -203,6 +203,13 @@ const translations = {
         "form-label-industry": "Branża",
         "form-label-message": "Wiadomość / Czym zajmuje się Twoja firma?",
         "form-submit": "Wyślij zapytanie",
+        "form-placeholder-name": "np. Jan",
+        "form-placeholder-email": "np. jan@example.pl",
+        "form-placeholder-phone": "np. +48 123 456 789",
+        "form-placeholder-industry": "np. agencja pracy, firma remontowa",
+        "form-placeholder-message": "Opisz krótko czego potrzebujesz...",
+        "whatsapp-label": "Wolisz szybki kontakt na czacie?",
+        "whatsapp-btn": "Napisz na WhatsApp",
         
         // Footer Section
         "footer-tagline": "Proste strony i automatyzacje dla nowych firm",
@@ -453,6 +460,13 @@ const translations = {
         "form-label-industry": "Галузь бізнесу",
         "form-label-message": "Повідомлення / Чим займається ваша компанія?",
         "form-submit": "Надіслати запит",
+        "form-placeholder-name": "напр. Іван",
+        "form-placeholder-email": "напр. ivan@example.com",
+        "form-placeholder-phone": "напр. +380 50 123 4567",
+        "form-placeholder-industry": "напр. кадрове агентство, будівельна компанія",
+        "form-placeholder-message": "Опишіть коротко, що вам потрібно...",
+        "whatsapp-label": "Бажаєте швидко зв'язатися в чаті?",
+        "whatsapp-btn": "Написати у WhatsApp",
         
         // Footer Section
         "footer-tagline": "Прості сайти та автоматизація для нових компаній",
@@ -704,6 +718,13 @@ const translations = {
         "form-label-industry": "Industry",
         "form-label-message": "Message / What does your company do?",
         "form-submit": "Send Inquiry",
+        "form-placeholder-name": "e.g. John",
+        "form-placeholder-email": "e.g. john@example.com",
+        "form-placeholder-phone": "e.g. +48 123 456 789",
+        "form-placeholder-industry": "e.g. recruitment agency, renovation company",
+        "form-placeholder-message": "Briefly describe what you need...",
+        "whatsapp-label": "Do you prefer a quick chat?",
+        "whatsapp-btn": "Write to us on WhatsApp",
         
         // Footer Section
         "footer-tagline": "Simple websites and automations for new businesses",
