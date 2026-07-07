@@ -1155,6 +1155,11 @@ ul {
     align-items: center;
     gap: var(--space-4);
     font-size: 1.0625rem;
+    color: var(--color-text-primary);
+}
+
+a.contact-method-item:hover {
+    color: var(--color-accent-teal);
 }
 
 .contact-method-item svg {
@@ -1231,6 +1236,12 @@ ul {
     background: #10b981 !important;
     color: #ffffff !important;
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.4) !important;
+}
+
+.btn-error {
+    background: #ef4444 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4) !important;
 }
 
 .btn-loading {

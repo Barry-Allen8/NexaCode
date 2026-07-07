@@ -216,13 +216,14 @@ const translations = {
         // Messages
         "validation-alert": "Proszę wypełnić wszystkie pola formularza.",
         "submit-success": "✓ Zapytanie zostało wysłane!",
+        "submit-error": "❌ Błąd. Spróbuj ponownie.",
         
         // Privacy Policy Page
         "privacy-title": "Polityka Prywatności",
         "privacy-last-updated": "Ostatnia aktualizacja: 6 lipca 2026",
         "privacy-intro": "NexaCode dba o Twoją prywatność. Poniższa polityka wyjaśnia zasady przetwarzania danych osobowych oraz prawa, które Ci przysługują.",
         "privacy-h1": "1. Administrator danych",
-        "privacy-p1": "Administratorem danych osobowych zbieranych za pośrednictwem serwisu jest NexaCode z siedzibą w Polsce (kontakt@nexacode.net).",
+        "privacy-p1": "Administratorem danych osobowych zbieranych za pośrednictwem serwisu jest NexaCode z siedzibą w Polsce (vektadev@gmail.com).",
         "privacy-h2": "2. Jakie dane przetwarzamy i w jakim celu?",
         "privacy-p2-item": "<strong>Formularz kontaktowy:</strong> Przetwarzamy Twoje imię, adres e-mail, numer telefonu, branżę oraz treść wiadomości, aby odpowiedzieć na zapytanie ofertowe i przedstawić szczegóły pakietów (art. 6 ust. 1 lit. b RODO).",
         "privacy-h3": "3. Czas przechowywania danych",
@@ -465,13 +466,14 @@ const translations = {
         // Messages
         "validation-alert": "Будь ласка, заповніть усі поля форми.",
         "submit-success": "✓ Вашу заявку успішно надіслано!",
+        "submit-error": "❌ Помилка. Спробуйте ще раз.",
         
         // Privacy Policy Page
         "privacy-title": "Політика Конфіденційності",
         "privacy-last-updated": "Останнє оновлення: 6 липня 2026",
         "privacy-intro": "NexaCode піклується про вашу конфіденційність. Наступна політика пояснює правила обробки персональних даних та права, які вам належать.",
         "privacy-h1": "1. Адміністратор даних",
-        "privacy-p1": "Адміністратором персональних даних, зібраних за допомогою сервісу, є NexaCode з місцезнаходженням у Польщі (kontakt@nexacode.net).",
+        "privacy-p1": "Адміністратором персональних даних, зібраних за допомогою сервісу, є NexaCode з місцезнаходженням у Польщі (vektadev@gmail.com).",
         "privacy-h2": "2. Які дані ми обробляємо та з якою метою?",
         "privacy-p2-item": "<strong>Контактна форма:</strong> Ми обробляємо ваше ім'я, адресу електронної пошти, номер телефону, галузь діяльності та вміст повідомлення, щоб відповісти на запит та надати деталі пакетів (ст. 6 абз. 1 літ. b GDPR).",
         "privacy-h3": "3. Термін зберігання даних",
@@ -715,13 +717,14 @@ const translations = {
         // Messages
         "validation-alert": "Please fill out all the input fields.",
         "submit-success": "✓ Your inquiry has been sent successfully!",
+        "submit-error": "❌ Error. Please try again.",
         
         // Privacy Policy Page
         "privacy-title": "Privacy Policy",
         "privacy-last-updated": "Last updated: July 6, 2026",
         "privacy-intro": "NexaCode cares about your privacy. The following policy explains the rules of processing personal data and the rights you hold.",
         "privacy-h1": "1. Data administrator",
-        "privacy-p1": "The administrator of personal data collected through the service is NexaCode based in Poland (kontakt@nexacode.net).",
+        "privacy-p1": "The administrator of personal data collected through the service is NexaCode based in Poland (vektadev@gmail.com).",
         "privacy-h2": "2. What data we process and for what purpose?",
         "privacy-p2-item": "<strong>Contact form:</strong> We process your name, e-mail address, phone number, industry, and message content to answer inquiries and present package details (art. 6 sec. 1 lit. b GDPR).",
         "privacy-h3": "3. Data retention period",

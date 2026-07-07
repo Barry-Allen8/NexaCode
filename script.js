@@ -414,21 +414,43 @@ function initContactForm() {
         submitBtn.innerHTML = '<span class="btn-loading"></span>';
         submitBtn.disabled = true;
 
-        // Simulate API call (delay 1.5 seconds)
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/vektadev@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    Name: name,
+                    Email: email,
+                    Phone: phone,
+                    Industry: industry,
+                    Message: message
+                })
+            });
 
-        // Show success state
-        submitBtn.innerHTML = t['submit-success'] || '✓ Zapytanie zostało wysłane!';
-        submitBtn.classList.add('btn-success');
-        
-        // Reset inputs
-        form.reset();
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
 
-        // Reset button state after 3.5 seconds
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('btn-success');
-        }, 3500);
+            // Show success state
+            submitBtn.innerHTML = t['submit-success'] || '✓ Zapytanie zostało wysłane!';
+            submitBtn.classList.add('btn-success');
+            
+            // Reset inputs
+            form.reset();
+        } catch (error) {
+            console.error('Form submission error:', error);
+            submitBtn.innerHTML = t['submit-error'] || '❌ Błąd. Spróbuj ponownie.';
+            submitBtn.classList.add('btn-error');
+        } finally {
+            // Reset button state after 3.5 seconds
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('btn-success', 'btn-error');
+            }, 3500);
+        }
     });
 }
