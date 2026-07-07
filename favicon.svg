@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="40" viewBox="0 0 36 40" fill="none">
+    <defs>
+        <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00F5D4" />
+            <stop offset="100%" style="stop-color:#7B61FF" />
+        </linearGradient>
+    </defs>
+    <path d="M18 0L35.3205 10V30L18 40L0.679492 30V10L18 0Z" fill="url(#hexGradient)" />
+    <text x="18" y="26" text-anchor="middle" fill="#020814" font-family="Onest, sans-serif"
+        font-size="18" font-weight="800">N</text>
+</svg>
