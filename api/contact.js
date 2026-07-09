@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: 'NexaCode Contact Form <onboarding@resend.dev>',
-        to: 'vektadev@gmail.com',
+        to: 'joi777@ukr.net',
         subject: `NexaCode: Nowa wiadomość od ${Name}`,
         html: `
           <h2>Nowe zapytanie z formularza kontaktowego NexaCode</h2>
